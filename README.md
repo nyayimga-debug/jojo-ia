@@ -50,3 +50,81 @@ python bot.py
 - Les IDs de canaux et de supergroupes commencent généralement par `-100`.
 - Les IDs de groupes classiques (non "super") sont négatifs (ex. `-123456789`).
 - Les IDs d'utilisateurs et de canaux/groupes "normaux" sont positifs.
+
+## 5. Déploiement sur un VPS (ex. Hostinger) avec systemd
+
+Ces étapes gardent le bot actif en permanence, même après un redémarrage du
+serveur.
+
+### 5.1 Connexion et dépendances
+
+```bash
+ssh root@ton_ip_vps
+
+apt update && apt install -y python3 python3-venv python3-pip git
+```
+
+### 5.2 Récupérer le code
+
+```bash
+cd /opt
+git clone https://github.com/nyayimga-debug/jojo-ia.git
+cd jojo-ia
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+nano .env   # colle ton VRAI token (jamais dans .env.example / jamais commité)
+deactivate
+```
+
+### 5.3 Créer le service systemd
+
+```bash
+nano /etc/systemd/system/jojo-bot.service
+```
+
+Colle ceci (adapte `WorkingDirectory` si tu as cloné ailleurs que `/opt/jojo-ia`) :
+
+```ini
+[Unit]
+Description=Jojo ID Bot (Telegram)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/jojo-ia
+ExecStart=/opt/jojo-ia/venv/bin/python /opt/jojo-ia/bot.py
+Restart=always
+RestartSec=5
+EnvironmentFile=/opt/jojo-ia/.env
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### 5.4 Démarrer et activer au boot
+
+```bash
+systemctl daemon-reload
+systemctl enable jojo-bot
+systemctl start jojo-bot
+```
+
+### 5.5 Vérifier / dépanner
+
+```bash
+systemctl status jojo-bot     # état du service
+journalctl -u jojo-bot -f     # logs en direct
+```
+
+### 5.6 Mettre à jour le bot plus tard
+
+```bash
+cd /opt/jojo-ia
+git pull
+source venv/bin/activate
+pip install -r requirements.txt
+deactivate
+systemctl restart jojo-bot
+```
