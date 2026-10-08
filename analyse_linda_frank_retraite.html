@@ -70,6 +70,22 @@ details.theme .tablebox{border:0;border-top:1px solid var(--line);border-radius:
 .warnbox{background:var(--warn-soft);border-radius:10px;padding:14px 18px;display:grid;gap:6px}
 .warnbox ul{margin:0;padding-left:18px;display:grid;gap:4px}
 footer{color:var(--muted);font-size:13px;max-width:82ch}
+.tl{display:flex;gap:2px;border-radius:8px;overflow:hidden;min-height:46px;margin-top:6px}
+.seg{display:flex;align-items:flex-end;padding:6px;min-width:18px;color:#fff;font:500 11px/1.2 var(--mono)}
+.seg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s1{background:#b4442b} .s2{background:#8a6a12} .s3{background:#2f5d8a} .s4{background:#2f6f5e} .s5{background:#7a3fb0} .s6{background:#5f5446}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.beats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.beat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px;align-content:start;min-width:0}
+.beat.wide{grid-column:1/-1}
+.bt{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
+.time{font:600 12px var(--mono);color:var(--accent);background:var(--accent-soft);padding:3px 7px;border-radius:5px}
+.line{font:14px/1.6 var(--body);background:var(--bg);border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 8px 8px 0}
+.stage{color:var(--muted);font-style:italic}
+.loop{margin:0;padding-left:22px;display:grid;gap:8px}
+.loop small,.flow small{display:block;color:var(--muted);font-size:13px}
+.phr{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
 </style>
 </head>
 <body>
@@ -115,7 +131,7 @@ footer{color:var(--muted);font-size:13px;max-width:82ch}
         <li><b>Le verdict de chacun</b><small>« Linda’s take / Frank’s take » à l’écran : le spectateur choisit son camp en commentaire.</small></li>
         <li><b>La question d’un spectateur</b><small>À partir de la 3e vidéo, lire un vrai commentaire : ça fidélise.</small></li>
         <li><b>Conclusion face caméra</b><small>Le guide gratuit en lien, et l’épisode suivant.</small></li>
-      </ol></div>
+      </ol><a href="#schema" class="copy">Voir le schéma détaillé ci-dessous</a></div>
       <div class="card"><h3>Pourquoi le désaccord est la clé</h3><ul>
         <li>Les titres qui marchent posent une décision : <i>« Would I Ever Live in a 55+ Community AGAIN? »</i>, <i>« Moving OUT of My 55+ Community? »</i></li>
         <li>Deux avis qui s’opposent, c’est de la tension, donc de la rétention, et des commentaires (« Team Linda ou Team Frank ? »).</li>
@@ -124,6 +140,158 @@ footer{color:var(--muted);font-size:13px;max-width:82ch}
       </ul></div>
     </div>
   </section>
+
+  <section id="schema">
+    <h2>Le schéma de production d’un épisode</h2>
+    <p class="muted">Un modèle à réutiliser pour chaque épisode. Il s’inspire des talk-shows et des podcasts à deux voix, et il est pensé pour des avatars IA : <b>une seule personne parle à la fois</b>, <b>le plan change toutes les 8 à 15 secondes</b>, et <b>le B-roll couvre les moments où l’avatar serait moins naturel</b>.</p>
+
+    <div class="card">
+      <h3>La frise d’un épisode de 30 minutes</h3>
+      <div class="tl" role="img" aria-label="Frise d’un épisode de 30 minutes : ouverture 30 secondes, intro face caméra 1 minute, présentation du sujet 1 minute 30, cinq parties d’environ 4 minutes 45, verdicts 2 minutes, question d’un spectateur et conclusion 1 minute">
+        <div class="seg s1" style="flex:0.5"><span>0:00</span></div>
+        <div class="seg s2" style="flex:1"><span>0:30</span></div>
+        <div class="seg s3" style="flex:1.5"><span>1:30</span></div>
+        <div class="seg s4" style="flex:24"><span>3:00 · 5 parties × ~4 min 45</span></div>
+        <div class="seg s5" style="flex:2"><span>27:00</span></div>
+        <div class="seg s6" style="flex:1"><span>29:00</span></div>
+      </div>
+      <div class="legend">
+        <span><i class="s1"></i>Ouverture</span><span><i class="s2"></i>Intro face caméra</span><span><i class="s3"></i>Le sujet</span><span><i class="s4"></i>Les parties</span><span><i class="s5"></i>Verdicts</span><span><i class="s6"></i>Conclusion</span>
+      </div>
+    </div>
+
+    <div class="beats">
+      <article class="beat"><div class="bt"><span class="time">0:00–0:30</span><h3>1. L’ouverture : le désaccord</h3></div>
+        <p><b>Plans :</b> gros plan de Linda, puis gros plan de Frank, puis plan large où ils rient. Musique douce qui monte.</p>
+        <p><b>Rôle :</b> accrocher en 5 secondes avec une tension. Pas de « hello », pas de présentation.</p>
+        <p class="line">LINDA : “Selling that house was the best decision we ever made.”<br>FRANK : “Says you. I still dream about my garage.”<br><span class="stage">(plan large : ils rient, le titre apparaît)</span></p></article>
+
+      <article class="beat"><div class="bt"><span class="time">0:30–1:30</span><h3>2. L’intro face caméra</h3></div>
+        <p><b>Plans :</b> plan « intro » où les deux regardent la caméra (Linda parle, puis Frank parle). Nom de la chaîne en bas de l’écran.</p>
+        <p><b>Rôle :</b> se présenter en 2 phrases, annoncer la question de l’épisode, promettre ce qu’on va apprendre.</p>
+        <p class="line">LINDA : “Hi friends, welcome back to The Second Chapter. I’m Linda…”<br>FRANK : “…and I’m Frank. Today: we sold our house at 66, and there are seven things we wish someone had told us first.”<br>LINDA : “Number four cost us almost ten thousand dollars. So stay with us.”</p></article>
+
+      <article class="beat"><div class="bt"><span class="time">1:30–3:00</span><h3>3. Le sujet : pourquoi ça compte</h3></div>
+        <p><b>Plans :</b> plan large de conversation, avec 2 ou 3 B-rolls (cartons, panneau « Sold »), et un chiffre clé à l’écran.</p>
+        <p><b>Rôle :</b> raconter <i>leur</i> situation en 3 ou 4 répliques, puis dire pourquoi le spectateur est concerné.</p>
+        <p class="line">FRANK : “We’d lived in that house for 31 years. Raised three kids there.”<br>LINDA : “And when we started looking into it, we realized most couples our age are facing the exact same choice.”</p></article>
+
+      <article class="beat wide"><div class="bt"><span class="time">3:00–27:00</span><h3>4. Les parties : la boucle qui se répète 5 fois</h3></div>
+        <p>Chaque partie traite une sous-question (une des « 7 choses », un pays, une règle…) et suit toujours la même boucle, d’environ 4 minutes 45 :</p>
+        <ol class="loop">
+          <li><b>La question</b> · plan large · 10 s<small>Un des deux pose la question de la partie. Le numéro s’affiche (« #3 — The Garage Problem »).</small></li>
+          <li><b>Premier avis</b> · gros plan de celui qui parle · 30 à 45 s<small>Découpé en clips de 10 à 15 s. Entre deux clips : un plan de l’autre qui écoute (il hoche la tête, il sourit).</small></li>
+          <li><b>Les faits en images</b> · B-roll avec leur voix · 60 à 90 s<small>Chiffres, lieux, objets. C’est ici que l’information passe. Texte clé à l’écran.</small></li>
+          <li><b>L’autre avis</b> · gros plan de l’autre · 30 à 45 s<small>Il nuance ou contredit : « I see it differently… ».</small></li>
+          <li><b>Le ping-pong</b> · plan large, puis gros plans alternés · 20 à 40 s<small>Des répliques courtes, une petite pique, un rire. C’est le moment le plus « podcast ».</small></li>
+          <li><b>Le conseil à retenir</b> · B-roll et texte à l’écran · 15 à 20 s<small>Une phrase claire : « Tip: get two moving quotes, not one. »</small></li>
+          <li><b>La transition</b> · plan large · 5 à 10 s<small>Une phrase qui crée l’envie de continuer : « Okay, but the next one is where we really fought. »</small></li>
+        </ol></article>
+
+      <article class="beat"><div class="bt"><span class="time">27:00–29:00</span><h3>5. Les verdicts</h3></div>
+        <p><b>Plans :</b> gros plan de Linda avec « Linda’s take » à l’écran, puis gros plan de Frank avec « Frank’s take », puis plan large.</p>
+        <p><b>Rôle :</b> chacun résume sa position en 2 phrases, et on invite le spectateur à choisir son camp.</p>
+        <p class="line">LINDA : “So, Team Linda or Team Frank? Tell us in the comments.”</p></article>
+
+      <article class="beat"><div class="bt"><span class="time">29:00–30:00</span><h3>6. La question d’un spectateur, puis la conclusion</h3></div>
+        <p><b>Plans :</b> plan large avec le commentaire affiché à l’écran, puis le plan « intro » face caméra.</p>
+        <p><b>Rôle :</b> lire un vrai commentaire (à partir du 3e épisode), présenter le guide gratuit, annoncer l’épisode suivant.</p>
+        <p class="line">FRANK : “Our free downsizing checklist is in the description.”<br>LINDA : “And next week: would we ever move into a 55+ community? Spoiler: we don’t agree.”</p></article>
+    </div>
+
+    <div class="cards">
+      <div class="card"><h3>Comment ils se passent la parole</h3>
+        <p class="sub2">Ces phrases rendent l’échange naturel. Varie-les d’un épisode à l’autre.</p>
+        <ul class="phr">
+          <li><b>Pour donner la parole :</b> “Frank, you’re making that face again.” · “Tell them about the garage.” · “You did the math on this one, right?”</li>
+          <li><b>Pour réagir :</b> “Okay, I’ll give you that one.” · “That’s fair, but…” · “See, this is where we disagree.”</li>
+          <li><b>Pour couper gentiment :</b> “Wait, before you go on…” · “Can I jump in here?”</li>
+          <li><b>Pour rappeler un épisode :</b> “Remember the moving truck story?” · “Like we said in the 55+ episode…”</li>
+          <li><b>Pour revenir au spectateur :</b> “If you’re watching this and you’re 65…” · “A lot of you asked us…”</li>
+        </ul></div>
+      <div class="card"><h3>Ce qui rend la discussion vivante</h3>
+        <ul>
+          <li><b>Des rôles fixes :</b> Linda est l’optimiste qui organise, Frank le prudent qui fait les calculs et sort l’humour pince-sans-rire.</li>
+          <li><b>Un running gag :</b> le garage de Frank, les listes de Linda. On les retrouve d’un épisode à l’autre.</li>
+          <li><b>Des répliques courtes :</b> 1 à 3 phrases, rarement plus de 20 secondes d’affilée.</li>
+          <li><b>Des prénoms :</b> ils s’appellent par leur prénom, au moins une fois par partie.</li>
+          <li><b>Des chiffres concrets :</b> « 31 years », « nine thousand dollars », plutôt que « a lot ».</li>
+          <li><b>De vrais désaccords :</b> pas toujours d’accord à la fin, et c’est voulu.</li>
+        </ul></div>
+    </div>
+
+    <div class="card">
+      <h3>La bibliothèque de plans à générer une seule fois</h3>
+      <p class="sub2">À partir de la même image de référence (même canapé, même lumière, mêmes vêtements). Tu réutilises ces plans dans tous les épisodes, et seul l’audio change.</p>
+      <div class="tablebox" style="border:0"><table><thead><tr><th>#</th><th>Plan</th><th>Utilisé pour</th><th class="num">Durée d’un clip</th></tr></thead><tbody>
+        <tr><td class="num">1</td><td><b>Plan intro</b> : les deux face caméra</td><td>Intro, conclusion, appels à l’action</td><td class="num">8–15 s</td></tr>
+        <tr><td class="num">2</td><td><b>Plan large</b> : Linda parle, Frank écoute</td><td>Questions, ping-pong, transitions</td><td class="num">5–12 s</td></tr>
+        <tr><td class="num">3</td><td><b>Plan large</b> : Frank parle, Linda écoute</td><td>Questions, ping-pong, transitions</td><td class="num">5–12 s</td></tr>
+        <tr><td class="num">4</td><td><b>Gros plan de Linda qui parle</b></td><td>Ses avis, ses histoires</td><td class="num">10–15 s</td></tr>
+        <tr><td class="num">5</td><td><b>Gros plan de Frank qui parle</b></td><td>Ses avis, ses calculs</td><td class="num">10–15 s</td></tr>
+        <tr><td class="num">6</td><td><b>Gros plan de Linda qui écoute</b> (hoche la tête, sourit)</td><td>Réactions entre deux clips de Frank</td><td class="num">2–4 s</td></tr>
+        <tr><td class="num">7</td><td><b>Gros plan de Frank qui écoute</b> (lève un sourcil, rit)</td><td>Réactions entre deux clips de Linda</td><td class="num">2–4 s</td></tr>
+        <tr><td class="num">8</td><td><b>Plan large : les deux rient</b></td><td>Fin d’une pique, transitions, ouverture</td><td class="num">2–4 s</td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="card">
+      <h3>La méthode de fabrication avec des avatars IA</h3>
+      <ol class="flow">
+        <li><b>Écrire le script dialogué</b><small>Avec le nom de chaque personne devant chaque réplique, les numéros de partie et les indications de B-roll. Voir le modèle ci-dessous.</small></li>
+        <li><b>Générer l’audio d’abord</b><small>Deux voix bien différentes (Linda vive, Frank lent et grave). Monter tout l’audio de l’épisode avec de petits silences de 0,2 à 0,5 s entre les répliques, et quelques rires ou « mm-hmm » discrets.</small></li>
+        <li><b>Découper l’audio réplique par réplique</b><small>Chaque morceau de 5 à 15 s devient un clip à animer.</small></li>
+        <li><b>Animer chaque réplique sur le bon plan</b><small>Synchronisation des lèvres sur le plan 2, 3, 4 ou 5 selon qui parle. Évite les clips de plus de 15 s : c’est là que les défauts de l’IA se voient.</small></li>
+        <li><b>Monter en alternant</b><small>Changer de plan toutes les 8 à 15 s. Placer les plans d’écoute (6 et 7) entre deux clips du même orateur. Couvrir avec du B-roll dès qu’un clip a un défaut.</small></li>
+        <li><b>Habiller</b><small>Sous-titres gros et contrastés, numéro et titre de chaque partie, chiffres clés à l’écran, « Linda’s take / Frank’s take », musique douce et basse.</small></li>
+        <li><b>Vérifier</b><small>Regarder l’épisode en entier en accéléré : aucun plan figé plus de 15 s, aucun silence gênant, aucune information non vérifiée.</small></li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>Le modèle de script à copier</h3>
+      <div class="prompt" id="tpl">EPISODE: [Title]
+QUESTION: [The one question this episode answers]
+LINDA'S SIDE: [her position]   FRANK'S SIDE: [his position]
+
+[COLD OPEN — CU Linda / CU Frank / WIDE laughing]
+LINDA: [strong one-liner for her side]
+FRANK: [funny or skeptical one-liner for his side]
+
+[INTRO — both to camera]
+LINDA: Hi friends, welcome back to The Second Chapter. I'm Linda…
+FRANK: …and I'm Frank. Today: [question, said simply].
+LINDA: [the promise / the hook: "Number 4 cost us…"]
+
+[THE TOPIC — WIDE + 2–3 B-ROLL]
+FRANK: [our situation in 1–2 lines]
+LINDA: [why the viewer should care]
+B-ROLL: [shots]   ON SCREEN: [key number]
+
+[PART 1 — "#1 [Part title]"]
+WIDE — LINDA: [the question of this part]
+CU LINDA: [first opinion, 2–3 short lines]   (cut to CU Frank listening)
+B-ROLL + VOICE: [facts, numbers, places]   ON SCREEN: [key fact]
+CU FRANK: [other side: "I see it differently…"]
+WIDE / CU ALTERNATING: [3–6 quick lines of back-and-forth, one joke]
+ON SCREEN: Tip: [one clear takeaway]
+WIDE — FRANK: [transition: "Okay, but the next one is where we really fought."]
+
+[PARTS 2 to 5 — same loop]
+
+[VERDICTS]
+CU LINDA ("Linda's take"): [2 lines]
+CU FRANK ("Frank's take"): [2 lines]
+WIDE — LINDA: Team Linda or Team Frank? Tell us in the comments.
+
+[VIEWER QUESTION + OUTRO — both to camera]
+FRANK: [read one real comment and answer it]
+LINDA: Our free [guide name] is in the description.
+FRANK: Next week: [next episode]. See you then.</div>
+      <button class="copy" type="button" data-copy="tpl">Copier le modèle</button>
+    </div>
+  </section>
+
 
   <section>
     <h2>20 épisodes prêts à lancer</h2>
@@ -196,7 +364,7 @@ document.getElementById('chips').addEventListener('click', e => {
 });
 document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
   const el = document.getElementById(b.dataset.copy);
-  const done = () => { b.textContent = 'Copié'; setTimeout(() => b.textContent = 'Copier le prompt', 1500); };
+  const label = b.textContent; const done = () => { b.textContent = 'Copié'; setTimeout(() => b.textContent = label, 1500); };
   const pick = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Texte sélectionné : Ctrl+C'; };
   try { navigator.clipboard.writeText(el.textContent).then(done, pick); } catch (e) { pick(); }
 }));
