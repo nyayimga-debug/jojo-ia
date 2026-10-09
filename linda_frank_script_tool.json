@@ -1,0 +1,448 @@
+{
+  "skill_name": "lf-script",
+  "version": "1.0",
+  "note_fr": "Spécification de l'outil qui écrit le script du podcast Linda & Frank. Les instructions sont en anglais pour l'agent ; le script produit est en anglais américain. Chaque réplique indique qui parle, en mode solo ou duo, et sur quel plan.",
+  "purpose": "Turn one episode topic into a complete, natural two-person podcast script for the YouTube channel 'The Second Chapter', ready for text-to-speech, lip-sync and editing.",
+  "input": {
+    "required": {
+      "episode_title": "Final YouTube title (already cloned from a proven title)",
+      "question": "The one question the episode answers",
+      "linda_side": "Linda's position",
+      "frank_side": "Frank's position"
+    },
+    "optional": {
+      "parts": "3-5 sub-questions; if missing, generate 5",
+      "facts": "Verified facts with sources to use",
+      "viewer_comment": "One real viewer comment to answer (from episode 3 on)",
+      "lead_magnet": "Free guide promoted in the outro",
+      "next_episode": "Title of next episode",
+      "previous_episode": "Title of a past episode to call back to"
+    }
+  },
+  "characters": {
+    "linda": {
+      "age": 67,
+      "personality": "optimist, organizer, warm, quick, enthusiastic; loves lists and color-coded binders",
+      "speech": "short energetic sentences, asks questions, uses 'friends', 'honestly', 'okay so'",
+      "never": "never naive, never mean; she has real arguments and numbers too"
+    },
+    "frank": {
+      "age": 70,
+      "personality": "careful, does the math, dry deadpan humor; loves his garage and his tools",
+      "speech": "slower, fewer words, concrete numbers, understatement, one-liners",
+      "never": "never grumpy for real, never mocking Linda; his jokes are affectionate"
+    },
+    "shared_backstory": [
+      "Married 44 years",
+      "Sold the family house at 66 after 31 years",
+      "Raised three kids, have grandchildren",
+      "Live in a smaller home now",
+      "Not financial advisors, not experts: they share their experience and quote real experts and official sources"
+    ],
+    "running_gags": [
+      "Frank's garage and tools",
+      "Linda's lists and binders",
+      "'Team Linda or Team Frank?'"
+    ]
+  },
+  "speaking_modes": {
+    "linda_solo": {
+      "who": "linda",
+      "shots": [
+        "S4 close-up Linda talks",
+        "S2 wide Linda talks"
+      ],
+      "use": "her opinion, her stories, the question of a part"
+    },
+    "frank_solo": {
+      "who": "frank",
+      "shots": [
+        "S5 close-up Frank talks",
+        "S3 wide Frank talks"
+      ],
+      "use": "his opinion, his math, transitions"
+    },
+    "duo": {
+      "who": "linda and frank alternate, one line each",
+      "shots": [
+        "S1 both facing camera (intro/outro)",
+        "S2/S3 wide",
+        "S8 both laugh"
+      ],
+      "use": "cold open, intro, ping-pong, verdicts, outro",
+      "rule": "Even in duo, only ONE person speaks per line. Duo = quick alternation, never two people talking at the same time."
+    },
+    "broll_voice": {
+      "who": "linda or frank",
+      "shots": [
+        "BROLL"
+      ],
+      "use": "facts, numbers, places; their voice over B-roll"
+    },
+    "reaction": {
+      "who": "nobody speaks",
+      "shots": [
+        "S6 Linda listens",
+        "S7 Frank listens",
+        "S8 both laugh"
+      ],
+      "use": "inserted between two lines of the same speaker, or after a joke",
+      "text": null
+    }
+  },
+  "shot_ids": {
+    "S1": "INTRO_BOTH_TO_CAMERA",
+    "S2": "WIDE_LINDA_TALKS",
+    "S3": "WIDE_FRANK_TALKS",
+    "S4": "CU_LINDA_TALKS",
+    "S5": "CU_FRANK_TALKS",
+    "S6": "CU_LINDA_LISTENS",
+    "S7": "CU_FRANK_LISTENS",
+    "S8": "WIDE_BOTH_LAUGH",
+    "BROLL": "B-roll with voice over"
+  },
+  "length": {
+    "target_words": "4,600-4,950",
+    "hard_max_words": 5000,
+    "speaking_rate_wpm": 150,
+    "target_duration": "31-33 min",
+    "budget": [
+      {
+        "section": "COLD_OPEN",
+        "mode": "duo",
+        "words": 60
+      },
+      {
+        "section": "INTRO",
+        "mode": "duo (S1)",
+        "words": 170
+      },
+      {
+        "section": "TOPIC",
+        "mode": "duo + broll_voice",
+        "words": 250
+      },
+      {
+        "section": "PART_1..PART_5",
+        "mode": "loop below, x5",
+        "words_each": 790,
+        "loop": [
+          {
+            "step": "QUESTION",
+            "mode": "linda_solo or frank_solo (wide)",
+            "words": 35
+          },
+          {
+            "step": "FIRST_OPINION",
+            "mode": "solo (close-up) + reactions",
+            "words": 140
+          },
+          {
+            "step": "FACTS_BROLL",
+            "mode": "broll_voice, both may speak",
+            "words": 260
+          },
+          {
+            "step": "OTHER_OPINION",
+            "mode": "other person solo (close-up) + reactions",
+            "words": 140
+          },
+          {
+            "step": "PING_PONG",
+            "mode": "duo, 4-8 short lines, one joke, S8",
+            "words": 130
+          },
+          {
+            "step": "TIP",
+            "mode": "broll_voice + on_screen text",
+            "words": 50
+          },
+          {
+            "step": "TRANSITION",
+            "mode": "solo (wide)",
+            "words": 35
+          }
+        ]
+      },
+      {
+        "section": "VERDICTS",
+        "mode": "linda_solo then frank_solo then duo",
+        "words": 120
+      },
+      {
+        "section": "OUTRO",
+        "mode": "duo (S2 then S1)",
+        "words": 150
+      }
+    ]
+  },
+  "line_rules": [
+    "One line = one speaker = one audio file = one avatar clip.",
+    "Max 40 words per line (about 15 s). Split longer thoughts into two lines with a reaction shot between them.",
+    "Most lines 8-25 words. Ping-pong lines 3-12 words.",
+    "Alternate who opens each part: Linda opens parts 1, 3, 5; Frank opens 2 and 4.",
+    "Speaker balance: each person 45-55% of total words.",
+    "They call each other by first name at least once per part.",
+    "Use contractions and natural spoken English; no lists read like a document, no corporate words.",
+    "Concrete numbers ('31 years', 'nine thousand dollars'), written out the way they are spoken.",
+    "Real disagreement: at least 2 of 5 parts end without full agreement.",
+    "At least one light joke per part, usually from Frank; Linda gets jokes too.",
+    "Callback to a running gag at least twice per episode.",
+    "Never more than 3 consecutive lines by the same speaker; never more than 45 s of one person in a row."
+  ],
+  "handoff_phrases": {
+    "give_the_floor": [
+      "Frank, you're making that face again.",
+      "Tell them about the garage.",
+      "You did the math on this one, right?",
+      "Okay Linda, go ahead, read your list."
+    ],
+    "react": [
+      "Okay, I'll give you that one.",
+      "That's fair, but…",
+      "See, this is where we disagree.",
+      "Mm-hmm. Keep going."
+    ],
+    "interrupt_kindly": [
+      "Wait, before you go on…",
+      "Can I jump in here?"
+    ],
+    "callback": [
+      "Remember the moving truck story?",
+      "Like we said in the 55+ episode…"
+    ],
+    "to_viewer": [
+      "If you're watching this and you're 65…",
+      "A lot of you asked us…",
+      "Be honest, which one are you?"
+    ]
+  },
+  "delivery_tags": {
+    "allowed": [
+      "warm",
+      "excited",
+      "deadpan",
+      "skeptical",
+      "teasing",
+      "serious",
+      "gentle",
+      "laughing",
+      "surprised"
+    ],
+    "note": "One tag per line for the voice tool. Optional inline cues allowed only in square brackets at the start: [laughs], [sighs], [chuckles]."
+  },
+  "accuracy_rules": [
+    "Every number about money, Social Security, Medicare, taxes or health must come from 'facts' input or an official source (ssa.gov, medicare.gov, irs.gov, cms.gov, census.gov, bls.gov) and be listed in 'sources' with the year.",
+    "If a fact cannot be verified, do not invent it: rephrase as personal experience ('for us it was about…') or mark it in 'needs_check'.",
+    "Say once in the episode: 'We're not financial advisors, this is just our experience, so check with a professional for your situation.'",
+    "No fake credentials, no fake experts, no invented 'secret rules', no fear-mongering.",
+    "Personal stories are allowed as the characters' story, but never presented as proof of a statistic."
+  ],
+  "process": [
+    "1. Read the input and pick 5 parts that answer the question in a logical order, strongest part in position 1 or 2, the 'big surprise' in part 4 (promised in the intro).",
+    "2. Write a one-line outline per part: who opens, Linda's view, Frank's view, the fact, the tip, the transition hook.",
+    "3. Write the full script following the budget and line rules.",
+    "4. Self-check: count words (total and per speaker), check every line <= 40 words, check no speaker > 3 lines in a row, check the intro promise is paid off, check every number has a source or is in needs_check.",
+    "5. Output ONLY the JSON object described in output_schema."
+  ],
+  "output_schema": {
+    "episode": {
+      "title": "string",
+      "question": "string",
+      "word_count": "int",
+      "words_linda": "int",
+      "words_frank": "int",
+      "estimated_minutes": "float"
+    },
+    "parts": [
+      {
+        "n": "int",
+        "title": "string, shown on screen as '#n — title'",
+        "opened_by": "linda|frank"
+      }
+    ],
+    "lines": [
+      {
+        "id": "int, sequential",
+        "section": "COLD_OPEN|INTRO|TOPIC|PART_1..PART_5|VERDICTS|OUTRO",
+        "step": "QUESTION|FIRST_OPINION|FACTS_BROLL|OTHER_OPINION|PING_PONG|TIP|TRANSITION|null",
+        "mode": "linda_solo|frank_solo|duo|broll_voice|reaction",
+        "speaker": "linda|frank|null (null only for reaction)",
+        "shot": "S1..S8|BROLL",
+        "text": "string|null",
+        "delivery": "one allowed tag|null",
+        "on_screen": "short text to display|null",
+        "broll": "English visual description for B-roll|null",
+        "words": "int"
+      }
+    ],
+    "sources": [
+      {
+        "claim": "string",
+        "source": "string",
+        "url": "string",
+        "year": "int"
+      }
+    ],
+    "needs_check": [
+      "string"
+    ],
+    "plain_text_script": "The same dialogue as plain text, one line per reply, format 'LINDA: …' / 'FRANK: …', no shots, ready to paste into a voice tool."
+  },
+  "example_output_excerpt": {
+    "episode": {
+      "title": "Our Biggest Downsizing Mistake in Retirement (We Sold Our House at 66)",
+      "question": "Should we have sold the family house?",
+      "word_count": 4780,
+      "words_linda": 2410,
+      "words_frank": 2370,
+      "estimated_minutes": 31.9
+    },
+    "parts": [
+      {
+        "n": 1,
+        "title": "The Garage Problem",
+        "opened_by": "linda"
+      }
+    ],
+    "lines": [
+      {
+        "id": 1,
+        "section": "COLD_OPEN",
+        "step": null,
+        "mode": "duo",
+        "speaker": "linda",
+        "shot": "S4",
+        "text": "Selling that house was the best decision we ever made.",
+        "delivery": "excited",
+        "on_screen": null,
+        "broll": null,
+        "words": 10
+      },
+      {
+        "id": 2,
+        "section": "COLD_OPEN",
+        "step": null,
+        "mode": "duo",
+        "speaker": "frank",
+        "shot": "S5",
+        "text": "Says you. I still dream about my garage.",
+        "delivery": "deadpan",
+        "on_screen": null,
+        "broll": null,
+        "words": 8
+      },
+      {
+        "id": 3,
+        "section": "COLD_OPEN",
+        "step": null,
+        "mode": "reaction",
+        "speaker": null,
+        "shot": "S8",
+        "text": null,
+        "delivery": null,
+        "on_screen": "TITLE",
+        "broll": null,
+        "words": 0
+      },
+      {
+        "id": 4,
+        "section": "INTRO",
+        "step": null,
+        "mode": "duo",
+        "speaker": "linda",
+        "shot": "S1",
+        "text": "Hi friends, welcome back to The Second Chapter. I'm Linda.",
+        "delivery": "warm",
+        "on_screen": "The Second Chapter",
+        "broll": null,
+        "words": 10
+      },
+      {
+        "id": 5,
+        "section": "INTRO",
+        "step": null,
+        "mode": "duo",
+        "speaker": "frank",
+        "shot": "S1",
+        "text": "And I'm Frank. Today, we sold our house at sixty-six, and there are seven things we wish somebody had told us first.",
+        "delivery": "warm",
+        "on_screen": null,
+        "broll": null,
+        "words": 22
+      },
+      {
+        "id": 6,
+        "section": "INTRO",
+        "step": null,
+        "mode": "duo",
+        "speaker": "linda",
+        "shot": "S1",
+        "text": "And number four cost us almost ten thousand dollars. So stay with us.",
+        "delivery": "teasing",
+        "on_screen": null,
+        "broll": null,
+        "words": 13
+      },
+      {
+        "id": 7,
+        "section": "INTRO",
+        "step": null,
+        "mode": "duo",
+        "speaker": "frank",
+        "shot": "S1",
+        "text": "She's still mad about number four.",
+        "delivery": "deadpan",
+        "on_screen": null,
+        "broll": null,
+        "words": 6
+      },
+      {
+        "id": 8,
+        "section": "INTRO",
+        "step": null,
+        "mode": "reaction",
+        "speaker": null,
+        "shot": "S8",
+        "text": null,
+        "delivery": null,
+        "on_screen": null,
+        "broll": null,
+        "words": 0
+      },
+      {
+        "id": 24,
+        "section": "PART_1",
+        "step": "FACTS_BROLL",
+        "mode": "broll_voice",
+        "speaker": "frank",
+        "shot": "BROLL",
+        "text": "We got three moving quotes for the same house. The cheapest and the most expensive were thousands of dollars apart.",
+        "delivery": "serious",
+        "on_screen": "Get 3 quotes",
+        "broll": "three printed moving company quotes on a kitchen table, reading glasses, calculator, realistic, 16:9",
+        "words": 21
+      }
+    ],
+    "sources": [
+      {
+        "claim": "example only",
+        "source": "—",
+        "url": "—",
+        "year": 2026
+      }
+    ],
+    "needs_check": [],
+    "plain_text_script": "LINDA: Selling that house was the best decision we ever made.\nFRANK: Says you. I still dream about my garage.\n…"
+  },
+  "quality_checklist": [
+    "Hook in the first 10 seconds, no 'hello' before the cold open.",
+    "Intro promise (e.g. 'number four cost us…') is paid off in the right part.",
+    "Each part has: question, two opinions, a fact on B-roll, ping-pong, a tip, a transition.",
+    "Total words 4,600-4,950 and never above 5,000.",
+    "Every line <= 40 words; each speaker 45-55%.",
+    "At least 5 laughs or light moments; at least 2 real disagreements left open.",
+    "Disclaimer line present; AI disclosure goes in the description, not in the dialogue.",
+    "Ends with 'Team Linda or Team Frank?', free guide, next episode."
+  ]
+}
