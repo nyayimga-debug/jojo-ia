@@ -31,147 +31,115 @@
   "reference_image_prompt": "Photorealistic wide shot of a cozy home podcast set. A large, long beige linen three-seat sofa fills the frame horizontally. An American retired couple sits at opposite ends of the sofa with a wide empty space between them. On the far LEFT of the frame (viewer's left): Linda, 67, shoulder-length gray-blonde hair, soft green knit sweater. On the far RIGHT of the frame (viewer's right): Frank, 70, short white hair, light trimmed white beard, light blue button-down shirt. Both sit turned slightly toward each other, relaxed and natural. Each has a black podcast microphone on a boom arm in front of them. Warm living room background with bookshelves, a floor lamp, green plants, soft warm lighting, subtle bokeh. Eye-level camera, centered, 16:9, documentary photography style, realistic skin texture.",
   "shot_library": [
     {
-      "id": "S1",
-      "name": "INTRO_BOTH_TO_CAMERA",
-      "who_speaks": "linda_or_frank",
-      "use": "intro, outro, calls to action",
-      "clip_seconds": "8-15"
+      "id": "INTRO_DUO",
+      "description": "Both on the sofa in the same frame, facing camera. Used ONLY for the fixed 5-8 s intro."
     },
     {
-      "id": "S2",
-      "name": "WIDE_LINDA_TALKS",
-      "who_speaks": "linda",
-      "use": "questions, ping-pong, transitions",
-      "clip_seconds": "5-12"
+      "id": "LINDA_TALKS",
+      "description": "Close-up of Linda alone, talking."
     },
     {
-      "id": "S3",
-      "name": "WIDE_FRANK_TALKS",
-      "who_speaks": "frank",
-      "use": "questions, ping-pong, transitions",
-      "clip_seconds": "5-12"
+      "id": "LINDA_LISTENS",
+      "description": "Close-up of Linda alone, listening (nods, small smile). No lip movement."
     },
     {
-      "id": "S4",
-      "name": "CU_LINDA_TALKS",
-      "who_speaks": "linda",
-      "use": "her opinions and stories",
-      "clip_seconds": "10-15"
+      "id": "LINDA_LAUGHS",
+      "description": "Close-up of Linda alone, laughing (1-3 s)."
     },
     {
-      "id": "S5",
-      "name": "CU_FRANK_TALKS",
-      "who_speaks": "frank",
-      "use": "his opinions and math",
-      "clip_seconds": "10-15"
+      "id": "FRANK_TALKS",
+      "description": "Close-up of Frank alone, talking."
     },
     {
-      "id": "S6",
-      "name": "CU_LINDA_LISTENS",
-      "who_speaks": "none",
-      "use": "reaction inserted between two Frank clips (nods, smiles)",
-      "clip_seconds": "2-4"
+      "id": "FRANK_LISTENS",
+      "description": "Close-up of Frank alone, listening (raises an eyebrow, half smile). No lip movement."
     },
     {
-      "id": "S7",
-      "name": "CU_FRANK_LISTENS",
-      "who_speaks": "none",
-      "use": "reaction inserted between two Linda clips (raises eyebrow, chuckles)",
-      "clip_seconds": "2-4"
+      "id": "FRANK_LAUGHS",
+      "description": "Close-up of Frank alone, laughing or chuckling (1-3 s)."
     },
     {
-      "id": "S8",
-      "name": "WIDE_BOTH_LAUGH",
-      "who_speaks": "none",
-      "use": "after a joke, transitions, cold open",
-      "clip_seconds": "2-4"
+      "id": "BROLL",
+      "description": "B-roll with Linda's or Frank's voice over it."
     }
   ],
   "shot_rules": [
-    "Only one person speaks per avatar clip.",
-    "Never more than 15 s on one avatar clip.",
-    "Change shot every 8–15 s.",
-    "Insert a listening shot (S6/S7) between two clips of the same speaker.",
+    "Only the fixed 5-8 s intro shows Linda and Frank in the same frame; it is generated once and reused every episode.",
+    "After the intro, every clip shows one person alone: Linda's parts and Frank's parts are separate clips.",
+    "Never more than 15 s on one avatar clip; change shot every 8-15 s.",
+    "Insert a LISTENS or LAUGHS close-up of the other person between two clips of the same speaker.",
     "Cover any glitchy avatar clip with B-roll.",
-    "Same sofa, light and clothes in every episode: generate S1–S8 once from the reference image and reuse; only the audio changes."
+    "All close-ups come from the same reference image (same sofa, light and clothes)."
   ],
   "episode_structure": [
     {
-      "section": "COLD_OPEN",
-      "time": "0:00-0:30",
-      "shots": "S4, S5, S8",
-      "content": "One strong line from Linda, one skeptical/funny line from Frank, both laugh, title appears. No hello."
+      "section": "INTRO_DUO",
+      "mode": "intro_duo (fixed, reused)",
+      "words": 13,
+      "seconds": "5-8"
     },
     {
-      "section": "INTRO",
-      "time": "0:30-1:30",
-      "shots": "S1",
-      "content": "'Hi friends, welcome back to The Second Chapter. I'm Linda…' '…and I'm Frank.' Question of the day + a promise ('Number 4 cost us almost ten thousand dollars')."
+      "section": "HOOK",
+      "mode": "linda_solo then frank_solo",
+      "words": 80,
+      "note": "the question of the day + the promise ('number four cost us almost ten thousand dollars')"
     },
     {
       "section": "TOPIC",
-      "time": "1:30-3:00",
-      "shots": "S2/S3 + 2-3 B-roll",
-      "content": "Their situation in 3-4 lines, why the viewer is concerned, one key number on screen."
+      "mode": "solo + broll_voice",
+      "words": 250
     },
     {
-      "section": "PARTS",
-      "time": "3:00-27:00",
-      "repeat": 5,
+      "section": "PART_1..PART_5",
+      "mode": "loop below, x5",
+      "words_each": 800,
       "loop": [
         {
           "step": "QUESTION",
-          "shots": "S2 or S3",
-          "seconds": 10,
-          "note": "part number on screen ('#3 — The Garage Problem')"
+          "mode": "solo",
+          "words": 35
         },
         {
           "step": "FIRST_OPINION",
-          "shots": "S4 or S5 cut with S7/S6",
-          "seconds": "30-45"
+          "mode": "solo + reaction",
+          "words": 140
         },
         {
           "step": "FACTS_BROLL",
-          "shots": "B-roll with their voices",
-          "seconds": "60-90",
-          "note": "numbers, places, objects; key fact on screen"
+          "mode": "broll_voice",
+          "words": 260
         },
         {
           "step": "OTHER_OPINION",
-          "shots": "S5 or S4",
-          "seconds": "30-45",
-          "note": "'I see it differently…'"
+          "mode": "other person solo + reaction",
+          "words": 140
         },
         {
-          "step": "PING_PONG",
-          "shots": "S2/S3 then alternating close-ups, S8",
-          "seconds": "20-40",
-          "note": "short lines, one joke, a laugh"
+          "step": "BACK_AND_FORTH",
+          "mode": "alternating linda_solo / frank_solo, 4-8 short lines, one joke + laugh",
+          "words": 140
         },
         {
           "step": "TIP",
-          "shots": "B-roll + on-screen text",
-          "seconds": "15-20"
+          "mode": "broll_voice + on_screen text",
+          "words": 50
         },
         {
           "step": "TRANSITION",
-          "shots": "S2 or S3",
-          "seconds": "5-10",
-          "note": "'Okay, but the next one is where we really fought.'"
+          "mode": "solo",
+          "words": 35
         }
       ]
     },
     {
       "section": "VERDICTS",
-      "time": "27:00-29:00",
-      "shots": "S4 ('Linda's take'), S5 ('Frank's take'), S2",
-      "content": "Each sums up in 2 lines. 'Team Linda or Team Frank? Tell us in the comments.'"
+      "mode": "linda_solo then frank_solo",
+      "words": 120
     },
     {
-      "section": "VIEWER_QUESTION_OUTRO",
-      "time": "29:00-30:00",
-      "shots": "S2 + comment on screen, then S1",
-      "content": "Read one real comment (from episode 3 on), free guide in description, next episode."
+      "section": "OUTRO",
+      "mode": "alternating solo lines",
+      "words": 150
     }
   ],
   "dialogue_style": {
@@ -180,7 +148,8 @@
       "They call each other by name at least once per part.",
       "Concrete numbers ('31 years', 'nine thousand dollars'), never 'a lot'.",
       "Real disagreements; they don't always agree at the end.",
-      "Running gags: Frank's garage, Linda's lists."
+      "Running gags: Frank's garage, Linda's lists.",
+      "Laughs are written as their own lines ('FRANK: [laughs]') or cues inside a line, 8-12 per episode, only after real jokes."
     ],
     "handoff_phrases": [
       "Frank, you're making that face again.",
@@ -197,54 +166,15 @@
     ]
   },
   "script_output_schema": {
-    "description": "The tool must produce the script as JSON lines, one object per spoken line or B-roll beat, so audio, clips and edit can be generated automatically.",
-    "example": [
-      {
-        "id": 1,
-        "section": "COLD_OPEN",
-        "speaker": "linda",
-        "shot": "S4",
-        "text": "Selling that house was the best decision we ever made.",
-        "on_screen": null,
-        "broll": null
-      },
-      {
-        "id": 2,
-        "section": "COLD_OPEN",
-        "speaker": "frank",
-        "shot": "S5",
-        "text": "Says you. I still dream about my garage.",
-        "on_screen": null,
-        "broll": null
-      },
-      {
-        "id": 3,
-        "section": "COLD_OPEN",
-        "speaker": null,
-        "shot": "S8",
-        "text": null,
-        "on_screen": "TITLE",
-        "broll": null
-      },
-      {
-        "id": 14,
-        "section": "PART_1",
-        "step": "FACTS_BROLL",
-        "speaker": "frank",
-        "shot": "BROLL",
-        "text": "Moving company quotes ran from four thousand to eleven thousand dollars for the same house.",
-        "on_screen": "$4,000 – $11,000",
-        "broll": "two moving company quotes on a kitchen table, calculator, reading glasses, realistic, 16:9"
-      }
-    ]
+    "see": "linda_frank_script_tool.json (output_schema and example_output_excerpt)"
   },
   "production_pipeline": [
     "1. Topic → dialogue script (JSON above), 4,500–5,000 words for ~30–35 min.",
     "2. Fact-check every number against an official source; list sources.",
     "3. Generate audio per line with two distinct voices; assemble with 0.2–0.5 s gaps and a few soft laughs / 'mm-hmm'.",
     "4. Split audio per line; any line > 15 s is split in two clips.",
-    "5. Lip-sync each line on the right shot (S1–S5) using the pre-made shot library.",
-    "6. Insert listening shots (S6/S7/S8) between clips of the same speaker.",
+    "5. Lip-sync each line on the right close-up (LINDA_TALKS or FRANK_TALKS); the fixed INTRO_DUO clip is made once and reused.",
+    "6. Insert LISTENS / LAUGHS close-ups of the other person between clips of the same speaker, and laugh lines where the script puts them.",
     "7. Generate or source B-roll for every BROLL beat (or let the Subscriber app do B-roll from the script).",
     "8. Edit: alternate shots every 8–15 s, big high-contrast subtitles, part numbers, key numbers, 'Linda's take / Frank's take', soft low music.",
     "9. QA: watch at 2x; no frozen shot > 15 s, no awkward silence, no unverified claim.",
@@ -544,5 +474,22 @@
       "broll_ideas_fr": "Voiturettes de golf, places animées, terrains de golf, maisons, concerts.",
       "inspired_by": "World’s Most Infamous Retirement Community (9,6 M) · Inside America’s Most Controversial Retirement Community (1,3 M)"
     }
-  ]
+  ],
+  "fixed_intro": {
+    "duration_seconds": "5-8 (max 8)",
+    "shot": "INTRO_DUO",
+    "same_every_episode": true,
+    "note": "Generated once as one video clip with both people in the same frame, then reused at the start of every episode. The script tool does NOT rewrite it; it only inserts it as lines 1-2.",
+    "lines": [
+      {
+        "speaker": "linda",
+        "text": "Hi friends, I'm Linda…"
+      },
+      {
+        "speaker": "frank",
+        "text": "…and I'm Frank. Welcome to The Second Chapter."
+      }
+    ],
+    "words": 13
+  }
 }

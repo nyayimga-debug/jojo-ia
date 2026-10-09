@@ -1,6 +1,6 @@
 # Prompt de démarrage : l'outil vidéo « Linda & Frank »
 
-Colle tout le texte sous la ligne dans une nouvelle conversation avec Claude, et joins le fichier `linda_frank_projet.json`.
+Colle tout le texte sous la ligne dans une nouvelle conversation avec Claude, et joins les fichiers `linda_frank_projet.json` et `linda_frank_script_tool.json`.
 
 ---
 
@@ -13,7 +13,7 @@ Je crée une chaîne YouTube en anglais, « The Second Chapter », pour des Amé
 Tout ce qui est déjà décidé se trouve dans le fichier JSON joint :
 - les personnages, leurs voix et leur apparence ;
 - le prompt de l'image de référence ;
-- la bibliothèque de 8 plans (S1 à S8) ;
+- la bibliothèque de plans (intro à deux, gros plans de Linda et de Frank qui parlent, écoutent ou rient) ;
 - la structure d'un épisode de 30 minutes ;
 - le style des dialogues ;
 - le format du script en JSON ;
@@ -27,9 +27,11 @@ Lis-le en entier avant de commencer. **Ne change pas ces décisions sans me le d
 ## Ce que je veux construire
 
 Un outil qui me permet de produire un épisode complet presque automatiquement. Il doit gérer trois types de parties :
-1. **Linda parle seule** (plans S2 et S4) ;
-2. **Frank parle seul** (plans S3 et S5) ;
-3. **Linda et Frank ensemble** : intro et conclusion face caméra (S1), ping-pong rapide, rires (S8) et plans d'écoute (S6 et S7).
+1. **Linda parle seule** (gros plan LINDA_TALKS) ;
+2. **Frank parle seul** (gros plan FRANK_TALKS) ;
+3. **Linda et Frank ensemble**, uniquement dans l'intro de 5 à 8 secondes, la même à chaque épisode.
+
+Les rires et les plans d'écoute de l'autre personne s'intercalent entre les répliques.
 
 Il doit aussi ajouter **le B-roll** : des images ou petites vidéos qui illustrent les faits pendant qu'on entend leurs voix.
 
@@ -67,7 +69,8 @@ Résultat attendu pour chaque épisode :
 ## Règles à ne jamais casser
 
 - Une seule personne parle par clip d'avatar. Jamais plus de 15 secondes par clip. On change de plan toutes les 8 à 15 secondes.
-- Les plans S1 à S8 sont générés une seule fois à partir de la même image de référence (même canapé, même lumière, mêmes vêtements). Ensuite, seul l'audio change.
+- L'intro à deux (5 à 8 s) est générée une seule fois et réutilisée. Après l'intro, chaque plan montre une seule personne. Tous les gros plans viennent de la même image de référence (même canapé, même lumière, mêmes vêtements).
+- Les règles d'écriture du script sont dans `linda_frank_script_tool.json` (joins-le aussi).
 - Linda est l'optimiste qui organise. Frank est le prudent qui fait les calculs, avec un humour pince-sans-rire. Ils ont de vrais désaccords, des chiffres concrets et leurs gags récurrents (le garage de Frank, les listes de Linda).
 - Titres : on reprend mot pour mot un titre qui a fait beaucoup de vues et on ne change que les mots liés à la niche. On n'écrit jamais une affirmation fausse.
 - Argent, Social Security, Medicare : informations générales, vérifiées sur ssa.gov, medicare.gov ou irs.gov, datées, avec la mention « This is not financial advice ».

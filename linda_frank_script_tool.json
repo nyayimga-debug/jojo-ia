@@ -1,7 +1,7 @@
 {
   "skill_name": "lf-script",
-  "version": "1.0",
-  "note_fr": "Spécification de l'outil qui écrit le script du podcast Linda & Frank. Les instructions sont en anglais pour l'agent ; le script produit est en anglais américain. Chaque réplique indique qui parle, en mode solo ou duo, et sur quel plan.",
+  "version": "2.0",
+  "note_fr": "Spécification de l'outil qui écrit le script du podcast Linda & Frank. Seule l'intro (5 à 8 s) montre les deux dans le même cadre ; elle est identique à chaque épisode. Tout le reste est fait de parties séparées : Linda seule ou Frank seul, avec des rires notés dans le script.",
   "purpose": "Turn one episode topic into a complete, natural two-person podcast script for the YouTube channel 'The Second Chapter', ready for text-to-speech, lip-sync and editing.",
   "input": {
     "required": {
@@ -45,61 +45,15 @@
       "'Team Linda or Team Frank?'"
     ]
   },
-  "speaking_modes": {
-    "linda_solo": {
-      "who": "linda",
-      "shots": [
-        "S4 close-up Linda talks",
-        "S2 wide Linda talks"
-      ],
-      "use": "her opinion, her stories, the question of a part"
-    },
-    "frank_solo": {
-      "who": "frank",
-      "shots": [
-        "S5 close-up Frank talks",
-        "S3 wide Frank talks"
-      ],
-      "use": "his opinion, his math, transitions"
-    },
-    "duo": {
-      "who": "linda and frank alternate, one line each",
-      "shots": [
-        "S1 both facing camera (intro/outro)",
-        "S2/S3 wide",
-        "S8 both laugh"
-      ],
-      "use": "cold open, intro, ping-pong, verdicts, outro",
-      "rule": "Even in duo, only ONE person speaks per line. Duo = quick alternation, never two people talking at the same time."
-    },
-    "broll_voice": {
-      "who": "linda or frank",
-      "shots": [
-        "BROLL"
-      ],
-      "use": "facts, numbers, places; their voice over B-roll"
-    },
-    "reaction": {
-      "who": "nobody speaks",
-      "shots": [
-        "S6 Linda listens",
-        "S7 Frank listens",
-        "S8 both laugh"
-      ],
-      "use": "inserted between two lines of the same speaker, or after a joke",
-      "text": null
-    }
-  },
   "shot_ids": {
-    "S1": "INTRO_BOTH_TO_CAMERA",
-    "S2": "WIDE_LINDA_TALKS",
-    "S3": "WIDE_FRANK_TALKS",
-    "S4": "CU_LINDA_TALKS",
-    "S5": "CU_FRANK_TALKS",
-    "S6": "CU_LINDA_LISTENS",
-    "S7": "CU_FRANK_LISTENS",
-    "S8": "WIDE_BOTH_LAUGH",
-    "BROLL": "B-roll with voice over"
+    "INTRO_DUO": "Both on the sofa in the same frame, facing camera. Used ONLY for the fixed 5-8 s intro.",
+    "LINDA_TALKS": "Close-up of Linda alone, talking.",
+    "LINDA_LISTENS": "Close-up of Linda alone, listening (nods, small smile). No lip movement.",
+    "LINDA_LAUGHS": "Close-up of Linda alone, laughing (1-3 s).",
+    "FRANK_TALKS": "Close-up of Frank alone, talking.",
+    "FRANK_LISTENS": "Close-up of Frank alone, listening (raises an eyebrow, half smile). No lip movement.",
+    "FRANK_LAUGHS": "Close-up of Frank alone, laughing or chuckling (1-3 s).",
+    "BROLL": "B-roll with Linda's or Frank's voice over it."
   },
   "length": {
     "target_words": "4,600-4,950",
@@ -108,49 +62,51 @@
     "target_duration": "31-33 min",
     "budget": [
       {
-        "section": "COLD_OPEN",
-        "mode": "duo",
-        "words": 60
+        "section": "INTRO_DUO",
+        "mode": "intro_duo (fixed, reused)",
+        "words": 13,
+        "seconds": "5-8"
       },
       {
-        "section": "INTRO",
-        "mode": "duo (S1)",
-        "words": 170
+        "section": "HOOK",
+        "mode": "linda_solo then frank_solo",
+        "words": 80,
+        "note": "the question of the day + the promise ('number four cost us almost ten thousand dollars')"
       },
       {
         "section": "TOPIC",
-        "mode": "duo + broll_voice",
+        "mode": "solo + broll_voice",
         "words": 250
       },
       {
         "section": "PART_1..PART_5",
         "mode": "loop below, x5",
-        "words_each": 790,
+        "words_each": 800,
         "loop": [
           {
             "step": "QUESTION",
-            "mode": "linda_solo or frank_solo (wide)",
+            "mode": "solo",
             "words": 35
           },
           {
             "step": "FIRST_OPINION",
-            "mode": "solo (close-up) + reactions",
+            "mode": "solo + reaction",
             "words": 140
           },
           {
             "step": "FACTS_BROLL",
-            "mode": "broll_voice, both may speak",
+            "mode": "broll_voice",
             "words": 260
           },
           {
             "step": "OTHER_OPINION",
-            "mode": "other person solo (close-up) + reactions",
+            "mode": "other person solo + reaction",
             "words": 140
           },
           {
-            "step": "PING_PONG",
-            "mode": "duo, 4-8 short lines, one joke, S8",
-            "words": 130
+            "step": "BACK_AND_FORTH",
+            "mode": "alternating linda_solo / frank_solo, 4-8 short lines, one joke + laugh",
+            "words": 140
           },
           {
             "step": "TIP",
@@ -159,19 +115,19 @@
           },
           {
             "step": "TRANSITION",
-            "mode": "solo (wide)",
+            "mode": "solo",
             "words": 35
           }
         ]
       },
       {
         "section": "VERDICTS",
-        "mode": "linda_solo then frank_solo then duo",
+        "mode": "linda_solo then frank_solo",
         "words": 120
       },
       {
         "section": "OUTRO",
-        "mode": "duo (S2 then S1)",
+        "mode": "alternating solo lines",
         "words": 150
       }
     ]
@@ -188,7 +144,8 @@
     "Real disagreement: at least 2 of 5 parts end without full agreement.",
     "At least one light joke per part, usually from Frank; Linda gets jokes too.",
     "Callback to a running gag at least twice per episode.",
-    "Never more than 3 consecutive lines by the same speaker; never more than 45 s of one person in a row."
+    "Never more than 3 consecutive lines by the same speaker; never more than 45 s of one person in a row.",
+    "After the intro, every spoken line shows ONE person alone in frame (LINDA_TALKS or FRANK_TALKS). Both appear together only in the fixed intro."
   ],
   "handoff_phrases": {
     "give_the_floor": [
@@ -239,10 +196,10 @@
     "Personal stories are allowed as the characters' story, but never presented as proof of a statistic."
   ],
   "process": [
-    "1. Read the input and pick 5 parts that answer the question in a logical order, strongest part in position 1 or 2, the 'big surprise' in part 4 (promised in the intro).",
+    "1. Insert the fixed intro as lines 1-2. Then pick 5 parts that answer the question in a logical order, strongest part in position 1 or 2, the 'big surprise' in part 4 (promised in the hook).",
     "2. Write a one-line outline per part: who opens, Linda's view, Frank's view, the fact, the tip, the transition hook.",
     "3. Write the full script following the budget and line rules.",
-    "4. Self-check: count words (total and per speaker), check every line <= 40 words, check no speaker > 3 lines in a row, check the intro promise is paid off, check every number has a source or is in needs_check.",
+    "4. Self-check: count words (total and per speaker), every line <= 40 words, no speaker > 3 lines in a row, 8-12 laugh moments placed after real jokes, intro unchanged, hook promise paid off, every number sourced or in needs_check.",
     "5. Output ONLY the JSON object described in output_schema."
   ],
   "output_schema": {
@@ -264,16 +221,17 @@
     "lines": [
       {
         "id": "int, sequential",
-        "section": "COLD_OPEN|INTRO|TOPIC|PART_1..PART_5|VERDICTS|OUTRO",
-        "step": "QUESTION|FIRST_OPINION|FACTS_BROLL|OTHER_OPINION|PING_PONG|TIP|TRANSITION|null",
-        "mode": "linda_solo|frank_solo|duo|broll_voice|reaction",
+        "section": "INTRO_DUO|HOOK|TOPIC|PART_1..PART_5|VERDICTS|OUTRO",
+        "step": "QUESTION|FIRST_OPINION|FACTS_BROLL|OTHER_OPINION|BACK_AND_FORTH|TIP|TRANSITION|null",
+        "mode": "intro_duo|linda_solo|frank_solo|broll_voice|reaction|laugh",
         "speaker": "linda|frank|null (null only for reaction)",
-        "shot": "S1..S8|BROLL",
-        "text": "string|null",
+        "shot": "INTRO_DUO|LINDA_TALKS|LINDA_LISTENS|LINDA_LAUGHS|FRANK_TALKS|FRANK_LISTENS|FRANK_LAUGHS|BROLL",
+        "text": "string|null; laugh lines use a cue like '[laughs]'",
         "delivery": "one allowed tag|null",
-        "on_screen": "short text to display|null",
-        "broll": "English visual description for B-roll|null",
-        "words": "int"
+        "duration_seconds": "only for reaction and laugh lines",
+        "on_screen": "short text|null",
+        "broll": "English visual description|null",
+        "words": "int (0 for laugh/reaction)"
       }
     ],
     "sources": [
@@ -287,7 +245,7 @@
     "needs_check": [
       "string"
     ],
-    "plain_text_script": "The same dialogue as plain text, one line per reply, format 'LINDA: …' / 'FRANK: …', no shots, ready to paste into a voice tool."
+    "plain_text_script": "Same dialogue as plain text, 'LINDA: …' / 'FRANK: …', laughs kept as cues ('FRANK: [laughs]'), ready for the voice tool."
   },
   "example_output_excerpt": {
     "episode": {
@@ -308,24 +266,50 @@
     "lines": [
       {
         "id": 1,
-        "section": "COLD_OPEN",
+        "section": "INTRO_DUO",
         "step": null,
-        "mode": "duo",
+        "mode": "intro_duo",
         "speaker": "linda",
-        "shot": "S4",
-        "text": "Selling that house was the best decision we ever made.",
-        "delivery": "excited",
+        "shot": "INTRO_DUO",
+        "text": "Hi friends, I'm Linda…",
+        "delivery": "warm",
         "on_screen": null,
         "broll": null,
-        "words": 10
+        "words": 4
       },
       {
         "id": 2,
-        "section": "COLD_OPEN",
+        "section": "INTRO_DUO",
         "step": null,
-        "mode": "duo",
+        "mode": "intro_duo",
         "speaker": "frank",
-        "shot": "S5",
+        "shot": "INTRO_DUO",
+        "text": "…and I'm Frank. Welcome to The Second Chapter.",
+        "delivery": "warm",
+        "on_screen": "The Second Chapter",
+        "broll": null,
+        "words": 9
+      },
+      {
+        "id": 3,
+        "section": "HOOK",
+        "step": null,
+        "mode": "linda_solo",
+        "speaker": "linda",
+        "shot": "LINDA_TALKS",
+        "text": "Today: we sold our house at sixty-six, and selling it was the best decision we ever made.",
+        "delivery": "excited",
+        "on_screen": null,
+        "broll": null,
+        "words": 17
+      },
+      {
+        "id": 4,
+        "section": "HOOK",
+        "step": null,
+        "mode": "frank_solo",
+        "speaker": "frank",
+        "shot": "FRANK_TALKS",
         "text": "Says you. I still dream about my garage.",
         "delivery": "deadpan",
         "on_screen": null,
@@ -333,82 +317,44 @@
         "words": 8
       },
       {
-        "id": 3,
-        "section": "COLD_OPEN",
-        "step": null,
-        "mode": "reaction",
-        "speaker": null,
-        "shot": "S8",
-        "text": null,
-        "delivery": null,
-        "on_screen": "TITLE",
-        "broll": null,
-        "words": 0
-      },
-      {
-        "id": 4,
-        "section": "INTRO",
-        "step": null,
-        "mode": "duo",
-        "speaker": "linda",
-        "shot": "S1",
-        "text": "Hi friends, welcome back to The Second Chapter. I'm Linda.",
-        "delivery": "warm",
-        "on_screen": "The Second Chapter",
-        "broll": null,
-        "words": 10
-      },
-      {
         "id": 5,
-        "section": "INTRO",
+        "section": "HOOK",
         "step": null,
-        "mode": "duo",
-        "speaker": "frank",
-        "shot": "S1",
-        "text": "And I'm Frank. Today, we sold our house at sixty-six, and there are seven things we wish somebody had told us first.",
-        "delivery": "warm",
+        "mode": "laugh",
+        "speaker": "linda",
+        "shot": "LINDA_LAUGHS",
+        "text": "[laughs]",
+        "delivery": "laughing",
+        "duration_seconds": 2,
         "on_screen": null,
         "broll": null,
-        "words": 22
+        "words": 0
       },
       {
         "id": 6,
-        "section": "INTRO",
+        "section": "HOOK",
         "step": null,
-        "mode": "duo",
+        "mode": "linda_solo",
         "speaker": "linda",
-        "shot": "S1",
-        "text": "And number four cost us almost ten thousand dollars. So stay with us.",
+        "shot": "LINDA_TALKS",
+        "text": "There are seven things we wish somebody had told us first. And number four cost us almost ten thousand dollars.",
         "delivery": "teasing",
-        "on_screen": null,
+        "on_screen": "7 things we wish we knew",
         "broll": null,
-        "words": 13
+        "words": 20
       },
       {
         "id": 7,
-        "section": "INTRO",
+        "section": "HOOK",
         "step": null,
-        "mode": "duo",
+        "mode": "frank_solo",
         "speaker": "frank",
-        "shot": "S1",
-        "text": "She's still mad about number four.",
+        "shot": "FRANK_TALKS",
+        "text": "She's still mad about number four. [chuckles] So stay with us.",
         "delivery": "deadpan",
         "on_screen": null,
         "broll": null,
-        "words": 6
-      },
-      {
-        "id": 8,
-        "section": "INTRO",
-        "step": null,
-        "mode": "reaction",
-        "speaker": null,
-        "shot": "S8",
-        "text": null,
-        "delivery": null,
-        "on_screen": null,
-        "broll": null,
-        "words": 0
+        "words": 10
       },
       {
         "id": 24,
@@ -433,16 +379,151 @@
       }
     ],
     "needs_check": [],
-    "plain_text_script": "LINDA: Selling that house was the best decision we ever made.\nFRANK: Says you. I still dream about my garage.\n…"
+    "plain_text_script": "LINDA: Hi friends, I'm Linda…\nFRANK: …and I'm Frank. Welcome to The Second Chapter.\nLINDA: Today: we sold our house at sixty-six, and selling it was the best decision we ever made.\nFRANK: Says you. I still dream about my garage.\nLINDA: [laughs]\n…"
   },
   "quality_checklist": [
-    "Hook in the first 10 seconds, no 'hello' before the cold open.",
-    "Intro promise (e.g. 'number four cost us…') is paid off in the right part.",
-    "Each part has: question, two opinions, a fact on B-roll, ping-pong, a tip, a transition.",
-    "Total words 4,600-4,950 and never above 5,000.",
-    "Every line <= 40 words; each speaker 45-55%.",
-    "At least 5 laughs or light moments; at least 2 real disagreements left open.",
-    "Disclaimer line present; AI disclosure goes in the description, not in the dialogue.",
+    "Fixed intro (5-8 s, both in frame) at 0:00, identical every episode.",
+    "Hook right after the intro: the question and a promise, in solo lines.",
+    "After the intro, one person alone in frame on every spoken line.",
+    "Intro promise is paid off in the right part.",
+    "Each part: question, two opinions, a fact on B-roll, back-and-forth, a tip, a transition.",
+    "8-12 laugh moments, each after a real joke, none on serious topics.",
+    "Total 4,600-4,950 words, never above 5,000; every line <= 40 words; each speaker 45-55%.",
+    "Disclaimer line present; AI disclosure goes in the description.",
     "Ends with 'Team Linda or Team Frank?', free guide, next episode."
-  ]
+  ],
+  "fixed_intro": {
+    "duration_seconds": "5-8 (max 8)",
+    "shot": "INTRO_DUO",
+    "same_every_episode": true,
+    "note": "Generated once as one video clip with both people in the same frame, then reused at the start of every episode. The script tool does NOT rewrite it; it only inserts it as lines 1-2.",
+    "lines": [
+      {
+        "speaker": "linda",
+        "text": "Hi friends, I'm Linda…"
+      },
+      {
+        "speaker": "frank",
+        "text": "…and I'm Frank. Welcome to The Second Chapter."
+      }
+    ],
+    "words": 13
+  },
+  "speaking_modes": {
+    "intro_duo": {
+      "who": "Linda then Frank, same frame",
+      "shots": [
+        "INTRO_DUO"
+      ],
+      "use": "only the fixed intro at 0:00"
+    },
+    "linda_solo": {
+      "who": "linda",
+      "shots": [
+        "LINDA_TALKS"
+      ],
+      "use": "everything Linda says after the intro"
+    },
+    "frank_solo": {
+      "who": "frank",
+      "shots": [
+        "FRANK_TALKS"
+      ],
+      "use": "everything Frank says after the intro"
+    },
+    "broll_voice": {
+      "who": "linda or frank",
+      "shots": [
+        "BROLL"
+      ],
+      "use": "facts, numbers, places"
+    },
+    "reaction": {
+      "who": "nobody speaks",
+      "shots": [
+        "LINDA_LISTENS",
+        "FRANK_LISTENS"
+      ],
+      "use": "between two lines of the same speaker"
+    },
+    "laugh": {
+      "who": "linda, frank, or both one after the other",
+      "shots": [
+        "LINDA_LAUGHS",
+        "FRANK_LAUGHS"
+      ],
+      "use": "right after a joke or a teasing line; the person who laughs is the one shown"
+    }
+  },
+  "laughter": {
+    "what": "Short laugh moments written into the script as their own lines, so the voice tool generates the laugh sound and the edit shows the right close-up.",
+    "forms": [
+      {
+        "type": "laugh line",
+        "example": {
+          "mode": "laugh",
+          "speaker": "frank",
+          "shot": "FRANK_LAUGHS",
+          "text": "[laughs]",
+          "duration_seconds": 2
+        },
+        "use": "Frank laughs after Linda teases him"
+      },
+      {
+        "type": "laugh then talk",
+        "example": {
+          "mode": "linda_solo",
+          "speaker": "linda",
+          "shot": "LINDA_TALKS",
+          "text": "[laughs] Okay, fine, you win that one.",
+          "delivery": "laughing"
+        },
+        "use": "the speaker laughs at the start of her own line"
+      },
+      {
+        "type": "chuckle in a line",
+        "example": {
+          "mode": "frank_solo",
+          "speaker": "frank",
+          "shot": "FRANK_TALKS",
+          "text": "Thirty-one years of tools. [chuckles] You don't just throw that in a dumpster.",
+          "delivery": "deadpan"
+        },
+        "use": "small chuckle inside a line"
+      },
+      {
+        "type": "both laugh",
+        "example": [
+          {
+            "mode": "laugh",
+            "speaker": "linda",
+            "shot": "LINDA_LAUGHS",
+            "text": "[laughs]",
+            "duration_seconds": 2
+          },
+          {
+            "mode": "laugh",
+            "speaker": "frank",
+            "shot": "FRANK_LAUGHS",
+            "text": "[chuckles]",
+            "duration_seconds": 2
+          }
+        ],
+        "use": "after the best joke of a part: two quick laugh shots back to back"
+      }
+    ],
+    "allowed_cues": [
+      "[laughs]",
+      "[chuckles]",
+      "[laughs softly]",
+      "[sighs]"
+    ],
+    "rules": [
+      "1 to 3 laugh moments per part, about 8-12 in a full episode.",
+      "A laugh always follows something actually funny or teasing; never laugh at serious topics (illness, death, money trouble).",
+      "Frank mostly chuckles (dry); Linda laughs more openly.",
+      "Laugh lines last 1-3 s and count 0 words.",
+      "Never two laugh lines from the same person in a row."
+    ]
+  }
 }
