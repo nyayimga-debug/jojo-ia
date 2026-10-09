@@ -1,0 +1,548 @@
+{
+  "project": "The Second Chapter — Linda & Frank",
+  "language_of_videos": "English (US)",
+  "language_of_user": "French",
+  "goal": "Build a reusable tool/workflow that turns one episode topic into a finished 25–35 min YouTube video: dialogue script, two separate voices, lip-synced avatar clips (Linda solo, Frank solo, both together), B-roll, subtitles, final edit.",
+  "channel": {
+    "name": "The Second Chapter",
+    "format": "Faceless AI-avatar podcast: a retired American couple debating retirement decisions on their sofa",
+    "audience": "Americans 60+, retired or about to retire, mostly couples, in the US",
+    "promise": "Two honest points of view (hers and his) on every big retirement decision, with real numbers and no sales pitch"
+  },
+  "characters": {
+    "linda": {
+      "age": 67,
+      "role": "the optimist who organizes; makes lists; warm, quick, enthusiastic",
+      "voice": "bright, warm, medium pace, American female ~65",
+      "look": "shoulder-length gray-blonde hair, soft green knit sweater",
+      "seat": "far LEFT of frame (viewer's left)",
+      "running_gag": "her lists and color-coded binders"
+    },
+    "frank": {
+      "age": 70,
+      "role": "the careful one who does the math; dry, deadpan humor",
+      "voice": "slow, low, gravelly, American male ~70",
+      "look": "short white hair, light trimmed white beard, light blue button-down shirt",
+      "seat": "far RIGHT of frame (viewer's right)",
+      "running_gag": "his garage and his tools"
+    },
+    "backstory": "Married couple, sold the family house at 66 after 31 years, raised three kids. Not financial advisors, not ex-police, no fake credentials."
+  },
+  "reference_image_prompt": "Photorealistic wide shot of a cozy home podcast set. A large, long beige linen three-seat sofa fills the frame horizontally. An American retired couple sits at opposite ends of the sofa with a wide empty space between them. On the far LEFT of the frame (viewer's left): Linda, 67, shoulder-length gray-blonde hair, soft green knit sweater. On the far RIGHT of the frame (viewer's right): Frank, 70, short white hair, light trimmed white beard, light blue button-down shirt. Both sit turned slightly toward each other, relaxed and natural. Each has a black podcast microphone on a boom arm in front of them. Warm living room background with bookshelves, a floor lamp, green plants, soft warm lighting, subtle bokeh. Eye-level camera, centered, 16:9, documentary photography style, realistic skin texture.",
+  "shot_library": [
+    {
+      "id": "S1",
+      "name": "INTRO_BOTH_TO_CAMERA",
+      "who_speaks": "linda_or_frank",
+      "use": "intro, outro, calls to action",
+      "clip_seconds": "8-15"
+    },
+    {
+      "id": "S2",
+      "name": "WIDE_LINDA_TALKS",
+      "who_speaks": "linda",
+      "use": "questions, ping-pong, transitions",
+      "clip_seconds": "5-12"
+    },
+    {
+      "id": "S3",
+      "name": "WIDE_FRANK_TALKS",
+      "who_speaks": "frank",
+      "use": "questions, ping-pong, transitions",
+      "clip_seconds": "5-12"
+    },
+    {
+      "id": "S4",
+      "name": "CU_LINDA_TALKS",
+      "who_speaks": "linda",
+      "use": "her opinions and stories",
+      "clip_seconds": "10-15"
+    },
+    {
+      "id": "S5",
+      "name": "CU_FRANK_TALKS",
+      "who_speaks": "frank",
+      "use": "his opinions and math",
+      "clip_seconds": "10-15"
+    },
+    {
+      "id": "S6",
+      "name": "CU_LINDA_LISTENS",
+      "who_speaks": "none",
+      "use": "reaction inserted between two Frank clips (nods, smiles)",
+      "clip_seconds": "2-4"
+    },
+    {
+      "id": "S7",
+      "name": "CU_FRANK_LISTENS",
+      "who_speaks": "none",
+      "use": "reaction inserted between two Linda clips (raises eyebrow, chuckles)",
+      "clip_seconds": "2-4"
+    },
+    {
+      "id": "S8",
+      "name": "WIDE_BOTH_LAUGH",
+      "who_speaks": "none",
+      "use": "after a joke, transitions, cold open",
+      "clip_seconds": "2-4"
+    }
+  ],
+  "shot_rules": [
+    "Only one person speaks per avatar clip.",
+    "Never more than 15 s on one avatar clip.",
+    "Change shot every 8–15 s.",
+    "Insert a listening shot (S6/S7) between two clips of the same speaker.",
+    "Cover any glitchy avatar clip with B-roll.",
+    "Same sofa, light and clothes in every episode: generate S1–S8 once from the reference image and reuse; only the audio changes."
+  ],
+  "episode_structure": [
+    {
+      "section": "COLD_OPEN",
+      "time": "0:00-0:30",
+      "shots": "S4, S5, S8",
+      "content": "One strong line from Linda, one skeptical/funny line from Frank, both laugh, title appears. No hello."
+    },
+    {
+      "section": "INTRO",
+      "time": "0:30-1:30",
+      "shots": "S1",
+      "content": "'Hi friends, welcome back to The Second Chapter. I'm Linda…' '…and I'm Frank.' Question of the day + a promise ('Number 4 cost us almost ten thousand dollars')."
+    },
+    {
+      "section": "TOPIC",
+      "time": "1:30-3:00",
+      "shots": "S2/S3 + 2-3 B-roll",
+      "content": "Their situation in 3-4 lines, why the viewer is concerned, one key number on screen."
+    },
+    {
+      "section": "PARTS",
+      "time": "3:00-27:00",
+      "repeat": 5,
+      "loop": [
+        {
+          "step": "QUESTION",
+          "shots": "S2 or S3",
+          "seconds": 10,
+          "note": "part number on screen ('#3 — The Garage Problem')"
+        },
+        {
+          "step": "FIRST_OPINION",
+          "shots": "S4 or S5 cut with S7/S6",
+          "seconds": "30-45"
+        },
+        {
+          "step": "FACTS_BROLL",
+          "shots": "B-roll with their voices",
+          "seconds": "60-90",
+          "note": "numbers, places, objects; key fact on screen"
+        },
+        {
+          "step": "OTHER_OPINION",
+          "shots": "S5 or S4",
+          "seconds": "30-45",
+          "note": "'I see it differently…'"
+        },
+        {
+          "step": "PING_PONG",
+          "shots": "S2/S3 then alternating close-ups, S8",
+          "seconds": "20-40",
+          "note": "short lines, one joke, a laugh"
+        },
+        {
+          "step": "TIP",
+          "shots": "B-roll + on-screen text",
+          "seconds": "15-20"
+        },
+        {
+          "step": "TRANSITION",
+          "shots": "S2 or S3",
+          "seconds": "5-10",
+          "note": "'Okay, but the next one is where we really fought.'"
+        }
+      ]
+    },
+    {
+      "section": "VERDICTS",
+      "time": "27:00-29:00",
+      "shots": "S4 ('Linda's take'), S5 ('Frank's take'), S2",
+      "content": "Each sums up in 2 lines. 'Team Linda or Team Frank? Tell us in the comments.'"
+    },
+    {
+      "section": "VIEWER_QUESTION_OUTRO",
+      "time": "29:00-30:00",
+      "shots": "S2 + comment on screen, then S1",
+      "content": "Read one real comment (from episode 3 on), free guide in description, next episode."
+    }
+  ],
+  "dialogue_style": {
+    "line_length": "1–3 sentences, rarely more than 20 s in a row",
+    "rules": [
+      "They call each other by name at least once per part.",
+      "Concrete numbers ('31 years', 'nine thousand dollars'), never 'a lot'.",
+      "Real disagreements; they don't always agree at the end.",
+      "Running gags: Frank's garage, Linda's lists."
+    ],
+    "handoff_phrases": [
+      "Frank, you're making that face again.",
+      "Tell them about the garage.",
+      "You did the math on this one, right?",
+      "Okay, I'll give you that one.",
+      "That's fair, but…",
+      "See, this is where we disagree.",
+      "Wait, before you go on…",
+      "Can I jump in here?",
+      "Remember the moving truck story?",
+      "If you're watching this and you're 65…",
+      "A lot of you asked us…"
+    ]
+  },
+  "script_output_schema": {
+    "description": "The tool must produce the script as JSON lines, one object per spoken line or B-roll beat, so audio, clips and edit can be generated automatically.",
+    "example": [
+      {
+        "id": 1,
+        "section": "COLD_OPEN",
+        "speaker": "linda",
+        "shot": "S4",
+        "text": "Selling that house was the best decision we ever made.",
+        "on_screen": null,
+        "broll": null
+      },
+      {
+        "id": 2,
+        "section": "COLD_OPEN",
+        "speaker": "frank",
+        "shot": "S5",
+        "text": "Says you. I still dream about my garage.",
+        "on_screen": null,
+        "broll": null
+      },
+      {
+        "id": 3,
+        "section": "COLD_OPEN",
+        "speaker": null,
+        "shot": "S8",
+        "text": null,
+        "on_screen": "TITLE",
+        "broll": null
+      },
+      {
+        "id": 14,
+        "section": "PART_1",
+        "step": "FACTS_BROLL",
+        "speaker": "frank",
+        "shot": "BROLL",
+        "text": "Moving company quotes ran from four thousand to eleven thousand dollars for the same house.",
+        "on_screen": "$4,000 – $11,000",
+        "broll": "two moving company quotes on a kitchen table, calculator, reading glasses, realistic, 16:9"
+      }
+    ]
+  },
+  "production_pipeline": [
+    "1. Topic → dialogue script (JSON above), 4,500–5,000 words for ~30–35 min.",
+    "2. Fact-check every number against an official source; list sources.",
+    "3. Generate audio per line with two distinct voices; assemble with 0.2–0.5 s gaps and a few soft laughs / 'mm-hmm'.",
+    "4. Split audio per line; any line > 15 s is split in two clips.",
+    "5. Lip-sync each line on the right shot (S1–S5) using the pre-made shot library.",
+    "6. Insert listening shots (S6/S7/S8) between clips of the same speaker.",
+    "7. Generate or source B-roll for every BROLL beat (or let the Subscriber app do B-roll from the script).",
+    "8. Edit: alternate shots every 8–15 s, big high-contrast subtitles, part numbers, key numbers, 'Linda's take / Frank's take', soft low music.",
+    "9. QA: watch at 2x; no frozen shot > 15 s, no awkward silence, no unverified claim.",
+    "10. Export title, description (with AI disclosure, sources, 'not financial advice'), tags, chapters, pinned comment, thumbnail brief."
+  ],
+  "guardrails": [
+    "Money, Social Security, Medicare: general information only, checked on ssa.gov / medicare.gov / irs.gov, dated, with 'This is not financial advice.'",
+    "No fake credentials or fake expertise; quote real experts by name when a topic comes from them.",
+    "Disclose AI characters in YouTube's altered/synthetic content setting and in the description.",
+    "Affiliate links clearly disclosed (FTC).",
+    "No fear-mongering or invented 'secret rules'. Titles reuse proven formats but only true claims."
+  ],
+  "title_rule": "Reuse a proven high-view title word for word and change only the niche keywords (e.g. 'I' → 'We', 'The Villages' → '55+ Communities'). Replace only words that would be false for our video.",
+  "products": {
+    "lead_magnets": [
+      "The Retirement Move Checklist",
+      "25 Questions to Ask Before Buying in a 55+ Community",
+      "Our Downsizing Room-by-Room Planner"
+    ],
+    "ebook": "The Second Chapter Playbook (19–27 $)",
+    "bundle": "Book + printable checklists + state/country comparison table (47 $)",
+    "later": "Course 'Plan Your Retirement Move in 30 Days' (97 $+)",
+    "affiliates": "retirement planning software, Medicare advice services, senior movers, assisted-living comparison sites (disclosed)"
+  },
+  "publishing_order": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    6,
+    8,
+    9,
+    10,
+    4,
+    13,
+    12
+  ],
+  "episodes": [
+    {
+      "n": 1,
+      "theme_fr": "Désencombrer, réduire, déménager",
+      "title": "Our Biggest Downsizing Mistake in Retirement (We Sold Our House at 66)",
+      "proven_title": "My Biggest Downsizing Mistake in Retirement",
+      "proven_views": 571583,
+      "proven_video": "https://youtu.be/biE2jzHDgB0",
+      "question_fr": "Est-ce qu’on aurait dû vendre la maison familiale ?",
+      "linda_side_fr": "Aucun regret : plus de ménage, plus d’argent de côté, plus de liberté.",
+      "frank_side_fr": "Il regrette son garage et ses outils, et il a sous-estimé le coût du déménagement.",
+      "broll_ideas_fr": "Panneau « Sold » devant une maison, cartons, camion de déménagement, garage vide, nouvelle cuisine plus petite.",
+      "inspired_by": "My Biggest Downsizing Mistake in Retirement (652 k, chaîne de 9 700 abonnés) · Nobody Wants Your Stuff (458 k) · She downsized to a beautiful Tiny Home (1,5 M)"
+    },
+    {
+      "n": 2,
+      "theme_fr": "Communautés 55+ et The Villages",
+      "title": "Would We Ever Live in a 55+ Community AGAIN? Here’s What We Still Disagree On",
+      "proven_title": "Would I Ever Live in a 55+ Community AGAIN? Here's What Over TWO YEARs Taught Me | Over 50 Over 60",
+      "proven_views": 171000,
+      "proven_video": "https://youtu.be/A6OZSCVSqM4",
+      "question_fr": "Une communauté 55+, c’est le paradis ou une prison dorée ?",
+      "linda_side_fr": "Pour : les activités, les amis, plus besoin d’entretenir un jardin.",
+      "frank_side_fr": "Contre : les frais de l’association (HOA), les règles, « ne voir que des gens de notre âge ».",
+      "broll_ideas_fr": "Voiturettes de golf, piscine, cours de danse en ligne, rues identiques, panneau HOA.",
+      "inspired_by": "Why People Are Leaving The Villages (2,3 M, chaîne de 9 500 abonnés) · 10 REGRETS After Moving to THE VILLAGES (2,7 M) · AVOID LIVING IN A 55 PLUS COMMUNITY (1,2 M)"
+    },
+    {
+      "n": 3,
+      "theme_fr": "Argent et Social Security",
+      "title": "Retiring on Social Security Alone… This Is What It Really Feels Like",
+      "proven_title": "I Retired Broke… And This Is What It Feels Like",
+      "proven_views": 1217565,
+      "proven_video": "https://youtu.be/Cp9iZBFhJGE",
+      "question_fr": "Peut-on vivre seulement avec la Social Security ?",
+      "linda_side_fr": "Oui, en changeant de région et de mode de vie.",
+      "frank_side_fr": "Pas sans un coussin d’épargne : la santé et la maison coûtent trop cher.",
+      "broll_ideas_fr": "Calculatrice et factures, épicerie, petite maison, carte des États les moins chers.",
+      "inspired_by": "Her Tiny Home on Social Security (1,2 M) · American Retires in Da Nang on Only Social Security (1,5 M) · I Retired Broke (1,2 M)"
+    },
+    {
+      "n": 4,
+      "theme_fr": "Argent et Social Security",
+      "title": "The Hidden Social Security Rule Costing Couples Thousands (Most Miss This)",
+      "proven_title": "Hidden Social Security Rule Costing Couples Thousands (Most Miss This)",
+      "proven_views": 576000,
+      "proven_video": "https://youtu.be/KWV5GBTz4cc",
+      "question_fr": "Quand chacun de nous deux doit-il demander sa pension ?",
+      "linda_side_fr": "Le plus tôt possible : « on ne sait pas combien de temps on a ».",
+      "frank_side_fr": "Attendre pour l’époux qui gagne le plus, pour protéger le survivant.",
+      "broll_ideas_fr": "Formulaires, couple à la table de la cuisine, graphique des montants selon l’âge.",
+      "inspired_by": "Hidden Social Security Rule Costing Couples Thousands (576 k, chaîne de 7 200 abonnés) · If I Claimed Social Security Again (1,3 M, chaîne de 10 000 abonnés) · The Hidden Social Security Math (1,7 M)"
+    },
+    {
+      "n": 5,
+      "theme_fr": "Vie de retraité, couple et sens",
+      "title": "7 Things That Got Quiet After We Retired (Nobody Talks About This)",
+      "proven_title": "7 Things That Go Quiet After You Retire (Nobody Talks About This)",
+      "proven_views": 1034377,
+      "proven_video": "https://youtu.be/Jowm-xdn1rw",
+      "question_fr": "Qu’est-ce qui change vraiment le premier jour de la retraite ?",
+      "linda_side_fr": "Le téléphone ne sonne plus, et elle a dû se créer une routine.",
+      "frank_side_fr": "Il a perdu son statut et ses collègues, et il ne savait plus « qui il était ».",
+      "broll_ideas_fr": "Bureau vide, réveil sans alarme, café sur la véranda, agenda vide puis rempli.",
+      "inspired_by": "7 Things That Go Quiet After You Retire (1 M, chaîne de 18 000 abonnés)"
+    },
+    {
+      "n": 6,
+      "theme_fr": "Où prendre sa retraite",
+      "title": "We Almost Retired Abroad — Here’s What We Didn’t Expect",
+      "proven_title": "I Chose to Retire Abroad, Here's What I Didn't Expect",
+      "proven_views": 2900000,
+      "proven_video": "https://youtu.be/bMFpHgR6wsg",
+      "question_fr": "Partir à l’étranger, rêve ou piège ?",
+      "linda_side_fr": "Le coût de la vie, le soleil, l’aventure.",
+      "frank_side_fr": "Les petits-enfants, la santé, la langue, et les mauvaises surprises.",
+      "broll_ideas_fr": "Plages du Mexique et du Portugal, marchés, hôpital, aéroport, appel vidéo avec les petits-enfants.",
+      "inspired_by": "I Chose to Retire Abroad, Here’s What I Didn’t Expect (2,9 M) · Americans Choosing to Retire Abroad (1,1 M, chaîne de 43 000 abonnés)"
+    },
+    {
+      "n": 7,
+      "theme_fr": "Désencombrer, réduire, déménager",
+      "title": "11 Decluttering Lessons EVERY Retiree Learns Too Late",
+      "proven_title": "11 Japanese Decluttering Lessons EVERYONE Learns Too Late",
+      "proven_views": 1763070,
+      "proven_video": "https://youtu.be/W49G8vPCQQQ",
+      "question_fr": "Comment trier une vie entière sans se disputer ?",
+      "linda_side_fr": "La méthode rapide : une pièce par semaine.",
+      "frank_side_fr": "Il garde tout « au cas où », et ça tourne à la dispute dans le grenier.",
+      "broll_ideas_fr": "Grenier encombré, boîtes « garder, donner, jeter », albums photo, vide-grenier.",
+      "inspired_by": "11 Japanese Decluttering Lessons EVERYONE Learns Too Late (1,8 M) · 5 Harsh Truths about Decluttering (1,5 M) · Decluttering Lessons EVERYONE Learns Too Late (745 k, chaîne de 16 000 abonnés)"
+    },
+    {
+      "n": 8,
+      "theme_fr": "Vie de retraité, couple et sens",
+      "title": "The 4 Phases of Retirement — Which One Are You In?",
+      "proven_title": "The 4 phases of retirement | Dr. Riley Moynes | TEDxSurrey",
+      "proven_views": 4307864,
+      "proven_video": "https://youtu.be/DMHMOQ_054U",
+      "question_fr": "Pourquoi la retraite déçoit-elle tant de gens après un an ?",
+      "linda_side_fr": "Elle est encore en « lune de miel ».",
+      "frank_side_fr": "Il est passé par la phase « je m’ennuie ».",
+      "broll_ideas_fr": "Vacances, hamac, canapé et télé, bénévolat, atelier, petits-enfants.",
+      "inspired_by": "The 4 phases of retirement, TEDx (4,3 M)"
+    },
+    {
+      "n": 9,
+      "theme_fr": "Argent et Social Security",
+      "title": "Sell These 5 Things BEFORE You Retire (And 2 We Should Have Kept)",
+      "proven_title": "Sell These 5 Things BEFORE You Retire",
+      "proven_views": 2509935,
+      "proven_video": "https://youtu.be/IltvyKpy8Z4",
+      "question_fr": "Qu’est-ce qu’il faut vendre avant de partir à la retraite ?",
+      "linda_side_fr": "La deuxième voiture, la grande maison, le bateau.",
+      "frank_side_fr": "Il défend le camping-car et ses outils.",
+      "broll_ideas_fr": "Annonces de vente, voiture, bateau, outils, compte en banque qui monte.",
+      "inspired_by": "Sell These 5 Things BEFORE You Retire (2,5 M)"
+    },
+    {
+      "n": 10,
+      "theme_fr": "Sécurité et vivre seul",
+      "title": "35 Home-Safety Tricks Every Retired Couple Should Know That Cost Pennies",
+      "proven_title": "35 Home-Defense Tricks Retired Cops Teach Seniors Living Alone That Cost Pennies",
+      "proven_views": 2400000,
+      "proven_video": "https://youtu.be/SpktUJlX7fo",
+      "question_fr": "Comment rester en sécurité chez soi en vieillissant ?",
+      "linda_side_fr": "L’éclairage, les rampes, un tapis en moins.",
+      "frank_side_fr": "Les serrures, la caméra de la porte, « le voisin qui surveille ».",
+      "broll_ideas_fr": "Serrure, caméra de sonnette, éclairage extérieur, rampe d’escalier, détecteur de fumée.",
+      "inspired_by": "35 Home-Defense Tricks Retired Cops Teach Seniors Living Alone (2,4 M, chaîne de 35 800 abonnés) · 5 Things Retired Cops Do Every Night (852 k) · 15 Things Ex-MI6 Officers Teach… (689 k)"
+    },
+    {
+      "n": 11,
+      "theme_fr": "Où prendre sa retraite",
+      "title": "Retirement Taxes by State: 5 Best and 3 Worst for 2027",
+      "proven_title": "Retirement Taxes by State: 5 Best and 3 Worst for 2026",
+      "proven_views": 892089,
+      "proven_video": "https://youtu.be/t0Ls8E5dBS0",
+      "question_fr": "Où vivre aux États-Unis quand on est à la retraite ?",
+      "linda_side_fr": "La Floride et la Caroline du Sud, pour le soleil et les impôts.",
+      "frank_side_fr": "Le Tennessee et le Texas, et surtout pas là où les ouragans frappent.",
+      "broll_ideas_fr": "Carte des États, plages, montagnes, panneau « no state income tax », ouragan.",
+      "inspired_by": "Retirement Taxes by State: 5 Best and 3 Worst for 2026 (1,3 M, chaîne de 10 600 abonnés) · 10 Texas Towns Where Retirees Actually Thrive (389 k)"
+    },
+    {
+      "n": 12,
+      "theme_fr": "Résidences et aide",
+      "title": "If You Can’t Live Alone, Don’t Go to a Nursing Home — Here’s What We’d Do Instead",
+      "proven_title": "If You Can’t Live Alone, Don’t Go to Nursing Homes—Do This Instead From a Nurse",
+      "proven_views": 783238,
+      "proven_video": "https://youtu.be/8eDkUESXZbI",
+      "question_fr": "Que ferons-nous quand l’un de nous ne pourra plus tout faire ?",
+      "linda_side_fr": "Elle préfère une résidence avec services.",
+      "frank_side_fr": "Il veut rester à la maison avec de l’aide à domicile.",
+      "broll_ideas_fr": "Résidence, aide-soignante à domicile, factures, salle de bain adaptée.",
+      "inspired_by": "Life and Death in Assisted Living, FRONTLINE (2,9 M) · If You Can’t Live Alone, Don’t Go to Nursing Homes (783 k) · Avoid the Nursing Home With This Simple Plan (882 k)"
+    },
+    {
+      "n": 13,
+      "theme_fr": "Où prendre sa retraite",
+      "title": "10 Best Countries to Retire on a Small Pension or Social Security (We Compared Them)",
+      "proven_title": "10 Best Countries to Retire on a Small Pension or Social Security",
+      "proven_views": 2300468,
+      "proven_video": "https://youtu.be/PQbC2h70qMM",
+      "question_fr": "Quels pays pour vivre bien avec une petite pension ?",
+      "linda_side_fr": "Le Portugal et le Mexique.",
+      "frank_side_fr": "L’Uruguay et le Panama, qu’il a étudiés « par sécurité ».",
+      "broll_ideas_fr": "Lisbonne, Mexique, Uruguay, Panama, tableaux de coût de la vie.",
+      "inspired_by": "10 Best Countries to Retire on a Small Pension (2,3 M, chaîne de 79 000 abonnés) · Why Almost Nobody Lives in Uruguay (966 k, chaîne de 8 400 abonnés)"
+    },
+    {
+      "n": 14,
+      "theme_fr": "Sécurité et vivre seul",
+      "title": "Things They Don’t Tell You About Living Alone After Your Spouse Is Gone",
+      "proven_title": "Things They Don’t Tell You About Living Alone as an Older Person",
+      "proven_views": 1382907,
+      "proven_video": "https://youtu.be/E0zUZA23CtE",
+      "question_fr": "Comment se préparer à vivre seul un jour ?",
+      "linda_side_fr": "Elle a fait une liste de tout ce que Frank gère seul : les comptes, la voiture.",
+      "frank_side_fr": "Il avoue qu’il ne sait pas cuisiner, et ça fait rire.",
+      "broll_ideas_fr": "Paperasse, mots de passe, cuisine, amis, club, église.",
+      "inspired_by": "Things They Don’t Tell You About Living Alone as an Older Person (1,4 M) · 10 Benefits to Living Alone as An Older Woman (1,3 M)"
+    },
+    {
+      "n": 15,
+      "theme_fr": "Désencombrer, réduire, déménager",
+      "title": "We Retired at 66 & Almost Moved Into a Tiny House",
+      "proven_title": "She Retired at 70 & Moved Into This Stunning Tiny House",
+      "proven_views": 3428926,
+      "proven_video": "https://youtu.be/8jMjb-esjZQ",
+      "question_fr": "Vivre petit, liberté ou folie ?",
+      "linda_side_fr": "Elle adore l’idée : moins de ménage, plus de voyages.",
+      "frank_side_fr": "Il pense à ses genoux et à la mezzanine.",
+      "broll_ideas_fr": "Tiny house, cuisine minuscule, camping-car, terrasse avec vue.",
+      "inspired_by": "She Retired at 70 & Moved Into This Stunning Tiny House (3,4 M) · Retired Couple’s Tiny Home on Wheels (790 k)"
+    },
+    {
+      "n": 16,
+      "theme_fr": "Vie de retraité, couple et sens",
+      "title": "Flight Attendants Wish Retirees Knew These 10 Boarding Secrets",
+      "proven_title": "Flight Attendants Wish Seniors Knew These 10 Boarding Secrets",
+      "proven_views": 985000,
+      "proven_video": "https://youtu.be/KYO2P408oy4",
+      "question_fr": "Comment voyager mieux et moins cher après 65 ans ?",
+      "linda_side_fr": "Les croisières et les réductions seniors.",
+      "frank_side_fr": "Les places dans l’avion, les bagages, l’assurance voyage.",
+      "broll_ideas_fr": "Aéroport, avion, croisière, valises, hôtel.",
+      "inspired_by": "Flight Attendants Wish Seniors Knew These 10 Boarding Secrets (985 k, chaîne de 24 000 abonnés)"
+    },
+    {
+      "n": 17,
+      "theme_fr": "Vie de retraité, couple et sens",
+      "title": "Why Older Couples Are Getting SQUEEZED & Can’t Retire",
+      "proven_title": "Why Older Workers Are Getting LAID OFF & Can't Retire",
+      "proven_views": 898286,
+      "proven_video": "https://youtu.be/SDHpyoC_EnU",
+      "question_fr": "Pourquoi la retraite devient-elle un luxe ?",
+      "linda_side_fr": "Elle parle de ses amies qui travaillent encore à 70 ans.",
+      "frank_side_fr": "Il explique l’inflation et le coût de la santé.",
+      "broll_ideas_fr": "Bureaux, travailleurs âgés, chariot d’épicerie, factures de santé.",
+      "inspired_by": "Why Older Workers Are Getting LAID OFF & Can’t Retire (898 k) · The Retirement Crisis Nobody’s Talking About (672 k)"
+    },
+    {
+      "n": 18,
+      "theme_fr": "Vie de retraité, couple et sens",
+      "title": "The 5 Things Retirees Must Rely On Instead of Their Kids",
+      "proven_title": "The 5 things seniors must rely on instead of family for happiness, health, and peace!",
+      "proven_views": 553000,
+      "proven_video": "https://youtu.be/C5uuYbw67dc",
+      "question_fr": "Faut-il encore aider financièrement ses enfants adultes ?",
+      "linda_side_fr": "Elle veut aider les petits-enfants.",
+      "frank_side_fr": "Il veut d’abord protéger leur retraite.",
+      "broll_ideas_fr": "Repas de famille, chèque, petits-enfants, discussion autour de la table.",
+      "inspired_by": "The 5 things seniors must rely on instead of family (553 k)"
+    },
+    {
+      "n": 19,
+      "theme_fr": "Sécurité et vivre seul",
+      "title": "25 Simple Forgotten Meals for Retired Couples on a Budget",
+      "proven_title": "25 Simple Forgotten Meals for Seniors Living Alone",
+      "proven_views": 962000,
+      "proven_video": "https://youtu.be/GmLDjzc9RsA",
+      "question_fr": "Comment bien manger sans se ruiner ni passer sa vie en cuisine ?",
+      "linda_side_fr": "Ses recettes rapides de la semaine.",
+      "frank_side_fr": "Ses « inventions » du dimanche.",
+      "broll_ideas_fr": "Cuisine, marché, plats simples, liste de courses.",
+      "inspired_by": "25 Simple Forgotten Meals for Seniors Living Alone (962 k, chaîne de 33 700 abonnés)"
+    },
+    {
+      "n": 20,
+      "theme_fr": "Communautés 55+ et The Villages",
+      "title": "We Spent a Week in the World’s Most Infamous Retirement Community (The Villages, Florida)",
+      "proven_title": "World's Most Infamous Retirement Community (The Villages, Florida) 🇺🇸",
+      "proven_views": 9597306,
+      "proven_video": "https://youtu.be/BX4i8qprP2I",
+      "question_fr": "The Villages vaut-elle vraiment sa réputation ?",
+      "linda_side_fr": "Elle a adoré l’ambiance et les activités.",
+      "frank_side_fr": "Il a trouvé ça « trop parfait pour être vrai ».",
+      "broll_ideas_fr": "Voiturettes de golf, places animées, terrains de golf, maisons, concerts.",
+      "inspired_by": "World’s Most Infamous Retirement Community (9,6 M) · Inside America’s Most Controversial Retirement Community (1,3 M)"
+    }
+  ]
+}
