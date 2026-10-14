@@ -525,5 +525,57 @@
       "Laugh lines last 1-3 s and count 0 words.",
       "Never two laugh lines from the same person in a row."
     ]
+  },
+  "video_method": {
+    "source": "Jake Trinder, 'How to Become Disgustingly Good at YouTube' (youtu.be/Dx-c19qXdxM), Oct 14 2026",
+    "principle": "A video is a series system: topic, packaging (title + thumbnail), hook, body and edit must all be right; one wrong decision can sink the video.",
+    "topic": [
+      "Pick topics from what the audience already chooses to watch (revealed preference), not from what we think they need.",
+      "For each topic note the floor (median views of a decent video) and the ceiling (best videos) over the last 3–6 months, 8+ min videos.",
+      "Check views look real (≈1–5 % likes per view, on-topic comments) and that demand is still active (recent videos still getting views).",
+      "Raise the ceiling by attaching the topic to a bigger demand: season, event, culture (Amish, Japanese), well-known store (Walmart, Costco, Aldi)."
+    ],
+    "title": [
+      "Use a title framing that wins in at least 2–3 different channels or niches, not a single outlier.",
+      "Understand why the framing works and only reuse it if that reason is true for our audience (avoid overfitting).",
+      "The title must make a promise the video fully delivers; never use false words."
+    ],
+    "thumbnail": [
+      "Job 1: stand out in the feed. Job 2: be understood at a glance.",
+      "Avatar face + one object/icon that targets the audience + a tension that opens a question; the title closes only part of it."
+    ],
+    "edit": "The edit matches the promise: calm and warm for our characters, useful B-roll, on-screen text for numbers, no gratuitous effects.",
+    "hook_4P": {
+      "promise": "Confirm in one sentence that this is what they clicked for.",
+      "proof": "Why listen: honest proof only (sources, the character's story told as a story, a shown result). Never fake credentials or numbers.",
+      "plan": "Announce the steps / number of items and what comes at the end.",
+      "persona": "Name the viewer: 'if you're over 60', 'if you lost your spouse', 'wenn du einen Diesel fährst'.",
+      "timing": "All 4 P inside the first 30–45 seconds."
+    },
+    "body_acceptance_criteria": [
+      "Decompose the title's promise: what must be true at the end for the title to be true? Break each answer down again.",
+      "That list is the outline; the script is finished only when every condition is met.",
+      "Deliver real value fast, then exceed the expectation (one bonus item, a safety tip, a worked example).",
+      "Goal is viewer satisfaction, not retention tricks."
+    ],
+    "after_publish": [
+      "Early signals: positive comments per view (and what they say), likes per view, subs per view, view curve vs channel average.",
+      "A metric tells where to look, not what to change (low CTR → look at the thumbnail and ask why).",
+      "Sharp retention drop → inspect that moment (early CTA, a slow part) and cut it.",
+      "Write down one lesson per video for the next one."
+    ],
+    "pre_production_checklist": [
+      "Topic has a good floor (median) and a high ceiling on videos from the last 3–6 months.",
+      "Reference views look real and demand is still active.",
+      "Topic is attached to a bigger demand when possible (season, store, culture, event).",
+      "Title framing wins in at least 2 different channels and we know why it works for our audience.",
+      "Title promise is deliverable and true, no false words.",
+      "Thumbnail: avatar face, one audience-targeting object, an open question; understood in 1 second.",
+      "Hook has the 4 P (promise, honest proof, plan, persona) in the first 45 seconds.",
+      "Script outline = the list of conditions that make the title true; every one is met.",
+      "Over-deliver: a bonus, a safety tip, a worked example.",
+      "Edit matches the promise: calm, warm, no gratuitous effects.",
+      "After 48 h and 7 days: read comments, likes/view, subs/view, retention curve; note one lesson."
+    ]
   }
 }

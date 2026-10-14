@@ -155,7 +155,8 @@
     "Use the running gags at most 2–3 times per video, short.",
     "Use the fixed lines from character.fixed_lines_de exactly.",
     "No idling advice: warming up a stationary engine is forbidden in Germany (StVO § 30) and bad for the engine.",
-    "Length check: count the words of all voice texts; 1,900–2,700 words."
+    "Length check: count the words of all voice texts; 1,900–2,700 words.",
+    "Apply video_method to every video: 4P hook in the first 45 s (promise, honest proof, plan, persona), and the outline = acceptance criteria that make the title true."
   ],
   "script_output_schema": {
     "description": "The script tool returns one JSON object per video with this shape.",
@@ -914,5 +915,468 @@
       "first_line_de": "Ein Ölfleck in der Einfahrt macht jedem Angst. Ich zeig dir, wie du in fünf Minuten weißt, wie schlimm es ist.",
       "caution_fr": "Identifier la fuite (couleur, odeur), sans promettre de la réparer soi-même."
     }
-  ]
+  ],
+  "video_method": {
+    "source": "Jake Trinder, 'How to Become Disgustingly Good at YouTube' (youtu.be/Dx-c19qXdxM), Oct 14 2026",
+    "principle": "A video is a series system: topic, packaging (title + thumbnail), hook, body and edit must all be right; one wrong decision can sink the video.",
+    "topic": [
+      "Pick topics from what the audience already chooses to watch (revealed preference), not from what we think they need.",
+      "For each topic note the floor (median views of a decent video) and the ceiling (best videos) over the last 3–6 months, 8+ min videos.",
+      "Check views look real (≈1–5 % likes per view, on-topic comments) and that demand is still active (recent videos still getting views).",
+      "Raise the ceiling by attaching the topic to a bigger demand: season, event, culture (Amish, Japanese), well-known store (Walmart, Costco, Aldi)."
+    ],
+    "title": [
+      "Use a title framing that wins in at least 2–3 different channels or niches, not a single outlier.",
+      "Understand why the framing works and only reuse it if that reason is true for our audience (avoid overfitting).",
+      "The title must make a promise the video fully delivers; never use false words."
+    ],
+    "thumbnail": [
+      "Job 1: stand out in the feed. Job 2: be understood at a glance.",
+      "Avatar face + one object/icon that targets the audience + a tension that opens a question; the title closes only part of it."
+    ],
+    "edit": "The edit matches the promise: calm and warm for our characters, useful B-roll, on-screen text for numbers, no gratuitous effects.",
+    "hook_4P": {
+      "promise": "Confirm in one sentence that this is what they clicked for.",
+      "proof": "Why listen: honest proof only (sources, the character's story told as a story, a shown result). Never fake credentials or numbers.",
+      "plan": "Announce the steps / number of items and what comes at the end.",
+      "persona": "Name the viewer: 'if you're over 60', 'if you lost your spouse', 'wenn du einen Diesel fährst'.",
+      "timing": "All 4 P inside the first 30–45 seconds."
+    },
+    "body_acceptance_criteria": [
+      "Decompose the title's promise: what must be true at the end for the title to be true? Break each answer down again.",
+      "That list is the outline; the script is finished only when every condition is met.",
+      "Deliver real value fast, then exceed the expectation (one bonus item, a safety tip, a worked example).",
+      "Goal is viewer satisfaction, not retention tricks."
+    ],
+    "after_publish": [
+      "Early signals: positive comments per view (and what they say), likes per view, subs per view, view curve vs channel average.",
+      "A metric tells where to look, not what to change (low CTR → look at the thumbnail and ask why).",
+      "Sharp retention drop → inspect that moment (early CTA, a slow part) and cut it.",
+      "Write down one lesson per video for the next one."
+    ],
+    "pre_production_checklist": [
+      "Topic has a good floor (median) and a high ceiling on videos from the last 3–6 months.",
+      "Reference views look real and demand is still active.",
+      "Topic is attached to a bigger demand when possible (season, store, culture, event).",
+      "Title framing wins in at least 2 different channels and we know why it works for our audience.",
+      "Title promise is deliverable and true, no false words.",
+      "Thumbnail: avatar face, one audience-targeting object, an open question; understood in 1 second.",
+      "Hook has the 4 P (promise, honest proof, plan, persona) in the first 45 seconds.",
+      "Script outline = the list of conditions that make the title true; every one is met.",
+      "Over-deliver: a bonus, a safety tip, a worked example.",
+      "Edit matches the promise: calm, warm, no gratuitous effects.",
+      "After 48 h and 7 days: read comments, likes/view, subs/view, retention curve; note one lesson."
+    ]
+  },
+  "videos_new_oct2026": [
+    {
+      "number": 31,
+      "title": "Dieser GEHEIME Auto-Trick ist fast allen Fahrern unbekannt (Profi-Tipps aus 40 Jahren Werkstatt)",
+      "priority": 1,
+      "winning_pattern_fr": "« SECRET Car Tricks Unknown to 99% of Drivers » : gagne en 4 langues (2,7 M en anglais, 575 k et 306 k en allemand, 368 k en russe)",
+      "topic_floor_ceiling_fr": "Auto Tricks : plancher 74 k · plafond 2 M",
+      "demand_stack_fr": "La formule qui gagne dans plusieurs langues + la crédibilité du vieux mécanicien.",
+      "reference_videos": [
+        {
+          "title": "Dieser GEHEIME Auto-Trick ist 99% der Fahrer unbekannt (Profi-Tipps)",
+          "url": "https://www.youtube.com/watch?v=ciOnZccofPY",
+          "views": 575087,
+          "channel": "AutoTechWelt"
+        },
+        {
+          "title": "These SECRET Car Tricks are Unknown To 99% of Drivers (Pro Tips)",
+          "url": "https://www.youtube.com/watch?v=a3kHOURxlEk",
+          "views": 2714568,
+          "channel": "OnTorque"
+        },
+        {
+          "title": "VERSTECKTE Auto-Tricks, die nur erfahrene Fahrer kennen",
+          "url": "https://www.youtube.com/watch?v=pg4yq2mv4cU",
+          "views": 306227,
+          "channel": "Ganz Entspannt Auto"
+        },
+        {
+          "title": "These SECRET Honda Functions Are Not Known By 99% Of Drivers (Use It Now!)",
+          "url": "https://www.youtube.com/watch?v=1kzy0nFPI3k",
+          "views": 708348,
+          "channel": "Honda Culture"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Heute zeig ich dir die Tricks, die ich jedem Kunden erklärt hab – und kaum einer kennt.",
+        "Proof: 40 Jahre Werkstatt. Und alles mit ADAC und Herstellerangaben abgeglichen.",
+        "Plan: Motor, Bremsen-Check, Innenraum, Winter – und der wichtigste Trick zum Schluss.",
+        "Persona: Wenn du dein Auto lange fahren und wenig in der Werkstatt lassen willst – bleib dran."
+      ],
+      "acceptance_criteria_fr": [
+        "Uniquement des astuces vraies et vérifiables, différentes de nos vidéos #4 et #22.",
+        "Chaque astuce montrée en B-roll, avec l'économie ou le risque évité.",
+        "Le « secret » final doit vraiment surprendre.",
+        "Le rappel de sécurité pour les freins et la direction."
+      ],
+      "thumbnail_fr": "Horst qui montre un bouton caché du tableau de bord, une flèche rouge, le texte « KENNT KEINER ».",
+      "caution_fr": "Pas de « 99 % » sans source : on dit « fast alle »."
+    },
+    {
+      "number": 32,
+      "title": "Ein alter Mechaniker warnt: Behalte dein altes Auto! Die Wahrheit über Neuwagen 2026",
+      "priority": 2,
+      "winning_pattern_fr": "« Kfz-Meister warnt: Behalte dein altes Auto! » (327 k) + « Kauf das NICHT! Warum MODERNE Autos zur TEUREN FALLE werden » (356 k)",
+      "topic_floor_ceiling_fr": "Gebrauchtwagen kaufen : plancher 80 k · plafond 3 M",
+      "demand_stack_fr": "Les prix des voitures neuves, et la longévité promise par Horst.",
+      "reference_videos": [
+        {
+          "title": "Kfz-Meister warnt: Behalte dein altes Auto! Die Wahrheit über Neuwagen 2026",
+          "url": "https://www.youtube.com/watch?v=W_jUnDvMB94",
+          "views": 326571,
+          "channel": "Auto Flüsterer"
+        },
+        {
+          "title": "Kauf das NICHT! Warum MODERNE Autos zur TEUREN FALLE werden! 50.000€ Schrott ab Werk!",
+          "url": "https://www.youtube.com/watch?v=z0ETXlUQ2OI",
+          "views": 356375,
+          "channel": "Die Autogesellschaft Dresden"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Warum dein altes Auto oft die bessere Wahl ist – und wann nicht.",
+        "Proof: Ich hab 40 Jahre lang gesehen, was alte und neue Autos wirklich kosten.",
+        "Plan: Wertverlust, Reparaturkosten, Elektronik, Versicherung – und wann sich ein Wechsel lohnt.",
+        "Persona: Wenn dein Auto 10 Jahre alt ist und der Händler dich drängt – hör erst mir zu."
+      ],
+      "acceptance_criteria_fr": [
+        "Une comparaison chiffrée et sourcée (ADAC Autokosten, perte de valeur).",
+        "Les cas où garder la vieille voiture est une mauvaise idée (sécurité, rouille, coûts).",
+        "Aucune attaque contre une marque précise.",
+        "La fin : la liste de contrôle « garder ou vendre »."
+      ],
+      "thumbnail_fr": "Horst la main posée sur une vieille Golf, une voiture neuve floue derrière avec un panneau « €€€ ».",
+      "caution_fr": "Horst ne dit jamais « Kfz-Meister » : c'est un faux titre. On dit « alter Mechaniker »."
+    },
+    {
+      "number": 33,
+      "title": "Gebrauchtwagen bis 5.000 €: Diese 7 kannst du kaufen – und diese 3 NIEMALS",
+      "priority": 3,
+      "winning_pattern_fr": "« N … NIEMALS kaufen – und M, die du blind kaufen kannst » (253 k) + « Gebrauchtwagen bis 5.000 Euro » (366 k)",
+      "topic_floor_ceiling_fr": "Gebrauchtwagen kaufen : plancher 80 k · plafond 3 M",
+      "demand_stack_fr": "Un budget précis, très recherché en période d'inflation.",
+      "reference_videos": [
+        {
+          "title": "Gebrauchtwagen bis 5.000 Euro: Unser Händler-Check | Markt NDR",
+          "url": "https://www.youtube.com/watch?v=YzvL-yrnVbM",
+          "views": 366414,
+          "channel": "ARD Marktcheck"
+        },
+        {
+          "title": "8 Wohnmobil-Marken, die du gebraucht NIEMALS kaufen solltest – und 3, die du blind kaufen kannst",
+          "url": "https://www.youtube.com/watch?v=MnwRtt4p5cA",
+          "views": 252697,
+          "channel": "Albert Rottmann"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 7 Autos bis 5.000 €, die halten – und 3, von denen ich die Finger lasse.",
+        "Proof: Ich stütze mich auf den TÜV-Report und die ADAC-Pannenstatistik, plus meine Werkstatt-Erfahrung.",
+        "Plan: die 3 Fehlkäufe zuerst, dann die 7 Empfehlungen, dann die Checkliste beim Kauf.",
+        "Persona: Wenn du wenig Geld hast und ein Auto brauchst, das dich nicht ruiniert – genau für dich."
+      ],
+      "acceptance_criteria_fr": [
+        "10 modèles avec génération et motorisation, appuyés sur le TÜV-Report et la statistique de pannes de l'ADAC.",
+        "Pour chacun : le défaut typique à vérifier.",
+        "La liste de contrôle à l'achat (rouille, historique d'entretien, essai).",
+        "Aucune affirmation « ne tombe jamais en panne »."
+      ],
+      "thumbnail_fr": "Trois voitures barrées en rouge, sept cochées en vert, et Horst au milieu.",
+      "caution_fr": "Éviter toute affirmation diffamatoire sur un modèle : rester sur les chiffres publiés."
+    },
+    {
+      "number": 34,
+      "title": "Schau dieses Video, bevor du auf ein Elektroauto umsteigst! (Horst und sein Enkel Jonas streiten)",
+      "priority": 4,
+      "winning_pattern_fr": "« Schau dieses Video, bevor du auf ein Elektroauto umsteigst! » (357 k)",
+      "topic_floor_ceiling_fr": "Auto Tricks : plancher 74 k · plafond 2 M",
+      "demand_stack_fr": "Le débat sur la voiture électrique, avec notre gag récurrent (Jonas).",
+      "reference_videos": [
+        {
+          "title": "Schau dieses Video, bevor du auf ein Elektroauto umsteigst!",
+          "url": "https://www.youtube.com/watch?v=Nlu9hGhRDoQ",
+          "views": 356521,
+          "channel": "DasIstJay"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Ehrlich: Für wen sich ein E-Auto lohnt – und für wen nicht.",
+        "Proof: ADAC-Kostenvergleich und die Zahlen vom Kraftfahrt-Bundesamt.",
+        "Plan: Kosten, Reichweite im Winter, Laden, Batterie, Werkstatt – Jonas gegen mich.",
+        "Persona: Wenn du über ein E-Auto nachdenkst und nicht weißt, wem du glauben sollst – wir streiten für dich."
+      ],
+      "acceptance_criteria_fr": [
+        "Une comparaison honnête des coûts (ADAC) avec les hypothèses claires.",
+        "Les vrais avantages ET les vrais inconvénients.",
+        "Jonas défend l'électrique, Horst le diesel : pas de caricature.",
+        "La conclusion : selon le profil du conducteur."
+      ],
+      "thumbnail_fr": "Horst et un jeune homme (Jonas) dos à dos, une prise de recharge et un pistolet diesel.",
+      "caution_fr": "Pas de chiffres de pannes de batteries inventés ; tout est sourcé."
+    },
+    {
+      "number": 35,
+      "title": "Ganzjahresreifen oder Winterreifen? Was 40 Jahre Werkstatt dazu sagen",
+      "priority": 5,
+      "winning_pattern_fr": "Comparatif saisonnier (464 k, rbb)",
+      "topic_floor_ceiling_fr": "Winterreifen : plancher 2 k (faible) · plafond 464 k → c'est la formule « oder » qui relève le plafond",
+      "demand_stack_fr": "La saison (octobre-novembre) et une question que tout le monde se pose.",
+      "reference_videos": [
+        {
+          "title": "Ganzjahresreifen im Check: Praktischer Allrounder oder fauler Kompromiss? | SUPER.MARKT",
+          "url": "https://www.youtube.com/watch?v=BXbwxhsnO0M",
+          "views": 464258,
+          "channel": "rbb"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Ganzjahres- oder Winterreifen – meine ehrliche Antwort für dein Auto.",
+        "Proof: Reifentests von ADAC und die Regeln der StVO.",
+        "Plan: das Gesetz, die Tests, wo du wohnst, wie du fährst – dann meine Empfehlung.",
+        "Persona: Wenn du jedes Jahr zweimal zum Reifenwechsel fährst und dich fragst, ob das sein muss – hier ist die Antwort."
+      ],
+      "acceptance_criteria_fr": [
+        "La règle légale exacte (situative Winterreifenpflicht, symbole alpin obligatoire depuis le 1er octobre 2024).",
+        "Les résultats des tests ADAC présentés honnêtement.",
+        "Une recommandation selon le profil (ville, montagne, kilométrage).",
+        "Le rappel : profondeur minimale 1,6 mm, conseil de 4 mm en hiver."
+      ],
+      "thumbnail_fr": "Un pneu toutes saisons et un pneu hiver côte à côte, Horst au milieu avec un point d'interrogation.",
+      "caution_fr": "Vérifier la règle StVO à jour le jour de l'écriture."
+    },
+    {
+      "number": 36,
+      "title": "TÜV: Was der Prüfer wirklich prüft – und die 12 Mängel, an denen die meisten durchfallen",
+      "priority": 6,
+      "winning_pattern_fr": "« Das unfassbare Milliardengeschäft hinter dem TÜV » (350 k) + « Der TÜV-Report » (254 k)",
+      "topic_floor_ceiling_fr": "TÜV : plancher 26 k · plafond 873 k",
+      "demand_stack_fr": "Le TÜV, une angoisse que partagent tous les conducteurs allemands.",
+      "reference_videos": [
+        {
+          "title": "Das unfassbare Milliardengeschäft hinter dem TÜV",
+          "url": "https://www.youtube.com/watch?v=1O_jGXqzXJU",
+          "views": 349923,
+          "channel": "Was kostet die Welt?"
+        },
+        {
+          "title": "Der TÜV-Report: Wenn die Plakette wackelt (2001) | SPIEGEL TV Classic",
+          "url": "https://www.youtube.com/watch?v=sXmM-KKJd-M",
+          "views": 253868,
+          "channel": "DER SPIEGEL"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Die 12 häufigsten Mängel – und wie du sie vorher selbst findest.",
+        "Proof: Zahlen aus dem aktuellen TÜV-Report, und viele Jahre Vorbereitung auf die HU.",
+        "Plan: Licht, Bremsen, Reifen, Rost, Auspuff – und der eine Mangel, den keiner prüft.",
+        "Persona: Wenn deine Plakette bald fällig ist – mach das vorher in 20 Minuten."
+      ],
+      "acceptance_criteria_fr": [
+        "12 défauts tirés du TÜV-Report de l'année, avec les chiffres.",
+        "Ce qu'on peut vérifier soi-même, et ce qui relève du garage.",
+        "Le coût moyen d'un contre-contrôle (Nachprüfung), sourcé.",
+        "Aucun conseil pour tromper le contrôle."
+      ],
+      "thumbnail_fr": "Une vignette TÜV qui se décolle, Horst avec une lampe sous une voiture.",
+      "caution_fr": "Jamais de conseil pour masquer un défaut."
+    },
+    {
+      "number": 37,
+      "title": "Leasing-Rückgabe: 10 Fehler, die dich bares Geld kosten – ein alter Mechaniker packt aus",
+      "priority": 7,
+      "winning_pattern_fr": "« Leasing-Rückgabe: 10 Fehler… » (316 k) + « Leasing erklärt » (773 k)",
+      "topic_floor_ceiling_fr": "Gebrauchtwagen kaufen : plancher 80 k · plafond 3 M",
+      "demand_stack_fr": "L'argent (le leasing) relève le plafond d'une vidéo de mécanique.",
+      "reference_videos": [
+        {
+          "title": "Leasing-Rückgabe: 10 Fehler, die dich bares Geld kosten",
+          "url": "https://www.youtube.com/watch?v=HgJVhmwLNks",
+          "views": 315913,
+          "channel": "Auto Finanz"
+        },
+        {
+          "title": "Leasing erklärt: Warum ein 50.000-€-Auto nur 277 € im Monat kostet",
+          "url": "https://www.youtube.com/watch?v=mRGtn4ar9MI",
+          "views": 773303,
+          "channel": "Auto Finanz"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 10 Fehler bei der Leasing-Rückgabe – und wie du jeden vermeidest.",
+        "Proof: Ich hab hunderte Leasing-Autos vor der Rückgabe in der Werkstatt gehabt.",
+        "Plan: Kratzer, Felgen, Reifen, Wartung, Gutachten – und der teuerste Fehler zum Schluss.",
+        "Persona: Wenn dein Leasing in den nächsten Monaten endet – schau das jetzt."
+      ],
+      "acceptance_criteria_fr": [
+        "10 erreurs concrètes avec le coût typique, présenté comme un ordre de grandeur.",
+        "Ce qui relève de l'usure normale et ce qui n'en relève pas.",
+        "Le droit du client : un expertise indépendante est possible.",
+        "Aucun conseil juridique au-delà des faits généraux."
+      ],
+      "thumbnail_fr": "Une jante rayée en gros plan, Horst qui tient une facture, le texte « 2.000 € ? ».",
+      "caution_fr": "Mention « keine Rechtsberatung »."
+    },
+    {
+      "number": 38,
+      "title": "Dieses Knacken beim Lenken findet deine Werkstatt oft nicht – so findest du es selbst",
+      "priority": 8,
+      "winning_pattern_fr": "« Das Knacken, das deine Werkstatt nie findet » (437 k), proche de notre #7 « Dieses Geräusch killt… »",
+      "topic_floor_ceiling_fr": "Werkstatt Tipps : plancher 22 k · plafond 437 k",
+      "demand_stack_fr": "Un bruit que tout le monde connaît, et la méfiance envers les garages.",
+      "reference_videos": [
+        {
+          "title": "Das Knacken, das deine Werkstatt nie findet",
+          "url": "https://www.youtube.com/watch?v=JsFizWAp2pg",
+          "views": 436983,
+          "channel": "Olafs Pedal & Perspektive"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Woher das Knacken beim Lenken kommt – und wie du es eingrenzt.",
+        "Proof: Ich hab dieses Geräusch hunderte Male gesucht.",
+        "Plan: Antriebswelle, Domlager, Koppelstange, Spurstange – mit einfachem Test.",
+        "Persona: Wenn dein Auto beim Einparken knackt und die Werkstatt nichts findet – hör genau hin."
+      ],
+      "acceptance_criteria_fr": [
+        "4 causes, chacune avec le son typique, le test simple et le coût approximatif.",
+        "La sécurité : direction = garage, pas de réparation maison.",
+        "Comment décrire le bruit au garage.",
+        "Aucune « réparation miracle »."
+      ],
+      "thumbnail_fr": "Une roue braquée au maximum, une onde sonore, Horst qui écoute la main derrière l'oreille.",
+      "caution_fr": "Direction = sécurité : pas de réparation maison conseillée."
+    },
+    {
+      "number": 39,
+      "title": "Der versteckte Filter, der deinen Motor erstickt – und den fast keiner prüft",
+      "priority": 9,
+      "winning_pattern_fr": "« The Hidden Air Filter Choking Your Engine That Almost Nobody Checks » (409 k en anglais), formule à transposer en allemand",
+      "topic_floor_ceiling_fr": "Diesel Motor : plancher 409 k · plafond 2,4 M",
+      "demand_stack_fr": "La peur d'abîmer le moteur, et un geste simple et pas cher.",
+      "reference_videos": [
+        {
+          "title": "The Hidden Air Filter Choking Your Engine That Almost Nobody Checks",
+          "url": "https://www.youtube.com/watch?v=-XK7iNpABAc",
+          "views": 409026,
+          "channel": "Tom's Garage"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Welcher Filter oft vergessen wird – und was das deinen Motor kostet.",
+        "Proof: Wartungspläne der Hersteller und 40 Jahre Filterwechsel.",
+        "Plan: Luftfilter, Innenraumfilter, Kraftstofffilter – wann, warum, wie teuer.",
+        "Persona: Wenn dein Auto träge wirkt und mehr verbraucht – fang hier an."
+      ],
+      "acceptance_criteria_fr": [
+        "Les 3 filtres expliqués avec les intervalles du constructeur (« laut Wartungsplan »).",
+        "Ce qu'on peut changer soi-même en 10 minutes, et ce qui revient au garage.",
+        "Les symptômes de chaque filtre bouché.",
+        "Aucun chiffre de consommation inventé."
+      ],
+      "thumbnail_fr": "Un filtre à air noir de saleté à côté d'un neuf, Horst qui le tient à contre-jour.",
+      "caution_fr": null
+    },
+    {
+      "number": 40,
+      "title": "Gebrauchtwagen online kaufen: Diese 9 Fallen kosten dich Tausende",
+      "priority": 10,
+      "winning_pattern_fr": "« Online-Autokauf: Kunden berichten von Problemen » (445 k, ARD) + le plancher « Gebrauchtwagen » à 80 k",
+      "topic_floor_ceiling_fr": "Gebrauchtwagen kaufen : plancher 80 k · plafond 3 M",
+      "demand_stack_fr": "L'achat en ligne : un nouvel usage, avec un risque d'arnaque.",
+      "reference_videos": [
+        {
+          "title": "Online-Autokauf bei Autohero: Kunden berichten von Problemen | Marktcheck SWR",
+          "url": "https://www.youtube.com/watch?v=21jjtKulVKY",
+          "views": 445107,
+          "channel": "ARD Marktcheck"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 9 Fallen beim Online-Autokauf – und wie du jede erkennst.",
+        "Proof: Verbraucherzentrale-Warnungen und viele Kunden, die nach dem Kauf zu mir kamen.",
+        "Plan: Fotos, Preis, Anzahlung, Rückgabe, Gewährleistung – dann meine Checkliste.",
+        "Persona: Wenn du dein nächstes Auto im Internet suchst – lies das vor dem ersten Klick."
+      ],
+      "acceptance_criteria_fr": [
+        "9 pièges, dont les arnaques à l'acompte (sources : Verbraucherzentrale, police).",
+        "Les droits du client (Gewährleistung, rétractation) en termes généraux.",
+        "Aucune enseigne accusée nommément.",
+        "La liste de contrôle à télécharger, mentionnée seulement si elle existe."
+      ],
+      "thumbnail_fr": "Un écran de smartphone avec une annonce de voiture et un hameçon, Horst qui fronce les sourcils.",
+      "caution_fr": "Pas de nom d'enseigne présenté comme fautif."
+    },
+    {
+      "number": 41,
+      "title": "BYD, MG & Co.: Was ein alter Mechaniker über China-Autos denkt",
+      "priority": 11,
+      "winning_pattern_fr": "« BYD – der größte Betrug der Autoindustrie » (2 M) : une très grosse demande, à traiter sans attaque",
+      "topic_floor_ceiling_fr": "Auto Tricks : plancher 74 k · plafond 2 M",
+      "demand_stack_fr": "Un sujet d'actualité avec une forte curiosité.",
+      "reference_videos": [
+        {
+          "title": "BYD - der größte Betrug der Autoindustrie",
+          "url": "https://www.youtube.com/watch?v=ckl7kr_jdiY",
+          "views": 2015122,
+          "channel": "Wissenswert"
+        }
+      ],
+      "hook_4P": [
+        "Promise: Meine ehrliche Meinung zu China-Autos – was gut ist und wo ich vorsichtig wäre.",
+        "Proof: Euro-NCAP-Ergebnisse, ADAC-Tests und was Werkstätten bei Ersatzteilen erleben.",
+        "Plan: Preis, Sicherheit, Qualität, Ersatzteile, Wiederverkauf.",
+        "Persona: Wenn dich der günstige Preis reizt, du aber Zweifel hast – schau das erst."
+      ],
+      "acceptance_criteria_fr": [
+        "Les faits uniquement : résultats Euro NCAP, tests ADAC, réseau de pièces.",
+        "Les points forts ET les doutes, sans le mot « Betrug ».",
+        "La conclusion selon le profil d'acheteur.",
+        "Aucune information non vérifiée sur une marque."
+      ],
+      "thumbnail_fr": "Horst avec un regard sceptique devant une voiture asiatique moderne floue, le texte « EHRLICH? ».",
+      "caution_fr": "Ne pas reprendre « Betrug » (une fraude) : ce serait faux et diffamatoire."
+    },
+    {
+      "number": 42,
+      "title": "20 Werkzeug-Fehlkäufe, die du bereuen wirst – und was ein alter Mechaniker stattdessen kauft",
+      "priority": 12,
+      "winning_pattern_fr": "« 20 Werkstatt-Fehlkäufe, die du bereuen wirst » (274 k) + le succès des outils de discount (873 k)",
+      "topic_floor_ceiling_fr": "Werkstatt Tipps : plancher 22 k · plafond 437 k",
+      "demand_stack_fr": "Les outils de discount et les achats de Noël.",
+      "reference_videos": [
+        {
+          "title": "20 Werkstatt-Fehlkäufe, die du bereuen wirst",
+          "url": "https://www.youtube.com/watch?v=C5W1rCdsgNU",
+          "views": 273577,
+          "channel": "Helden der Werkstatt"
+        },
+        {
+          "title": "Tischkreissäge für 89€ 👉 PARKSIDE & TÜV SÜD - ich hab Fragen! 😲🤬 | Jonas Winkler",
+          "url": "https://www.youtube.com/watch?v=tiftRGBB6W8",
+          "views": 872641,
+          "channel": "Jonas Winkler"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 20 Werkzeuge, die Geld verschwenden – und die 10, die in jede Garage gehören.",
+        "Proof: 40 Jahre mit Werkzeug, das hält, und mit Werkzeug, das bricht.",
+        "Plan: Schrauben, Messen, Heben, Elektrik – dann meine Grundausstattung.",
+        "Persona: Wenn du selbst schrauben willst und nicht weißt, was du kaufen sollst – das spart dir Geld."
+      ],
+      "acceptance_criteria_fr": [
+        "20 catégories d'outils (pas de marque attaquée), chacune avec la raison.",
+        "La sécurité : cric = toujours des chandelles.",
+        "La liste de base avec une fourchette de prix réaliste.",
+        "Aucun test présenté comme réel : Horst parle de son expérience, il ne « teste » pas devant la caméra."
+      ],
+      "thumbnail_fr": "Une pile d'outils brillants barrée, et la caisse à outils usée de Horst cochée.",
+      "caution_fr": "Horst ne prétend pas avoir testé un produit précis."
+    }
+  ],
+  "publishing_order_note": "After the first 12 videos of publishing_order, insert videos_new_oct2026 by priority (31 = priority 1), alternating with the remaining original videos. Seasonal ones (Ganzjahresreifen, TÜV) go first in Oct–Nov."
 }

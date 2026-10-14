@@ -491,5 +491,480 @@
       }
     ],
     "words": 13
-  }
+  },
+  "video_method": {
+    "source": "Jake Trinder, 'How to Become Disgustingly Good at YouTube' (youtu.be/Dx-c19qXdxM), Oct 14 2026",
+    "principle": "A video is a series system: topic, packaging (title + thumbnail), hook, body and edit must all be right; one wrong decision can sink the video.",
+    "topic": [
+      "Pick topics from what the audience already chooses to watch (revealed preference), not from what we think they need.",
+      "For each topic note the floor (median views of a decent video) and the ceiling (best videos) over the last 3–6 months, 8+ min videos.",
+      "Check views look real (≈1–5 % likes per view, on-topic comments) and that demand is still active (recent videos still getting views).",
+      "Raise the ceiling by attaching the topic to a bigger demand: season, event, culture (Amish, Japanese), well-known store (Walmart, Costco, Aldi)."
+    ],
+    "title": [
+      "Use a title framing that wins in at least 2–3 different channels or niches, not a single outlier.",
+      "Understand why the framing works and only reuse it if that reason is true for our audience (avoid overfitting).",
+      "The title must make a promise the video fully delivers; never use false words."
+    ],
+    "thumbnail": [
+      "Job 1: stand out in the feed. Job 2: be understood at a glance.",
+      "Avatar face + one object/icon that targets the audience + a tension that opens a question; the title closes only part of it."
+    ],
+    "edit": "The edit matches the promise: calm and warm for our characters, useful B-roll, on-screen text for numbers, no gratuitous effects.",
+    "hook_4P": {
+      "promise": "Confirm in one sentence that this is what they clicked for.",
+      "proof": "Why listen: honest proof only (sources, the character's story told as a story, a shown result). Never fake credentials or numbers.",
+      "plan": "Announce the steps / number of items and what comes at the end.",
+      "persona": "Name the viewer: 'if you're over 60', 'if you lost your spouse', 'wenn du einen Diesel fährst'.",
+      "timing": "All 4 P inside the first 30–45 seconds."
+    },
+    "body_acceptance_criteria": [
+      "Decompose the title's promise: what must be true at the end for the title to be true? Break each answer down again.",
+      "That list is the outline; the script is finished only when every condition is met.",
+      "Deliver real value fast, then exceed the expectation (one bonus item, a safety tip, a worked example).",
+      "Goal is viewer satisfaction, not retention tricks."
+    ],
+    "after_publish": [
+      "Early signals: positive comments per view (and what they say), likes per view, subs per view, view curve vs channel average.",
+      "A metric tells where to look, not what to change (low CTR → look at the thumbnail and ask why).",
+      "Sharp retention drop → inspect that moment (early CTA, a slow part) and cut it.",
+      "Write down one lesson per video for the next one."
+    ],
+    "pre_production_checklist": [
+      "Topic has a good floor (median) and a high ceiling on videos from the last 3–6 months.",
+      "Reference views look real and demand is still active.",
+      "Topic is attached to a bigger demand when possible (season, store, culture, event).",
+      "Title framing wins in at least 2 different channels and we know why it works for our audience.",
+      "Title promise is deliverable and true, no false words.",
+      "Thumbnail: avatar face, one audience-targeting object, an open question; understood in 1 second.",
+      "Hook has the 4 P (promise, honest proof, plan, persona) in the first 45 seconds.",
+      "Script outline = the list of conditions that make the title true; every one is met.",
+      "Over-deliver: a bonus, a safety tip, a worked example.",
+      "Edit matches the promise: calm, warm, no gratuitous effects.",
+      "After 48 h and 7 days: read comments, likes/view, subs/view, retention curve; note one lesson."
+    ]
+  },
+  "episodes_new_oct2026": [
+    {
+      "number": 21,
+      "title": "Every Retiree Must Do This Before December 7 — The Medicare Deadline We Almost Missed",
+      "priority": 1,
+      "winning_pattern_fr": "« Every Senior Must Do This Before [date] » (463 k) + « BIG Medicare Changes Coming in 2027 » (934 k)",
+      "topic_floor_ceiling_fr": "social security 2027 : plancher 66 k · plafond 1,1 M",
+      "demand_stack_fr": "La date : la période d'inscription Medicare va du 15 octobre au 7 décembre. À publier tout de suite.",
+      "reference_videos": [
+        {
+          "title": "Every Senior Must Do This Before September 30: The 2027 COLA Rule Nobody Explains",
+          "url": "https://www.youtube.com/watch?v=QaxDyEkhhTo",
+          "views": 462642,
+          "channel": "Kevin Explains"
+        },
+        {
+          "title": "BIG Medicare Changes Coming in 2027 — What You Need to Know",
+          "url": "https://www.youtube.com/watch?v=nXXywC4myaw",
+          "views": 934439,
+          "channel": "Medicare Specialist - Abt Insurance Agency"
+        }
+      ],
+      "hook_4P": [
+        "Promise: what to check before December 7 so your 2027 Medicare costs don't surprise you.",
+        "Proof: everything here comes from medicare.gov — and Frank's own drug-plan mistake last year.",
+        "Plan: the dates, the 3 things to compare, the mistake we made, and where to get free help.",
+        "Persona: if you're on Medicare or turning 65 soon, don't skip this one."
+      ],
+      "acceptance_criteria_fr": [
+        "Les vraies dates de l'Open Enrollment, vérifiées sur medicare.gov.",
+        "Les 3 comparaisons : médicaments couverts, pharmacies, coût total de l'année.",
+        "L'aide gratuite (programmes SHIP) avec le lien officiel.",
+        "La mention « not financial or medical advice »."
+      ],
+      "thumbnail_fr": "Linda et Frank devant un calendrier avec le « DEC 7 » entouré, Frank qui tient une lettre de son assureur.",
+      "caution_fr": "Vérifier les règles 2027 sur medicare.gov le jour de l'écriture ; aucune promesse d'économies chiffrées."
+    },
+    {
+      "number": 22,
+      "title": "Seniors 65+: 7 Bills You May Not Have to Pay Anymore (Most Never Check)",
+      "priority": 2,
+      "winning_pattern_fr": "« Seniors 65+: N Bills You're Exempt From » : 4 chaînes (693 k, 636 k, 465 k au Royaume-Uni, 414 k au Canada)",
+      "topic_floor_ceiling_fr": "retirement advice : plancher 211 k · plafond 873 k",
+      "demand_stack_fr": "L'argent qu'on peut récupérer, avec un âge précis (65 ans et plus).",
+      "reference_videos": [
+        {
+          "title": "Seniors 65+: 5 Bills You're Legally Exempt From — Most Never Stop Paying Them",
+          "url": "https://www.youtube.com/watch?v=fsaVrWywvHo",
+          "views": 693477,
+          "channel": "Sophia Morgan"
+        },
+        {
+          "title": "Seniors: 5 Bills You Don't Have to Pay After 65 (Most People Don't Know)",
+          "url": "https://www.youtube.com/watch?v=HhSxNb--tSE",
+          "views": 636488,
+          "channel": "Sarah Retire"
+        },
+        {
+          "title": "UK PENSIONERS: Claim These Hidden DWP Payouts Before the Window Closes (£12,500+)",
+          "url": "https://www.youtube.com/watch?v=Q0-RhccM770",
+          "views": 465196,
+          "channel": "Helen Hartley — UK Pension & Tax"
+        },
+        {
+          "title": "🚨 12 Bills Canadian Seniors STOP Paying in 2026 — The Full List Most Never Claim",
+          "url": "https://www.youtube.com/watch?v=PBhv7ihn3mA",
+          "views": 413670,
+          "channel": "Jake Morrison"
+        }
+      ],
+      "hook_4P": [
+        "Promise: seven bills or charges many people over 65 can cut or stop.",
+        "Proof: we checked each one on official sites — and Linda found two for us.",
+        "Plan: property tax, phone, prescriptions, bank fees, and the one Frank refused to believe.",
+        "Persona: if you're 65 or older and on a fixed income, check this list tonight."
+      ],
+      "acceptance_criteria_fr": [
+        "7 postes vraiment réductibles, avec la règle officielle et le lien (IRS, ssa.gov, sites des États).",
+        "« May not » : préciser à chaque fois les conditions (revenus, État).",
+        "Comment faire la démarche, étape par étape.",
+        "Le désaccord du couple sur au moins un des postes."
+      ],
+      "thumbnail_fr": "Une pile de factures avec 3 tampons « STOP PAYING », et Linda qui sourit pendant que Frank hausse un sourcil.",
+      "caution_fr": "Pas de « legally exempt » si ce n'est pas vrai partout : on dit « may not have to »."
+    },
+    {
+      "number": 23,
+      "title": "Born Before 1962? 4 Social Security Changes Hitting Your Check in 2027",
+      "priority": 3,
+      "winning_pattern_fr": "« Born Before [année]? … Social Security » : 3 chaînes (1,12 M, 1,15 M, 475 k)",
+      "topic_floor_ceiling_fr": "social security 2027 : plancher 66 k · plafond 1,1 M",
+      "demand_stack_fr": "L'année de naissance (on se sent visé) et l'année qui vient (2027).",
+      "reference_videos": [
+        {
+          "title": "BORN BEFORE 1955? You're Being Paid the Wrong Social Security Amount",
+          "url": "https://www.youtube.com/watch?v=FMCfxXWtB6Q",
+          "views": 1122029,
+          "channel": "Peter Reynolds"
+        },
+        {
+          "title": "BORN BEFORE 1966 Paid the Wrong Social Security Check!? INSIDER REVEALS TRUTH!",
+          "url": "https://www.youtube.com/watch?v=wXvXdaCqlgg",
+          "views": 1145373,
+          "channel": "Dr. Ed Weir, PhD, Former Social Security Manager"
+        },
+        {
+          "title": "Born Before 1967? 4 Social Security Changes Hitting Your Birth Year In 2027",
+          "url": "https://www.youtube.com/watch?v=cEMxNQZ2tP0",
+          "views": 475211,
+          "channel": "Kevin Explains"
+        }
+      ],
+      "hook_4P": [
+        "Promise: the four 2027 changes that touch your Social Security check.",
+        "Proof: straight from ssa.gov's 2027 announcements, explained in plain English.",
+        "Plan: the COLA, the Medicare premium, the earnings limit, the tax threshold.",
+        "Persona: if you were born before 1962 and already claim, or will soon, this is your year."
+      ],
+      "acceptance_criteria_fr": [
+        "Seulement des chiffres officiels de ssa.gov et medicare.gov, avec leur date.",
+        "Ce que chaque changement veut dire pour un couple type.",
+        "Le désaccord : réclamer tôt ou attendre.",
+        "La mention « not financial advice »."
+      ],
+      "thumbnail_fr": "Une carte de Sécurité sociale avec « 2027 », et Frank avec une calculatrice.",
+      "caution_fr": "Ne publier qu'après l'annonce officielle du COLA 2027 ; aucun chiffre deviné."
+    },
+    {
+      "number": 24,
+      "title": "We Compared 4 Countries to Retire on $2,500 a Month — Only One Felt Like Home",
+      "priority": 4,
+      "winning_pattern_fr": "« At 67, I Spent $10,000 Comparing 4 Countries — Only One Felt Like Home » (467 k) + les récits de retraite à l'étranger (628 k, 427 k)",
+      "topic_floor_ceiling_fr": "retire abroad : plancher 68 k · plafond 1,9 M",
+      "demand_stack_fr": "Un budget précis, une comparaison, et notre désaccord de couple.",
+      "reference_videos": [
+        {
+          "title": "At 67, I Spent $10,000 Comparing 4 Countries to Retire—Only One Felt Like Home",
+          "url": "https://www.youtube.com/watch?v=W1gMtM9HUEM",
+          "views": 466634,
+          "channel": "Another Life Abroad"
+        },
+        {
+          "title": "I Retired In Thailand… Now I Can’t Go Home",
+          "url": "https://www.youtube.com/watch?v=YjaDO4UF2K8",
+          "views": 628148,
+          "channel": "Ryan Otis"
+        },
+        {
+          "title": "I Retired to the Philippines Alone at 64. Nobody Prepared Me for This",
+          "url": "https://www.youtube.com/watch?v=1dLLSlfVQbo",
+          "views": 427263,
+          "channel": "Philippines Life Unfiltered"
+        }
+      ],
+      "hook_4P": [
+        "Promise: four countries, one budget, and an honest verdict.",
+        "Proof: real 2026 costs from official and expat sources, and our own spreadsheet.",
+        "Plan: Portugal, Mexico, Panama, Malaysia — cost, health care, visa, the feeling.",
+        "Persona: if Social Security alone doesn't stretch far enough here, let's see where it does."
+      ],
+      "acceptance_criteria_fr": [
+        "Pour chaque pays : loyer, soins, visa retraite, distance avec la famille, avec les sources.",
+        "Les vraies difficultés (langue, santé, impôts), pas seulement le rêve.",
+        "Le désaccord : Linda vote pour un pays, Frank pour un autre.",
+        "Le verdict final et pour qui ce pays convient."
+      ],
+      "thumbnail_fr": "Une carte du monde avec 4 punaises, et Linda et Frank qui pointent chacun un pays différent.",
+      "caution_fr": "Linda et Frank sont des personnages : on dit « we compared », jamais « we lived there » si ce n'est pas l'histoire de la série."
+    },
+    {
+      "number": 25,
+      "title": "Retirees, Once Your House Is Paid Off You Have a BIG Fraud Risk — Here's What We Did",
+      "priority": 5,
+      "winning_pattern_fr": "« Once You Pay Off Your Mortgage, You Have a BIG FRAUD RISK » (927 k) + « What a Paid-Off Home Is Actually Worth » (423 k et 545 k)",
+      "topic_floor_ceiling_fr": "retirement advice : plancher 211 k · plafond 873 k",
+      "demand_stack_fr": "La peur de l'arnaque, accrochée au bien le plus précieux des retraités : la maison.",
+      "reference_videos": [
+        {
+          "title": "Retirees, Once You Pay Off Your Mortgage, You Have a BIG FRAUD RISK - Do This ASAP",
+          "url": "https://www.youtube.com/watch?v=5QPLImV9PgY",
+          "views": 926792,
+          "channel": "Holy Schmidt!"
+        },
+        {
+          "title": "What a Paid-Off Home Is Actually Worth in Retirement",
+          "url": "https://www.youtube.com/watch?v=qjeLnPoGZ24",
+          "views": 422756,
+          "channel": "Uncle John Financial "
+        },
+        {
+          "title": "The REAL Value Of A Fully Paid Off Home In Retirement (Nobody Will Tell You This)",
+          "url": "https://www.youtube.com/watch?v=XnT-etkjxOA",
+          "views": 544963,
+          "channel": "Nick Davis, CFP®"
+        }
+      ],
+      "hook_4P": [
+        "Promise: the scam that targets paid-off homes, and the 3 steps we took.",
+        "Proof: FBI and FTC warnings on deed and title fraud.",
+        "Plan: how the scam works, the warning signs, and what to set up this week.",
+        "Persona: if your home is paid off, this is the risk nobody mentions at the closing table."
+      ],
+      "acceptance_criteria_fr": [
+        "L'arnaque expliquée avec les sources (FBI IC3, FTC).",
+        "Les 3 protections : alerte du comté sur les actes, surveillance, vérification du titre.",
+        "Le coût et la gratuité de chaque solution.",
+        "Ce que vaut vraiment une maison payée (sécurité, budget), avec le désaccord du couple."
+      ],
+      "thumbnail_fr": "Une maison avec un cadenas et un acte de propriété qui s'envole, Frank inquiet.",
+      "caution_fr": "Aucune marque de service de surveillance mise en avant sans la mention « affiliate »."
+    },
+    {
+      "number": 26,
+      "title": "13 Ugly Habits in Retirement That Make People Avoid You (Frank Admits 3 of Them)",
+      "priority": 6,
+      "winning_pattern_fr": "« 13 Ugly Habits in Old Age That Make People Avoid You » : 4 chaînes (760 k, 344 k, 319 k, 263 k)",
+      "topic_floor_ceiling_fr": "things retirees : plancher 77 k · plafond 1,6 M",
+      "demand_stack_fr": "La formule « ugly habits » + l'autodérision de Frank (notre différence).",
+      "reference_videos": [
+        {
+          "title": "13 Ugly Habits in Old Age That Make People Avoid You (But They Are Afraid to Tell You)",
+          "url": "https://www.youtube.com/watch?v=71sPZwVD3Fg",
+          "views": 760046,
+          "channel": "Health Vibe "
+        },
+        {
+          "title": "13 Ugly Habits in Old Age That Make People Avoid You But They Are Afraid to Tell You",
+          "url": "https://www.youtube.com/watch?v=GG6An_ZSdPE",
+          "views": 344018,
+          "channel": "Retirement Transformed"
+        },
+        {
+          "title": "10 Ugly Habits in Old Age That Make People Avoid You (But No One Will Tell You)",
+          "url": "https://www.youtube.com/watch?v=eBk_HK60GwA",
+          "views": 319317,
+          "channel": "Nurse Jen | Healthcare Navigation"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 13 habits that quietly push family and friends away — and the fixes.",
+        "Proof: we asked our kids, our neighbors, and each other. Brutally.",
+        "Plan: talking, listening, money, health talk, and the one Linda does.",
+        "Persona: if the phone rings less than it used to, this might be why."
+      ],
+      "acceptance_criteria_fr": [
+        "13 habitudes concrètes, chacune avec la solution.",
+        "De l'humour sans méchanceté : Frank en reconnaît 3, Linda 1.",
+        "Pas de moquerie sur la santé ou l'hygiène.",
+        "La fin : comment renouer avec quelqu'un dès ce soir."
+      ],
+      "thumbnail_fr": "Frank qui lève la main, coupable, et Linda qui rit.",
+      "caution_fr": null
+    },
+    {
+      "number": 27,
+      "title": "Ages 65–75: If You Still Do These 6 Things, Your Retirement Is Going Better Than Most",
+      "priority": 7,
+      "winning_pattern_fr": "« Ages 75–85: If You Still Do These 6 Things, You're One of a Kind » : 3 chaînes (1,8 M, 657 k, 503 k)",
+      "topic_floor_ceiling_fr": "retired couple : plancher 138 k · plafond 8,6 M",
+      "demand_stack_fr": "La tranche d'âge exacte de notre public, et un ton positif (le spectateur sort rassuré).",
+      "reference_videos": [
+        {
+          "title": "Ages 75–85: If You Still Do These 6 Things, You’re Truly One Of A Kind",
+          "url": "https://www.youtube.com/watch?v=RATyjt9HA0E",
+          "views": 1793538,
+          "channel": "Natural Wellness Experince"
+        },
+        {
+          "title": "\"Ages 75–85: If You Can Still Do These 6 Things, You're Aging Better Than Most | Dr. Aliza Wright\"",
+          "url": "https://www.youtube.com/watch?v=o8-3MFpEoPU",
+          "views": 656628,
+          "channel": "livewell after60"
+        },
+        {
+          "title": "Ages 75–85: If You Still Do These 6 Things, You’re Truly One Of A Kind :Dr. Daniel Hayes",
+          "url": "https://www.youtube.com/watch?v=XbbDrg_lTx4",
+          "views": 503451,
+          "channel": "Dr. Daniel Hayes"
+        }
+      ],
+      "hook_4P": [
+        "Promise: six signs your retirement is on track — money, health, people, purpose.",
+        "Proof: what the research on retirement satisfaction actually shows, with sources.",
+        "Plan: the six signs, a quick score, and what to do if you're missing one.",
+        "Persona: if you're between 65 and 75, keep score with us."
+      ],
+      "acceptance_criteria_fr": [
+        "6 signes appuyés sur des études citées (enquêtes de satisfaction des retraités, NIA).",
+        "Un petit « score » à faire chez soi.",
+        "Pour chaque signe manquant : une action simple.",
+        "Linda et Frank comptent leur propre score, sans être d'accord."
+      ],
+      "thumbnail_fr": "Linda et Frank qui comptent sur leurs doigts, avec le texte « 6/6? ».",
+      "caution_fr": "Aucune promesse de santé ou de longévité."
+    },
+    {
+      "number": 28,
+      "title": "Retirement Taught Us Something Nobody Warned Us About",
+      "priority": 8,
+      "winning_pattern_fr": "Les révélations personnelles de retraités : 2 vidéos (873 k et 427 k)",
+      "topic_floor_ceiling_fr": "retirement advice : plancher 211 k · plafond 873 k",
+      "demand_stack_fr": "Une curiosité forte et la confession sincère du couple.",
+      "reference_videos": [
+        {
+          "title": "Retirement Taught Me Something Nobody Warned Me About…",
+          "url": "https://www.youtube.com/watch?v=mpwkLbA2UlQ",
+          "views": 872877,
+          "channel": "Retired Life with Reese Will"
+        },
+        {
+          "title": "Why Retirees Slowly Stop Wanting to Go Out",
+          "url": "https://www.youtube.com/watch?v=0h_Xy3gpNwc",
+          "views": 426386,
+          "channel": "Retirement In Confidence"
+        }
+      ],
+      "hook_4P": [
+        "Promise: the one thing about retirement nobody prepared us for.",
+        "Proof: two years in, and a lot of quiet afternoons.",
+        "Plan: what happened, why it happens to so many retirees, and what changed it for us.",
+        "Persona: if retirement isn't feeling the way you pictured, you're not doing it wrong."
+      ],
+      "acceptance_criteria_fr": [
+        "La révélation est donnée tôt (vers 2-3 min), puis approfondie.",
+        "Le lien avec les données sur l'isolement des retraités (NIA, CDC).",
+        "5 actions concrètes qui ont changé les choses.",
+        "Le désaccord : Linda a vécu ça autrement que Frank."
+      ],
+      "thumbnail_fr": "Frank seul dans un fauteuil près d'une fenêtre, Linda en arrière-plan.",
+      "caution_fr": null
+    },
+    {
+      "number": 29,
+      "title": "Keep These 6 Things Private in Retirement — We Learned the Hard Way",
+      "priority": 9,
+      "winning_pattern_fr": "« Keep These 6 Things Private » (554 k)",
+      "topic_floor_ceiling_fr": "retirement advice : plancher 211 k · plafond 873 k",
+      "demand_stack_fr": "La discrétion et la protection contre les arnaques et les conflits familiaux.",
+      "reference_videos": [
+        {
+          "title": "I Learned This the Hard Way: Keep These 6 Things Private",
+          "url": "https://www.youtube.com/watch?v=FjPDDN4LkXU",
+          "views": 553618,
+          "channel": "Retired Life with Reese Will"
+        }
+      ],
+      "hook_4P": [
+        "Promise: six things to stop telling people once you retire.",
+        "Proof: one of these cost Frank's brother real money.",
+        "Plan: money, health, house, will, plans, and family matters.",
+        "Persona: if friends and family ask more questions since you retired, read this first."
+      ],
+      "acceptance_criteria_fr": [
+        "6 choses, chacune avec le risque concret (arnaque, conflit, pression).",
+        "Comment répondre poliment sans tout dire.",
+        "Le lien vers notre vidéo sur la fraude de la maison payée.",
+        "Le désaccord : Linda trouve que Frank cache trop de choses."
+      ],
+      "thumbnail_fr": "Linda le doigt sur la bouche, Frank qui tient une enveloppe « WILL ».",
+      "caution_fr": null
+    },
+    {
+      "number": 30,
+      "title": "You'll Probably Never Spend Your Retirement Savings — Here's Why (Linda Disagrees)",
+      "priority": 10,
+      "winning_pattern_fr": "« You'll Probably Never Spend Your Retirement Savings » (512 k) ; chaîne de référence de la niche (Holy Schmidt)",
+      "topic_floor_ceiling_fr": "retirement advice : plancher 211 k · plafond 873 k",
+      "demand_stack_fr": "Un paradoxe qui surprend, et notre format de débat.",
+      "reference_videos": [
+        {
+          "title": "You'll Probably Never Spend Your Retirement Savings - Here's Why",
+          "url": "https://www.youtube.com/watch?v=rWWH9jtVjUw",
+          "views": 512261,
+          "channel": "Holy Schmidt!"
+        }
+      ],
+      "hook_4P": [
+        "Promise: why most retirees underspend — and whether that's wise.",
+        "Proof: what spending studies of retirees actually show.",
+        "Plan: the fear, the numbers, the 'go-go years', and our compromise.",
+        "Persona: if you feel guilty every time you spend, this conversation is for you."
+      ],
+      "acceptance_criteria_fr": [
+        "Les études citées (EBRI ou équivalent), avec les chiffres exacts.",
+        "Les deux camps : Frank (la prudence) contre Linda (profiter).",
+        "Une méthode simple pour se donner la permission de dépenser.",
+        "La mention « not financial advice »."
+      ],
+      "thumbnail_fr": "Une tirelire pleine et Linda qui tient des billets d'avion, Frank qui les retient.",
+      "caution_fr": null
+    },
+    {
+      "number": 31,
+      "title": "The Biggest Regrets of 80-Year-Olds — And What We're Changing at 67 and 70",
+      "priority": 11,
+      "winning_pattern_fr": "« Asking 80 Year Old Canadians About Their Biggest Regrets » (445 k)",
+      "topic_floor_ceiling_fr": "retirees regret : plancher 14 k · plafond 339 k",
+      "demand_stack_fr": "Les regrets des plus âgés comme miroir pour notre couple, ce qui relève le plafond.",
+      "reference_videos": [
+        {
+          "title": "Asking 80 Year Old Canadians About Their Biggest Regrets in Life",
+          "url": "https://www.youtube.com/watch?v=0od-CaDXnTU",
+          "views": 445055,
+          "channel": "Sprouht"
+        }
+      ],
+      "hook_4P": [
+        "Promise: what people in their 80s regret most, and what we're doing about it now.",
+        "Proof: published interviews and surveys of older adults.",
+        "Plan: five regrets, and one change each for us.",
+        "Persona: if you still have time to change something, this is the nudge."
+      ],
+      "acceptance_criteria_fr": [
+        "5 regrets tirés de sources citées (livres, enquêtes).",
+        "Pour chaque regret : une décision concrète du couple.",
+        "Un moment d'émotion sincère, sans pathos.",
+        "La question au public : leur propre regret."
+      ],
+      "thumbnail_fr": "Un vieux couple de dos sur un banc, et Linda et Frank face caméra.",
+      "caution_fr": null
+    }
+  ],
+  "episodes_new_note": "Episode 21 (Medicare deadline before Dec 7) is time-sensitive: produce it first. Keep the couple's disagreement in every new episode."
 }
