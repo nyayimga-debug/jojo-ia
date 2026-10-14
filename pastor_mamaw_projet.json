@@ -1,0 +1,2132 @@
+{
+  "project": "Personal video tool for two English AI-avatar YouTube channels: 'Sit With Pastor Sam' and 'Mamaw Birdie's Mountain Ways'",
+  "language_of_videos": "English (en-US). Everything the viewer sees or hears is in English.",
+  "language_of_user": "French. Talk to the user in French.",
+  "goal": "A personal tool that turns one video idea from the lists below into a finished long-form YouTube video for one of two AI-avatar channels: the script, the voice, lip-synced avatar clips, B-roll (AI-generated and free stock), verse/text cards, subtitles, the final edit and the publishing pack.",
+  "video_method": {
+    "source": "Jake Trinder, 'How to Become Disgustingly Good at YouTube' (youtu.be/Dx-c19qXdxM), Oct 14 2026",
+    "principle": "A video is a series system: topic, packaging (title + thumbnail), hook, body and edit must all be right; one wrong decision can sink the video.",
+    "topic": [
+      "Pick topics from what the audience already chooses to watch (revealed preference), not from what we think they need.",
+      "For each topic note the floor (median views of a decent video) and the ceiling (best videos) over the last 3–6 months, 8+ min videos.",
+      "Check views look real (≈1–5 % likes per view, on-topic comments) and that demand is still active (recent videos still getting views).",
+      "Raise the ceiling by attaching the topic to a bigger demand: season, event, culture (Amish, Japanese), well-known store (Walmart, Costco, Aldi)."
+    ],
+    "title": [
+      "Use a title framing that wins in at least 2–3 different channels or niches, not a single outlier.",
+      "Understand why the framing works and only reuse it if that reason is true for our audience (avoid overfitting).",
+      "The title must make a promise the video fully delivers; never use false words."
+    ],
+    "thumbnail": [
+      "Job 1: stand out in the feed. Job 2: be understood at a glance.",
+      "Avatar face + one object/icon that targets the audience + a tension that opens a question; the title closes only part of it."
+    ],
+    "edit": "The edit matches the promise: calm and warm for our characters, useful B-roll, on-screen text for numbers, no gratuitous effects.",
+    "hook_4P": {
+      "promise": "Confirm in one sentence that this is what they clicked for.",
+      "proof": "Why listen: honest proof only (sources, the character's story told as a story, a shown result). Never fake credentials or numbers.",
+      "plan": "Announce the steps / number of items and what comes at the end.",
+      "persona": "Name the viewer: 'if you're over 60', 'if you lost your spouse', 'wenn du einen Diesel fährst'.",
+      "timing": "All 4 P inside the first 30–45 seconds."
+    },
+    "body_acceptance_criteria": [
+      "Decompose the title's promise: what must be true at the end for the title to be true? Break each answer down again.",
+      "That list is the outline; the script is finished only when every condition is met.",
+      "Deliver real value fast, then exceed the expectation (one bonus item, a safety tip, a worked example).",
+      "Goal is viewer satisfaction, not retention tricks."
+    ],
+    "after_publish": [
+      "Early signals: positive comments per view (and what they say), likes per view, subs per view, view curve vs channel average.",
+      "A metric tells where to look, not what to change (low CTR → look at the thumbnail and ask why).",
+      "Sharp retention drop → inspect that moment (early CTA, a slow part) and cut it.",
+      "Write down one lesson per video for the next one."
+    ],
+    "pre_production_checklist": [
+      "Topic has a good floor (median) and a high ceiling on videos from the last 3–6 months.",
+      "Reference views look real and demand is still active.",
+      "Topic is attached to a bigger demand when possible (season, store, culture, event).",
+      "Title framing wins in at least 2 different channels and we know why it works for our audience.",
+      "Title promise is deliverable and true, no false words.",
+      "Thumbnail: avatar face, one audience-targeting object, an open question; understood in 1 second.",
+      "Hook has the 4 P (promise, honest proof, plan, persona) in the first 45 seconds.",
+      "Script outline = the list of conditions that make the title true; every one is met.",
+      "Over-deliver: a bonus, a safety tip, a worked example.",
+      "Edit matches the promise: calm, warm, no gratuitous effects.",
+      "After 48 h and 7 days: read comments, likes/view, subs/view, retention curve; note one lesson."
+    ]
+  },
+  "title_rule": "Clone, word for word, the title of a video that got many views and change only the niche words. If a word would be false for our video ('BANNED', '100% Effective', 'NEVER EXPIRE', an inflated number, 'Industry Buried'), replace only that word. The new ideas below already follow this rule and the video_method.",
+  "avatar_rules": [
+    "Each lip-synced avatar clip is at most 15 seconds; longer passages are split and alternated with B-roll.",
+    "The avatar is on screen about 20 % of the time for Mamaw Birdie, 25–35 % for Pastor Sam's teachings and only 10–15 % for prayer videos.",
+    "Every avatar image comes from the same reference image (same face, clothes, set) — generate the reference first, then use it for every variant.",
+    "Faces must stay clearly visible (three-quarter angle at most) or lip-sync fails.",
+    "Cover any glitchy lip-sync moment with B-roll while the voice continues."
+  ],
+  "free_stock_sources": [
+    {
+      "name": "Pixabay",
+      "url": "https://pixabay.com/videos/",
+      "license": "Pixabay Content License: free for commercial use, no attribution required; do not resell unchanged clips."
+    },
+    {
+      "name": "Pexels",
+      "url": "https://www.pexels.com/videos/",
+      "license": "Pexels License: free for commercial use, no attribution required; do not imply endorsement."
+    },
+    {
+      "name": "Mixkit",
+      "url": "https://mixkit.co/free-stock-video/",
+      "license": "Mixkit Stock Video Free License."
+    },
+    {
+      "name": "YouTube Audio Library / Pixabay Music",
+      "url": "https://studio.youtube.com",
+      "license": "Royalty-free music for the background."
+    }
+  ],
+  "stock_rules": [
+    "Search in English, landscape 1080p or 4K, 25/30 fps.",
+    "Log every clip in credits.csv (file, source, URL, license, date).",
+    "Re-check each license page before first use."
+  ],
+  "editing": {
+    "format": "16:9, 1920×1080, 30 fps, H.264, audio about −14 LUFS",
+    "subtitles": "Upload an English SRT made from the script.",
+    "music": "Soft, royalty-free, −25 to −30 dB under the voice; no copyrighted hymns or songs recorded by others.",
+    "transitions": "Slow cross-fades, gentle zooms, no flashy effects (the promise is calm and warm)."
+  },
+  "script_output_schema": {
+    "video_number": "int",
+    "channel": "pastor_samuel | mamaw_birdie",
+    "title": "string",
+    "format": "see channel formats",
+    "reference_videos": [
+      {
+        "title": "string",
+        "url": "string",
+        "views": "int"
+      }
+    ],
+    "word_count": "int",
+    "estimated_minutes": "number (≈130 spoken words per minute for these slow voices)",
+    "acceptance_criteria": [
+      "the conditions that make the title true (from video_method) — each must be met"
+    ],
+    "chapters": [
+      {
+        "time": "mm:ss",
+        "title": "string"
+      }
+    ],
+    "segments": [
+      {
+        "id": "S001",
+        "part": "Hook | Welcome | Item 1 … | Prayer | Blessing | Ending",
+        "speaker": "PASTOR | BIRDIE | VIRGIL",
+        "shot": "one of the channel shot_library keys, or BROLL_STOCK / BROLL_AI / TEXT_CARD / VERSE_CARD",
+        "voice_text": "English text spoken during this segment (the voice continues under B-roll)",
+        "est_seconds": "number — max 15 for any lip-synced avatar shot",
+        "on_screen_text": "short overlay, verse reference, number, or empty",
+        "verse": {
+          "reference": "e.g. Psalm 91:1",
+          "text_kjv": "exact KJV text"
+        },
+        "broll": {
+          "source": "stock | ai | none",
+          "stock_queries": [
+            "2–3 English search terms"
+          ],
+          "ai_image_prompt": "English prompt",
+          "ai_motion_prompt": "short motion instruction",
+          "fallback": "string"
+        },
+        "fact_check": [
+          {
+            "claim": "string",
+            "source": "name + URL",
+            "status": "ok | to_verify | removed"
+          }
+        ]
+      }
+    ],
+    "description": "from the channel description template",
+    "tags": "base tags + 5–10 topic tags",
+    "pinned_comment": "string",
+    "thumbnail": {
+      "text": "2–4 words",
+      "image_prompt": "English prompt"
+    }
+  },
+  "production_pipeline": [
+    "1. Pick the next video (publishing_order, then new_ideas by priority) or the one the user names.",
+    "2. Research: open the reference video(s), read the transcript, note structure and promise; check floor/ceiling and that demand is still active (video_method.topic).",
+    "3. Write acceptance criteria from the title (video_method.body_acceptance_criteria), then the script with the 4P hook in the first 45 s.",
+    "4. Fact-check every claim (CDC, USDA, NCHFP, NIA, ENERGY STAR, FEMA for Mamaw; exact KJV text for Pastor Sam). Remove anything unsourced.",
+    "5. Check the word count against the channel target.",
+    "6. Voice: generate audio per segment with the fixed voice of the speaker.",
+    "7. Avatar clips: lip-sync each avatar segment on the right reference image (≤15 s).",
+    "8. B-roll: stock first for generic real scenes, AI for specific scenes and for anything showing our characters' places.",
+    "9. Edit: voice track, avatar clips, B-roll, text/verse cards, music, subtitles, AI label in the first seconds.",
+    "10. QA with video_method.pre_production_checklist and the channel guardrails, export.",
+    "11. Publishing pack: title, description (template), chapters, tags, pinned comment, thumbnail; tick 'Altered or synthetic content' in YouTube Studio.",
+    "12. After 48 h and 7 days: read the signals listed in video_method.after_publish and write one lesson for the next video."
+  ],
+  "compliance": [
+    "AI characters are declared in the channel description and with YouTube's 'altered or synthetic content' setting on every upload.",
+    "The characters' memories are presented as stories; they never claim to be real people or give fake credentials.",
+    "Affiliate links and the channels' own products are clearly labelled (FTC).",
+    "No medical, legal or financial promises."
+  ],
+  "existing_scripts": {
+    "note": "Finished scripts in the repo — use them as style examples (plain text, pasted into the Subscriber app).",
+    "mamaw_birdie": [
+      "scripts/mamaw-birdie-01-script-seul.txt",
+      "scripts/mamaw-birdie-02-script-seul.txt",
+      "scripts/mamaw-birdie-03-script-seul.txt"
+    ],
+    "pastor_samuel": [
+      "scripts/pastor-samuel-01-script-seul.txt",
+      "scripts/pastor-samuel-02-script-seul.txt",
+      "scripts/pastor-samuel-03-script-seul.txt"
+    ]
+  },
+  "channels": {
+    "pastor_samuel": {
+      "channel": {
+        "name": "Sit With Pastor Sam",
+        "handle": "@SitWithPastorSam",
+        "alt_handle": "@PastorSamuelBrooks",
+        "banner_tagline": "Bible answers for your later years",
+        "upload_rhythm": "Teachings every Tuesday and Thursday, evening prayer every Sunday.",
+        "about": "Beloved, come sit with me a while.\n\nThis channel is a quiet place to open the Bible together and talk about the questions that matter most in the later years of life. What happens when we die? Will we see our loved ones again? Why am I still here? How do I keep holding on when God seems silent?\nEvery week you’ll find Bible teaching that answers one real question with Scripture, short sermons for hard seasons, and an evening prayer to end your day in peace.\nNew teachings every Tuesday and Thursday. Evening prayer every Sunday.\n📖 Heaven and Hope — A Bible Study for Your Later Years: [your link]\n🎁 Free download — 10 Bible Promises About Heaven: [your link]\nPastor Samuel is an AI-presented Bible teacher. Scripture quotations are from the King James Version (public domain). This channel never asks for donations or offerings. If you are going through a hard time, please also reach out to a local church or someone you trust.",
+        "channel_keywords": "Sit With Pastor Sam, Pastor Samuel, Bible teaching, Bible study, Christian seniors, faith after 60, sermon, short sermon, KJV Bible, heaven, eternal life, what happens when we die, will we see loved ones in heaven, God's promises, Christian encouragement, evening prayer, night prayer, prayer for peace, grief and faith, hope in Jesus, Christian living, Scripture",
+        "base_video_tags": "Pastor Samuel, Bible teaching, Christian seniors, faith after 60, sermon, KJV, heaven, prayer, God's promises, Christian encouragement",
+        "youtube_settings": "Country: United States. Language: English. Made for kids: no. Category: Education. Tick 'Altered or synthetic content' on every upload. Put the verse references and 'KJV' in the description. No donation link.",
+        "description_template": "[1–2 line hook taken from the video]\n\nIn this teaching, Pastor Sam opens the Bible to answer: [question]. Scriptures: [references] (KJV).\n\n📖 Heaven and Hope — A Bible Study for Your Later Years: [link]\n🎁 Free: 10 Bible Promises About Heaven: [link]\n\nChapters:\n0:00 [Hook]\n…\n\nPastor Samuel is an AI-presented Bible teacher. Scripture quotations are from the King James Version (public domain). This channel never asks for donations or offerings."
+      },
+      "character": {
+        "name": "Pastor Samuel Brooks (\"Pastor Sam\")",
+        "age": 68,
+        "bio": "Grew up in a small country town in rural Georgia, son of a farmer and a church pianist. Led a small country church for forty years. Married 41 years to Mae, who went home to the Lord three years ago. Two children, five grandchildren. Still reads the old King James Bible his mother gave him. Morning coffee on the porch; evening study in his small home study.",
+        "why": "His story lets him speak about grief, old age and God's faithfulness gently and from the inside.",
+        "tone": "Slow, warm, never threatening. Teaches like a grandfather, not like a shouting preacher.",
+        "fixed_lines": {
+          "opening": "Beloved, come sit with me a while.",
+          "reading": "Let's open the Book together.",
+          "comfort": "You are not forgotten. Not by Him.",
+          "blessing": "The LORD bless thee, and keep thee… (Numbers 6:24–26)",
+          "goodnight": "Goodnight, beloved."
+        },
+        "never": [
+          "Ask for money, donations, 'seed offerings' or 'buy me a coffee'.",
+          "Promise healing or a blessing in exchange for watching, sharing or doing something.",
+          "Present himself as a real living pastor or name a real church; memories are told as stories ('Let me tell you a story…').",
+          "Reuse words or audio of real preachers.",
+          "Use 'GOD SAYS: I BEG YOU' style manipulative messages."
+        ]
+      },
+      "voice": "African American man around 68, deep, warm, slightly husky, slow pace with natural pauses (2–3 s between prayer sentences), gentle Southern accent. Same voice ID for every video.",
+      "bible": "Quote only the King James Version word for word (public domain). NIV/ESV/NLT are copyrighted: short quotes only with the source. Stay on doctrine widely shared by Christians; Enoch or extra-biblical books only in small doses, saying clearly what is and isn't in the Bible.",
+      "formats": {
+        "teaching": {
+          "share": "60 %",
+          "set": "study",
+          "length": "22–30 min",
+          "structure": [
+            [
+              "0:00–0:30",
+              "The question head-on (avatar close-up), with the 4P hook."
+            ],
+            [
+              "0:30–1:30",
+              "Welcome: 'Beloved, come sit with me a while.' Why the question matters; which series it belongs to."
+            ],
+            [
+              "1:30–4:00",
+              "What people believe, gently corrected. B-roll: old family photos, old hands, peaceful cemetery."
+            ],
+            [
+              "4:00–22:00",
+              "4–5 answers from the Bible: verse card (KJV), simple explanation, a life example; avatar at the start and end of each answer, B-roll in the middle."
+            ],
+            [
+              "22:00–25:00",
+              "What it changes for you today — the most personal moment."
+            ],
+            [
+              "25:00–27:30",
+              "A 2–3 min prayer tied to the topic, calm B-roll."
+            ],
+            [
+              "27:30–28:30",
+              "Next episode of the series and the free guide. No money request."
+            ]
+          ]
+        },
+        "short_sermon": {
+          "share": "25 %",
+          "set": "study",
+          "length": "20–30 min",
+          "structure": [
+            [
+              "0:00–0:40",
+              "The trial named ('Maybe you've been praying for something for years…')."
+            ],
+            [
+              "0:40–3:00",
+              "The passage read slowly (e.g. Psalm 13, Isaiah 40:31)."
+            ],
+            [
+              "3:00–7:00",
+              "A Bible story or an illustration (presented as such)."
+            ],
+            [
+              "7:00–22:00",
+              "3 truths: verse, explanation, application after 60."
+            ],
+            [
+              "22:00–27:00",
+              "The call ('Tonight, I want you to…') and the prayer."
+            ],
+            [
+              "end",
+              "The blessing (Numbers 6:24–26)."
+            ]
+          ]
+        },
+        "evening_prayer": {
+          "share": "15 % (max one per week)",
+          "set": "porch at sunset",
+          "length": "30 min (extendable to 1–2 h 'for sleep')",
+          "avatar_share": "10–15 %",
+          "timeline": [
+            [
+              "0:00–1:00",
+              "Welcome — porch at sunset, lantern lit, 2–3 avatar clips of 10–15 s. Soft voice, distant crickets, very low piano.",
+              "Beloved, come sit with me a while. The day is done now…"
+            ],
+            [
+              "1:00–2:00",
+              "Evening verse card on dark background. Voice alone, then rain begins.",
+              "Psalm 4:8 (KJV)"
+            ],
+            [
+              "2:00–5:30",
+              "For the worries of the day — old hands joined, steaming tea, rainy window.",
+              "Lord, I bring you the worries I carried today…"
+            ],
+            [
+              "5:30–9:00",
+              "For the family — old photo frames, house lit at night, front door.",
+              "Watch over my children, and my children's children…"
+            ],
+            [
+              "9:00–13:00",
+              "For the tired body — bed with a throw, bedside lamp, glass of water, glasses.",
+              "You know every ache in this body. Give it rest tonight…"
+            ],
+            [
+              "13:00–16:30",
+              "For the protection of the home — house at night from outside, light behind curtains, stars.",
+              "Be a wall of fire around this home tonight… (Zechariah 2:5)"
+            ],
+            [
+              "16:30–20:00",
+              "Gratitude — sunset on mountains, birds flying home, candle; piano rises slightly.",
+              "Thank you for another day, Lord…"
+            ],
+            [
+              "20:00–25:00",
+              "Psalms reading — open Bible by candlelight, pages turning, verses on screen; slower voice, rain.",
+              "Psalm 23, then Psalm 91 (KJV)"
+            ],
+            [
+              "25:00–26:00",
+              "Blessing — one avatar clip looking at the camera.",
+              "The LORD bless thee, and keep thee… Goodnight, beloved."
+            ],
+            [
+              "26:00–30:00+",
+              "Rest — screen slowly darkens to a near-black starry sky; rain only; no text.",
+              ""
+            ]
+          ]
+        },
+        "teaching_end_prayer": "2–3 min tied to the topic: one avatar clip to introduce it, 4–6 B-roll shots, one verse card, one avatar clip for the blessing."
+      },
+      "series": {
+        "Heaven and Eternity": [
+          "What happens to your soul the moment you die?",
+          "Will we recognize our loved ones in heaven?",
+          "What will heaven actually look like?",
+          "Do our pets go to heaven?",
+          "Will there be marriage in heaven?",
+          "What will we do in heaven all day?",
+          "Can people in heaven see us?",
+          "Is it wrong to be afraid of dying?"
+        ],
+        "Growing Old With God": [
+          "7 things God wants you to do after 60",
+          "Why God keeps you here: your purpose in your later years",
+          "Abraham and Sarah: God's promise came in their old age",
+          "How to forgive before it's too late",
+          "When your body grows weak: what Paul says about the outer man",
+          "How to finish well: leaving a legacy of faith"
+        ],
+        "Questions You Were Afraid to Ask": [
+          "Why doesn't God answer my prayer?",
+          "Will God forgive what I did years ago?",
+          "What the Bible says about the last days, without fear",
+          "Every angel in the Bible, explained simply",
+          "Is my loved one who didn't believe in heaven?"
+        ]
+      },
+      "script_length": {
+        "target_words": "4,600–4,950 words (always under 5,000) for teachings and sermons ≈ 30–35 min; prayers ≈ 2,500–3,500 words for 30 min with long pauses.",
+        "style": "Plain text script, no stage directions inside the spoken text; verse references written out ('Psalm ninety-one, verse one')."
+      },
+      "shot_library": {
+        "PASTOR_STUDY_TALKS": {
+          "use": "Teachings and sermons: hook, welcome, start/end of each answer, personal moment.",
+          "prompt": "A 68-year-old African American pastor with short salt-and-pepper hair and a neatly trimmed gray beard, sitting at an old wooden desk in a small, warm home study in a Southern country house, evening. He wears a black clergy shirt with a white tab clerical collar under a soft charcoal wool cardigan. An open, well-worn leather King James Bible lies on the desk in front of him, one hand resting on the page. He looks gently straight into the camera, speaking softly with a warm, compassionate expression, mouth slightly open mid-sentence, face fully visible. Behind him, slightly out of focus: shelves of old books, a framed photo of an older woman, a brass desk lamp casting warm light, a window with dusk outside. Eye level, medium close-up, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles, documentary photography style, peaceful atmosphere, 16:9.",
+          "note": "New reference image for the study set (the page only had porch prompts). Generate it from the porch 'reading' image as reference so the face and clothes match."
+        },
+        "PASTOR_EVENING_READING": {
+          "use": "Evening verse, Psalms reading.",
+          "prompt": "A 68-year-old African American pastor with short salt-and-pepper hair and a neatly trimmed gray beard, sitting in a white wooden rocking chair on the front porch of a modest old Southern country house, early evening. He wears a black clergy shirt with a white tab clerical collar under a soft charcoal wool cardigan. He holds an open, well-worn leather Bible with both hands at chest height and is reading aloud from it, mouth slightly open mid-sentence, eyes looking down at the page, head only slightly tilted so his face remains clearly visible in a three-quarter angle. A lit oil lantern glows on a small wooden side table beside him. Behind him, slightly out of focus: wooden porch railing, a quiet field and tall trees under a warm orange sunset sky fading to deep blue. Warm low light from the lantern and the sunset on his face. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles, documentary photography style, peaceful atmosphere, 16:9."
+        },
+        "PASTOR_EVENING_CAMERA": {
+          "use": "Evening welcome and blessing.",
+          "prompt": "Same pastor, same porch, same evening light and lantern as the reference image. He holds the open Bible resting on his lap with one hand on the page, and has lifted his eyes from the Bible to look gently straight into the camera, speaking softly with a warm, compassionate expression, mouth slightly open mid-sentence. Face fully visible, relaxed shoulders. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture, documentary photography style, 16:9."
+        },
+        "PASTOR_MORNING_READING": {
+          "use": "Morning prayers: verse reading.",
+          "prompt": "A 68-year-old African American pastor with short salt-and-pepper hair and a neatly trimmed gray beard, sitting in a white wooden rocking chair on the front porch of a modest old Southern country house, early morning. He wears a black clergy shirt with a white tab clerical collar under a soft charcoal wool cardigan. He holds an open, well-worn leather Bible with both hands at chest height and is reading aloud from it, mouth slightly open mid-sentence, eyes on the page, head only slightly tilted so his face remains clearly visible in a three-quarter angle. A steaming cup of coffee sits on a small wooden side table beside him. Behind him, slightly out of focus: wooden porch railing, a green field with light morning mist and tall trees, soft golden sunrise light. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles, documentary photography style, calm hopeful atmosphere, 16:9."
+        },
+        "PASTOR_MORNING_CAMERA": {
+          "use": "Morning welcome and blessing.",
+          "prompt": "Same pastor, same porch, same sunrise light and coffee cup as the reference image. He holds the open Bible on his lap and has lifted his eyes to look warmly straight into the camera, gentle smile, speaking softly, mouth slightly open mid-sentence. Face fully visible. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture, documentary photography style, 16:9."
+        },
+        "MOTION_TURN_PAGE": {
+          "use": "Transitions without speech (image-to-video).",
+          "prompt": "The pastor slowly turns a page of the Bible, then continues reading silently, subtle natural breathing, the lantern flame flickers gently, leaves move slightly in the evening breeze, very slow camera push-in."
+        },
+        "MOTION_CLOSE_EYES_PRAY": {
+          "use": "Between two parts of a prayer.",
+          "prompt": "The pastor gently closes the Bible on his lap, rests both hands on it, closes his eyes and bows his head slightly in quiet prayer, calm breathing, soft lantern flicker, static camera."
+        },
+        "negative_prompt": "face hidden, head bowed too low, looking away from the book, cartoon, plastic skin, oversaturated, church interior, crowd, extra hands, extra fingers",
+        "VERSE_CARD": {
+          "use": "Every quoted verse.",
+          "spec": "Dark background, large serif text in light color, appears slowly; reference under it ('Psalm 91:1, KJV')."
+        },
+        "reference_order": "Generate the evening 'reading' image first and use it as the reference for every other Pastor image."
+      },
+      "image_rules": [
+        "Slow shots of 6–12 s, very light zoom, cross-fades, never hard cuts.",
+        "Warm low light: sunset, candle, lamp; nothing bright or saturated.",
+        "Objects rather than faces in B-roll: hands, cup, Bible, window, landscape.",
+        "Always the same 'house': same porch, candle, Bible — the channel becomes a familiar place."
+      ],
+      "broll": {
+        "stock_queries": [
+          "candle flame dark",
+          "rain on window night",
+          "old hands praying",
+          "sunset mountains",
+          "open bible candlelight",
+          "old family photos",
+          "country house at night",
+          "morning mist field",
+          "birds flying sunset",
+          "starry night sky",
+          "steaming cup tea",
+          "peaceful cemetery trees"
+        ],
+        "ai_broll": "AI images of the porch, the Bible on the desk, the house at night, then 5–10 s image-to-video clips — keeps the same set as the avatar.",
+        "bank": "Prepare once 40–60 shots sorted by theme (family, night, protection, gratitude, Bible) and reuse them in every prayer.",
+        "subscriber_form": {
+          "Place": "Rural Georgia and the American South — a modest country house, its porch and a small home study",
+          "Era": "Present day (old family photos for memories)",
+          "Environment": "Country porch at sunset and sunrise, home study with books and a desk lamp, fields, tall trees, quiet country roads, a small white country church seen from outside (no real church name)",
+          "Audience": "Christian Americans aged 60 and over, many widowed or living alone",
+          "Other details": "Warm low light, candles and lanterns, open King James Bible, no crowds, no megachurch stage, no readable logos, slow peaceful mood"
+        }
+      },
+      "sound": [
+        "Voice first, with 2–3 s pauses between prayer sentences.",
+        "Soft constant rain under prayers, no loud thunder.",
+        "Royalty-free piano very low under the voice.",
+        "No hymns recorded by others (copyright claims)."
+      ],
+      "products": [
+        {
+          "name": "10 Bible Promises About Heaven",
+          "price": "free",
+          "use": "Email opt-in, linked in every 'Heaven' episode."
+        },
+        {
+          "name": "Heaven and Hope — A Bible Study for Your Later Years",
+          "price": "17 $ ebook · 19.99 $ large-print paperback (Amazon KDP)",
+          "use": "Natural follow-up of the 'Heaven and Eternity' series."
+        },
+        {
+          "name": "Psalms for the Evening of Life — 90 Days of Prayers and Promises",
+          "price": "part of the 27 $ pack",
+          "use": "Sold with the evening prayers."
+        }
+      ],
+      "guardrails": [
+        "No donations, offerings or 'buy me a coffee' anywhere.",
+        "No healing promises, no 'God will bless you if you watch to the end'.",
+        "KJV only for long quotes.",
+        "No audio or text of real preachers.",
+        "AI character declared.",
+        "Doctrine widely shared by Christians; extra-biblical books clearly labelled."
+      ],
+      "done": [
+        1,
+        3,
+        2
+      ],
+      "publishing_order": [
+        1,
+        2,
+        3,
+        6,
+        4,
+        5,
+        7,
+        8,
+        12,
+        10,
+        9,
+        11
+      ],
+      "videos": [
+        {
+          "number": 1,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Where Does a Believer’s Soul Go After Death? - The Bible’s Answer Will Comfort You",
+          "inspiration": "How Long Does a Soul Stay on Earth After Death? (1,1 M, chaîne de 41 k) · What REALLY Happens After You Die (2,1 M)",
+          "status": "script written"
+        },
+        {
+          "number": 2,
+          "format": "Growing Old With God",
+          "set": "Bureau",
+          "title": "7 Things God Wants You to Do After 60 — This Is Why You’re Still Alive",
+          "inspiration": "7 Things God Wants Elderly People to Do (613 k, chaîne de 15 k) · Why God Keeps People Alive After 60 (172 k)",
+          "status": "script written"
+        },
+        {
+          "number": 3,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Will We See Our Loved Ones in Heaven? The Biblical Truth That Will Move You to Tears",
+          "inspiration": "Why the Ethiopian Bible Describes Heaven So Differently (932 k) · The 5 Crowns in Heaven (1,3 M)",
+          "status": "script written"
+        },
+        {
+          "number": 4,
+          "format": "Sermon court",
+          "set": "Bureau",
+          "title": "Listening To God When He Seems Silent – Pastor Samuel",
+          "inspiration": "Listening To God, Charles Stanley (1 M) · God Is Preparing You in Secret (495 k)",
+          "status": "to do"
+        },
+        {
+          "number": 5,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Will Our Pets Be in Heaven? What the Bible Says Will Move You to Tears",
+          "inspiration": "Do Pets Go to Heaven? (543 k, chaîne de 15 k)",
+          "status": "to do"
+        },
+        {
+          "number": 6,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "God Will Quiet Your Restless Mind — Peace Before Sleep | Night Prayer for Worry",
+          "inspiration": "Give It All to God Tonight (677 k, chaîne de 29 k) · God Will Quiet Your Restless Mind (777 k)",
+          "status": "to do"
+        },
+        {
+          "number": 7,
+          "format": "Growing Old With God",
+          "set": "Bureau",
+          "title": "The Story of Abraham and Sarah: When Faith Opens the Door in Old Age",
+          "inspiration": "Thème rare chez les concurrents, et directement senior · The Story of Ruth (1,2 M sur une chaîne de 28 k)",
+          "status": "to do"
+        },
+        {
+          "number": 8,
+          "format": "Questions You Were Afraid to Ask",
+          "set": "Bureau",
+          "title": "The Silence You Feel… Is the Very Place God Is Working in You",
+          "inspiration": "The Exhaustion You Feel… (446 k, chaîne de 23 k)",
+          "status": "to do"
+        },
+        {
+          "number": 9,
+          "format": "Sermon court",
+          "set": "Bureau",
+          "title": "The Season Where God Trains You in Pain — And Restores You in His Time",
+          "inspiration": "The Season Where God Trains You in Pain (994 k) · God Can Restore Your Circumstances (2,4 M)",
+          "status": "to do"
+        },
+        {
+          "number": 10,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "What Does Heaven REALLY Look Like According To The Bible? (Heaven Explained)",
+          "inspiration": "The 5 Crowns in Heaven (1,3 M) · Why the Ethiopian Bible Describes Heaven… (932 k)",
+          "status": "to do"
+        },
+        {
+          "number": 11,
+          "format": "Sermon court",
+          "set": "Bureau",
+          "title": "7 Biblical Truths About Widows Who Walk Alone | Why God Never Leaves You",
+          "inspiration": "The Story of Ruth (1,2 M) · 7 Biblical Truths About Women Who Walk Alone (593 k)",
+          "status": "to do"
+        },
+        {
+          "number": 12,
+          "format": "Psaumes pour dormir",
+          "set": "Véranda, soir",
+          "title": "Trust in God’s Protection Tonight | Psalm 91 & 23 Night Prayer for Peaceful Sleep",
+          "inspiration": "Trust in God’s Protection Tonight, Psalm 91 & 23 (756 k) · The Best Psalms to Sleep (3 M)",
+          "status": "to do"
+        },
+        {
+          "number": 13,
+          "format": "Questions You Were Afraid to Ask",
+          "set": "Bureau",
+          "title": "Are You Ready? 10 Signs Jesus Is Coming Soon (And Why You Need Not Fear)",
+          "inspiration": "Are You Ready? 10 Signs Jesus Is Coming Soon (2,2 M, chaîne de 52 k)",
+          "status": "to do"
+        },
+        {
+          "number": 14,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Is It Wrong to Be Afraid of Dying? What Jesus Said",
+          "inspiration": "Thème « paradis, mort, au-delà » : médiane 337 k, 16 petites chaînes",
+          "status": "to do"
+        },
+        {
+          "number": 15,
+          "format": "Growing Old With God",
+          "set": "Bureau",
+          "title": "How to Forgive Before It’s Too Late",
+          "inspiration": "Sermons sur le lâcher-prise : Let Them (1,8 M)",
+          "status": "to do"
+        },
+        {
+          "number": 16,
+          "format": "Questions You Were Afraid to Ask",
+          "set": "Bureau",
+          "title": "Every Angel in the Bible Read and Explained",
+          "inspiration": "Every Angel in the Bible Drawn and Explained (5,7 M)",
+          "status": "to do"
+        },
+        {
+          "number": 17,
+          "format": "Histoire biblique",
+          "set": "Bureau",
+          "title": "JOB: The Fall and Rise of God’s Most Faithful Servant",
+          "inspiration": "Histoires bibliques racontées : Joseph (1,8 M), Samson (948 k sur une chaîne de 55 k)",
+          "status": "to do"
+        },
+        {
+          "number": 18,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "If You Wake Up Between 3 AM and 5 AM, Pray These Things",
+          "inspiration": "God said: If You Wake Up Between 3 AM and 5 AM (545 k) · Midnight prayer (1,2 M)",
+          "status": "to do"
+        },
+        {
+          "number": 19,
+          "format": "Growing Old With God",
+          "set": "Bureau",
+          "title": "Why God Keeps You Alive After 70 | Biblical Truth About Old Age & God’s Purpose",
+          "inspiration": "Thème « âge, aînés » : rare et très ciblé",
+          "status": "to do"
+        },
+        {
+          "number": 20,
+          "format": "Questions You Were Afraid to Ask",
+          "set": "Bureau",
+          "title": "Will God Forgive What I Did Years Ago?",
+          "inspiration": "Enseignement par question : médiane 390 k",
+          "status": "to do"
+        },
+        {
+          "number": 21,
+          "format": "Prière du matin",
+          "set": "Véranda, matin",
+          "title": "MOST POWERFUL PSALM 23 MORNING PRAYER TO START YOUR DAY | Pastor Samuel",
+          "inspiration": "MOST POWERFUL PSALM 23 MORNING PRAYER (1,1 M, chaîne de 35 k) · Psalm 5 Morning Prayer (1,3 M)",
+          "status": "to do"
+        },
+        {
+          "number": 22,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "Psalms to Bless Your Home | 1 Hour of Protection and Peace for Your Grandchildren",
+          "inspiration": "Psalms to Bless Your Home (928 k, chaîne de 43 k créée en mars 2026) · I Plead the Blood of Jesus Over My Family (662 k)",
+          "status": "to do"
+        },
+        {
+          "number": 23,
+          "format": "Psaumes pour dormir",
+          "set": "Véranda, soir",
+          "title": "If You’re Grieving, Rest to the Gospel of John Tonight",
+          "inspiration": "If You’re Anxious, Rest to the Gospel of John Tonight (630 k, chaîne de 17 k)",
+          "status": "to do"
+        },
+        {
+          "number": 24,
+          "format": "Prière du matin",
+          "set": "Véranda, matin",
+          "title": "Thank You God for Another Day | Peaceful Morning Prayer of Gratitude",
+          "inspiration": "Thank You God for Today (865 k) · Powerful Morning Prayer (812 k, chaîne de 47 k)",
+          "status": "to do"
+        },
+        {
+          "number": 25,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "Give It All to God Tonight | Bedtime Prayer After Losing Your Husband or Wife",
+          "inspiration": "Thème « deuil » : peu de vidéos, bons scores (médiane 314 k)",
+          "status": "to do"
+        },
+        {
+          "number": 26,
+          "format": "Prière du matin",
+          "set": "Véranda, matin",
+          "title": "Psalm 90 | Seeking God’s Wisdom Before the Day Begins | Morning Prayer",
+          "inspiration": "Psalm 5 | Seeking God’s Voice Before the Day Begins (1,3 M)",
+          "status": "to do"
+        },
+        {
+          "number": 27,
+          "format": "Psaumes pour dormir",
+          "set": "Véranda, soir",
+          "title": "Psalm 121 for Sleep — He That Keepeth Thee Will Not Slumber",
+          "inspiration": "Format « Psaumes pour dormir » : médiane 375 k, 28 petites chaînes",
+          "status": "to do"
+        },
+        {
+          "number": 28,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "A Prayer for Your Children and Grandchildren Tonight",
+          "inspiration": "Thème « protection, famille » : médiane 292 k, 38 petites chaînes",
+          "status": "to do"
+        },
+        {
+          "number": 29,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "Don’t Grieve Alone. Let God Hold You Tonight",
+          "inspiration": "Thème « solitude » : 7 Biblical Truths About Women Who Walk Alone (593 k) · Don’t Fight Alone (340 k)",
+          "status": "to do"
+        },
+        {
+          "number": 30,
+          "format": "Prière du matin",
+          "set": "Véranda, matin",
+          "title": "A Morning Prayer Before a Doctor’s Visit — Peace in God’s Hands",
+          "inspiration": "Thème « inquiétude » : prière de paix, sans promesse de guérison",
+          "status": "to do"
+        },
+        {
+          "number": 31,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "A Prayer for Strength When You Care for a Sick Loved One",
+          "inspiration": "Thème « épreuve » : peu de vidéos, public senior très concerné",
+          "status": "to do"
+        },
+        {
+          "number": 32,
+          "format": "Prière du soir",
+          "set": "Véranda, soir",
+          "title": "A Prayer for Children Who Have Walked Away From Faith",
+          "inspiration": "Thème « famille » : une inquiétude très forte chez les parents âgés",
+          "status": "to do"
+        },
+        {
+          "number": 33,
+          "format": "Psaumes pour dormir",
+          "set": "Véranda, soir",
+          "title": "Psalm 4, 23, 91 and 121: The Bedtime Psalms (2 Hours, Rain)",
+          "inspiration": "The Book of Psalms for Sleep (1,2 M) · 200 Scriptures to Strengthen Your Faith Overnight (1,1 M)",
+          "status": "to do"
+        },
+        {
+          "number": 34,
+          "format": "Prière du matin",
+          "set": "Véranda, matin",
+          "title": "A Sunday Morning Prayer for Those Who Can’t Make It to Church",
+          "inspiration": "Le cœur de la promesse de Pastor Samuel : parler à ceux qui ne peuvent plus se déplacer",
+          "status": "to do"
+        },
+        {
+          "number": 35,
+          "format": "Histoire biblique",
+          "set": "Bureau",
+          "title": "The Story of Simeon: When Faith Waits a Lifetime to See Jesus",
+          "inspiration": "Une histoire biblique centrée sur la vieillesse, presque absente sur YouTube",
+          "status": "to do"
+        },
+        {
+          "number": 36,
+          "format": "Histoire biblique",
+          "set": "Bureau",
+          "title": "CALEB: The Rise of God’s Oldest Warrior",
+          "inspiration": "Histoire biblique pour les seniors · format « histoire racontée » (médiane 363 k)",
+          "status": "to do"
+        },
+        {
+          "number": 37,
+          "format": "Histoire biblique",
+          "set": "Bureau",
+          "title": "Elijah Under the Juniper Tree: When You’re Too Tired to Go On",
+          "inspiration": "The Exhaustion You Feel… (446 k, chaîne de 23 k)",
+          "status": "to do"
+        },
+        {
+          "number": 38,
+          "format": "Histoire biblique",
+          "set": "Bureau",
+          "title": "Moses Was 80: Why God Calls People Late in Life",
+          "inspiration": "Thème « âge » : Why God Keeps People Alive After 60 (172 k)",
+          "status": "to do"
+        },
+        {
+          "number": 39,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Can Our Loved Ones in Heaven See Us?",
+          "inspiration": "Série « Heaven » · thème « au-delà » : médiane 337 k",
+          "status": "to do"
+        },
+        {
+          "number": 40,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "The 5 Crowns in Heaven: What Every Christian Over 60 Should Know",
+          "inspiration": "Série « Heaven » · The 5 Crowns in Heaven (1,3 M)",
+          "status": "to do"
+        },
+        {
+          "number": 41,
+          "format": "Heaven and Eternity",
+          "set": "Bureau",
+          "title": "Will There Be Marriage in Heaven? What Jesus Actually Said",
+          "inspiration": "Série « Heaven » · question très recherchée par les couples âgés",
+          "status": "to do"
+        },
+        {
+          "number": 42,
+          "format": "Growing Old With God",
+          "set": "Bureau",
+          "title": "When Your Body Grows Weak: “Though Our Outward Man Perish” (2 Corinthians 4:16)",
+          "inspiration": "Série « Growing Old With God »",
+          "status": "to do"
+        },
+        {
+          "number": 43,
+          "format": "Sermon court",
+          "set": "Bureau",
+          "title": "Why Is Psalm 90 the Most Important Chapter for Your Later Years?",
+          "inspiration": "Thème « âge » et enseignement par question",
+          "status": "to do"
+        },
+        {
+          "number": 44,
+          "format": "Sermon court",
+          "set": "Bureau",
+          "title": "The Greatest Psalm Ever Written | Psalm 23 Line by Line",
+          "inspiration": "Psalm 23 : un des sujets les plus regardés de la niche",
+          "status": "to do"
+        },
+        {
+          "number": 45,
+          "format": "Questions You Were Afraid to Ask",
+          "set": "Bureau",
+          "title": "What Did Jesus Mean by “Many Mansions”? (John 14)",
+          "inspiration": "Série « Questions » · enseignement sur le paradis",
+          "status": "to do"
+        }
+      ],
+      "new_ideas_oct2026": [
+        {
+          "number": 101,
+          "title": "If Angels Are in Your House, You Will Notice These 7 Signs — What the Bible Says",
+          "priority": 1,
+          "winning_pattern_fr": "« If X… You Will Notice These N Signs » et « N Signs » : 4 chaînes (836 k, 797 k, 2,2 M, 1,5 M en espagnol)",
+          "topic_floor_ceiling_fr": "angels bible : plancher 122 k · plafond 5,9 M ; signs from god : 111 k · 2,2 M",
+          "demand_stack_fr": "Les anges, très demandés, accrochés à la maison du spectateur.",
+          "reference_videos": [
+            {
+              "title": "71-Year-Old Pastor: If Angels Are In Your House… You Will Notice These 3 Signs",
+              "url": "https://www.youtube.com/watch?v=W7k7V0rkffQ",
+              "views": 835810,
+              "channel": "The Old Pastor's Table"
+            },
+            {
+              "title": "5 Signs You’re Dangerously Anointed",
+              "url": "https://www.youtube.com/watch?v=VcwStnp5Gt8",
+              "views": 797465,
+              "channel": "Vlad Savchuk"
+            },
+            {
+              "title": "Are You Ready? 10 Signs Jesus Is Coming Soon",
+              "url": "https://www.youtube.com/watch?v=CXCKtxJ4bqk",
+              "views": 2226931,
+              "channel": "Discipled Daily"
+            }
+          ],
+          "hook_4P": [
+            "Promise: seven signs, straight from Scripture, that God's angels are near you.",
+            "Proof: we'll only use what the Bible says — Hebrews 13, Psalm 91, Luke 1.",
+            "Plan: who angels are, what they do, the seven signs, and what to do tonight.",
+            "Persona: if you live alone and sometimes feel you're not, beloved, this is for you."
+          ],
+          "acceptance_criteria_fr": [
+            "7 signes, chacun ancré dans un verset KJV précis et cité.",
+            "La mise en garde biblique : on ne prie pas les anges, on ne cherche pas les signes pour eux-mêmes (Colossiens 2:18).",
+            "Une prière finale de protection pour la maison.",
+            "Aucune promesse de vision ou d'apparition."
+          ],
+          "thumbnail_fr": "Pastor Sam dans son bureau le soir, une lumière douce qui entre par la fenêtre derrière lui, et une silhouette d'ailes floue.",
+          "caution_fr": "La chaîne « The Old Pastor's Table » (persona de pasteur âgé) occupe ce créneau : rester plus biblique et plus apaisant qu'elle."
+        },
+        {
+          "number": 102,
+          "title": "Methuselah Lived 969 Years — What His Story Means for the Years You Have Left",
+          "priority": 2,
+          "winning_pattern_fr": "Personnage biblique + chiffre frappant (le film Methuselah, 2,35 M) ; la vague des films bibliques (Daniel 9,6 M, Elijah 4,2 M)",
+          "topic_floor_ceiling_fr": "heaven bible : plancher 290 k · plafond 9,6 M",
+          "demand_stack_fr": "Un sujet tendance (les films bibliques) accroché à la question du temps qui reste.",
+          "reference_videos": [
+            {
+              "title": "METHUSELAH – The Movie (2026) | The Man Who Lived 969 Years | Full Biblical Movie in 4K",
+              "url": "https://www.youtube.com/watch?v=-k1ndbzyDjA",
+              "views": 2352731,
+              "channel": "Unraveling the Scriptures"
+            },
+            {
+              "title": "Daniel – The Movie (2026) | The Prophet of Visions | Full Biblical Movie in 4K",
+              "url": "https://www.youtube.com/watch?v=2R1aaROltxE",
+              "views": 9577696,
+              "channel": "Unraveling the Scriptures"
+            }
+          ],
+          "hook_4P": [
+            "Promise: what the longest life in the Bible teaches about yours.",
+            "Proof: Genesis 5, Hebrews 11 and Psalm 90 — Moses' own prayer about our days.",
+            "Plan: who Methuselah was, the meaning of his name, Enoch his father, and three lessons.",
+            "Persona: if you're counting the years more than you used to, sit with me."
+          ],
+          "acceptance_criteria_fr": [
+            "Les faits de Genèse 5 exacts (âges, généalogie, lien avec le Déluge).",
+            "Le sens du nom, présenté comme une interprétation traditionnelle, pas comme une certitude.",
+            "3 leçons concrètes pour ses dernières années, avec Psaume 90:12.",
+            "Une prière de fin."
+          ],
+          "thumbnail_fr": "Un parchemin ancien avec « 969 » en très grand, et Pastor Sam pensif.",
+          "caution_fr": "Ne pas présenter des légendes juives comme des faits bibliques."
+        },
+        {
+          "number": 103,
+          "title": "The Book of Enoch: Why It's Not in Your Bible — And What Every Christian Should Know",
+          "priority": 3,
+          "winning_pattern_fr": "Enoch : 3 grosses vidéos (5,9 M, 5,4 M, 1,9 M) ; la demande est active",
+          "topic_floor_ceiling_fr": "bible prophecy end times : plancher 197 k · plafond 3,8 M",
+          "demand_stack_fr": "Le sujet viral Enoch, ramené à une réponse calme de pasteur.",
+          "reference_videos": [
+            {
+              "title": "Enoch – The Movie (2026) | 10 Heavens and the Origin of the Nephilim | Full Biblical Movie in 4K",
+              "url": "https://www.youtube.com/watch?v=wJkXjNbsD-Y",
+              "views": 5440550,
+              "channel": "Unraveling the Scriptures"
+            },
+            {
+              "title": "6. THE BOOK OF ENOCH - The Entire Story",
+              "url": "https://www.youtube.com/watch?v=DTGFWd2WKdg",
+              "views": 1941181,
+              "channel": "Deep Dive History"
+            }
+          ],
+          "hook_4P": [
+            "Promise: a clear, calm answer about the Book of Enoch.",
+            "Proof: what Genesis 5, Hebrews 11 and Jude 14 actually say.",
+            "Plan: who Enoch was, what the book is, why it isn't in the canon, and what to do with it.",
+            "Persona: if friends keep sending you Enoch videos and you feel confused, let's settle it."
+          ],
+          "acceptance_criteria_fr": [
+            "Les faits : Enoch dans Genèse 5:24, Hébreux 11:5, Jude 14-15.",
+            "L'histoire du livre (1 Hénoch), le canon, et l'Église éthiopienne, sans caricature.",
+            "Ce qu'un chrétien peut en retenir et ce qu'il ne doit pas en faire.",
+            "Le retour à l'essentiel : Jean 14:6."
+          ],
+          "thumbnail_fr": "Un vieux livre fermé avec une lumière qui en sort, le texte « BANNED? » barré et remplacé par « THE TRUTH ».",
+          "caution_fr": "Être exact et nuancé sur l'histoire du canon."
+        },
+        {
+          "number": 104,
+          "title": "God Heard Your Prayer — Here's Why You're Still Waiting",
+          "priority": 4,
+          "winning_pattern_fr": "Titre-réponse à une douleur (940 k) ; lien avec « She Thought God Had Forgotten Her » (853 k)",
+          "topic_floor_ceiling_fr": "pastor message : plancher 326 k · plafond 5,6 M",
+          "demand_stack_fr": "Une douleur universelle (attendre une réponse), qui touche fort les plus de 60 ans.",
+          "reference_videos": [
+            {
+              "title": "God Heard Your Prayer, But Here's Why You're Still Waiting",
+              "url": "https://www.youtube.com/watch?v=Ai6ikOhU4ls",
+              "views": 940423,
+              "channel": "Pastor Rick"
+            },
+            {
+              "title": "She Thought God Had Forgotten Her… But He Was Working in Silence | Christian Movie",
+              "url": "https://www.youtube.com/watch?v=ukz1x60_tek",
+              "views": 853483,
+              "channel": "Story Time with Christelle"
+            }
+          ],
+          "hook_4P": [
+            "Promise: why God's delay is not God's 'no'.",
+            "Proof: Abraham, Hannah, Simeon and Daniel 10 — answered prayers that waited.",
+            "Plan: four reasons God makes us wait, and what to do while we wait.",
+            "Persona: if you've prayed for years for a child or a healing, beloved, don't stop."
+          ],
+          "acceptance_criteria_fr": [
+            "4 raisons bibliques, chacune avec son récit et son verset.",
+            "Daniel 10:12-13 cité exactement.",
+            "Ce qu'on fait pendant l'attente, en pratique.",
+            "Aucune promesse de guérison ou de résultat."
+          ],
+          "thumbnail_fr": "Pastor Sam les mains jointes sur une Bible ouverte, et un sablier.",
+          "caution_fr": null
+        },
+        {
+          "number": 105,
+          "title": "No Weapon Formed Against You Shall Prosper — A Prayer of Protection Over Your Home Tonight (Isaiah 54:17)",
+          "priority": 5,
+          "winning_pattern_fr": "Prière de protection + verset célèbre dans le titre (2,06 M) ; « in your home » (1,29 M)",
+          "topic_floor_ceiling_fr": "prayer protection : plancher 297 k · plafond 5,4 M",
+          "demand_stack_fr": "Le verset le plus recherché sur la protection, accroché à la maison et au soir.",
+          "reference_videos": [
+            {
+              "title": "No Weapon Formed Against Me Shall Prosper (Isaiah 54:17) | Warfare Worship Prayer For Protection 🛡️",
+              "url": "https://www.youtube.com/watch?v=AJgOXMsGoRs",
+              "views": 2056805,
+              "channel": "Soulful Worship SWR"
+            },
+            {
+              "title": "THE SONG THE DEVIL IS AFRAID TO HEAR IN YOUR HOME ",
+              "url": "https://www.youtube.com/watch?v=xoGxhuvea9o",
+              "views": 1287971,
+              "channel": "SONG OF WORSHIP one "
+            }
+          ],
+          "hook_4P": [
+            "Promise: thirty quiet minutes of protection prayer over your home.",
+            "Proof: Isaiah 54, Psalm 91 and Psalm 121, read slowly.",
+            "Plan: we bless the door, each room, your family, and your sleep.",
+            "Persona: if nights feel long and the house feels empty, let's pray together."
+          ],
+          "acceptance_criteria_fr": [
+            "Les versets KJV exacts.",
+            "Une prière pièce par pièce, au rythme lent de nos prières du soir.",
+            "Pas de « guerre spirituelle » agressive : le ton reste apaisant.",
+            "La fin en silence, avec la musique."
+          ],
+          "thumbnail_fr": "Une porte d'entrée la nuit avec une lumière chaude, et un bouclier lumineux discret.",
+          "caution_fr": null
+        },
+        {
+          "number": 106,
+          "title": "People Who Say They Saw Heaven — What the Bible Actually Says About Their Stories",
+          "priority": 6,
+          "winning_pattern_fr": "Témoignages du ciel : 3 grosses vidéos (2,66 M, 2,4 M, 1,78 M)",
+          "topic_floor_ceiling_fr": "heaven bible : plancher 290 k · plafond 9,6 M",
+          "demand_stack_fr": "Le sujet viral des expériences de mort imminente, ramené à la Bible.",
+          "reference_videos": [
+            {
+              "title": "He Spent 21 Days in Heaven. What He Saw Will Shock You",
+              "url": "https://www.youtube.com/watch?v=lA89S_uFbDA",
+              "views": 2659889,
+              "channel": "Vlad Savchuk"
+            },
+            {
+              "title": "Where is the Famous “Heaven Kid” 23 Years Later?",
+              "url": "https://www.youtube.com/watch?v=8FZugWlhdtg",
+              "views": 2416397,
+              "channel": "TruWitness"
+            },
+            {
+              "title": "If You Think Heaven Is FAKE, You NEED To See This",
+              "url": "https://www.youtube.com/watch?v=ryrW-p5j97U",
+              "views": 1783864,
+              "channel": "The Diary Of A CEO Clips"
+            }
+          ],
+          "hook_4P": [
+            "Promise: how to think about heaven stories without being fooled or afraid.",
+            "Proof: Paul in 2 Corinthians 12, John in Revelation 21, and what Jesus said.",
+            "Plan: what the stories have in common, what the Bible confirms, and where to be careful.",
+            "Persona: if you've lost someone and long to know where they are, this will comfort you."
+          ],
+          "acceptance_criteria_fr": [
+            "Une présentation honnête des récits, sans nommer pour accuser ni se moquer.",
+            "Ce que la Bible confirme sur le ciel, avec ses versets.",
+            "Le discernement : pourquoi la Bible reste la mesure (Galates 1:8).",
+            "Une fin consolante : Jean 14:1-3."
+          ],
+          "thumbnail_fr": "Un escalier de lumière dans les nuages, et Pastor Sam en bas, Bible en main.",
+          "caution_fr": "Ne pas affirmer qu'un témoignage précis est vrai ou faux."
+        },
+        {
+          "number": 107,
+          "title": "The Real Heaven Is More Surprising Than You Think — 7 Things the Bible Says Most Christians Miss",
+          "priority": 7,
+          "winning_pattern_fr": "« The Real Heaven Is Actually Pretty Shocking » (1,15 M) ; c'est le sujet au plus haut plancher de la niche",
+          "topic_floor_ceiling_fr": "heaven bible : plancher 290 k · plafond 9,6 M",
+          "demand_stack_fr": "La demande « heaven » à son maximum, sans doublon avec nos vidéos déjà prévues (à quoi ressemble le ciel, retrouver nos proches).",
+          "reference_videos": [
+            {
+              "title": "The Real Heaven Is Actually Pretty Shocking",
+              "url": "https://www.youtube.com/watch?v=WWxoPV4Ahes",
+              "views": 1149932,
+              "channel": "Vlad Savchuk"
+            }
+          ],
+          "hook_4P": [
+            "Promise: seven truths about heaven most sermons skip.",
+            "Proof: every point comes with a verse you can read tonight.",
+            "Plan: the new earth, our bodies, work, rest, worship, time, and the best one last.",
+            "Persona: if heaven feels vague or like an endless church service, you'll see it differently."
+          ],
+          "acceptance_criteria_fr": [
+            "7 vérités qui ne recoupent pas notre vidéo « What Does Heaven REALLY Look Like ».",
+            "Chaque vérité avec 1 ou 2 versets KJV.",
+            "La distinction entre ce que dit la Bible et ce que la tradition imagine.",
+            "La fin : l'espérance personnelle (Apocalypse 21:4)."
+          ],
+          "thumbnail_fr": "Un paysage lumineux de nouvelle terre, et le texte « NOT CLOUDS ».",
+          "caution_fr": null
+        },
+        {
+          "number": 108,
+          "title": "Why One-Third of the Angels Fell — The Bible's Answer (Revelation 12)",
+          "priority": 8,
+          "winning_pattern_fr": "Les anges déchus : 3 grosses vidéos (2,7 M, 1,5 M, et 2,27 M pour « I Recreated Every Angel »)",
+          "topic_floor_ceiling_fr": "angels bible : plancher 122 k · plafond 5,9 M",
+          "demand_stack_fr": "Un sujet viral, traité par un pasteur calme et uniquement par la Bible.",
+          "reference_videos": [
+            {
+              "title": "An Exorcist Reveals Why One-Third of the Angels Chose Hell",
+              "url": "https://www.youtube.com/watch?v=UUS6AlXsth0",
+              "views": 2713453,
+              "channel": "Shawn Ryan Clips"
+            },
+            {
+              "title": "Mel Gibson's Fallen Angels Scene Reveals Something Terrifying",
+              "url": "https://www.youtube.com/watch?v=5j-Zn-_4Pc4",
+              "views": 1518041,
+              "channel": "The Power of the Word"
+            },
+            {
+              "title": "I Recreated Every Angel in the Bible",
+              "url": "https://www.youtube.com/watch?v=rZCpF1PUtss",
+              "views": 2272544,
+              "channel": "Ear to Hear"
+            }
+          ],
+          "hook_4P": [
+            "Promise: what Scripture really tells us about the angels who fell.",
+            "Proof: Revelation 12, Isaiah 14, Ezekiel 28, Jude 6 — read together.",
+            "Plan: who they were, why they fell, where they are, and why you need not fear.",
+            "Persona: if this topic frightens you, by the end you'll have peace."
+          ],
+          "acceptance_criteria_fr": [
+            "Les passages cités exactement, et les débats d'interprétation présentés honnêtement.",
+            "Aucune spéculation présentée comme une certitude.",
+            "La victoire du Christ (Colossiens 2:15) comme conclusion.",
+            "Une prière de paix."
+          ],
+          "thumbnail_fr": "Une étoile qui tombe dans un ciel sombre, et Pastor Sam serein.",
+          "caution_fr": "Rester apaisant, sans sensationnalisme."
+        },
+        {
+          "number": 109,
+          "title": "Winter Is Coming in the Bible — What God Says About the Winter Season of Your Life",
+          "priority": 9,
+          "winning_pattern_fr": "Sujet accroché à la saison : « Winter Predictions — They Did Not Know This Was in the Bible » (997 k)",
+          "topic_floor_ceiling_fr": "pastor message : plancher 326 k · plafond 5,6 M",
+          "demand_stack_fr": "La saison (l'hiver), qui parle du dernier âge de la vie.",
+          "reference_videos": [
+            {
+              "title": "\"Winter Predictions\" - They Did Not Know This Was in the Bible",
+              "url": "https://www.youtube.com/watch?v=1k1S0VGGMvI",
+              "views": 997080,
+              "channel": "Off The Kirb Ministries"
+            }
+          ],
+          "hook_4P": [
+            "Promise: what the Bible says about winter seasons — in nature and in your life.",
+            "Proof: Ecclesiastes 3, Genesis 8:22, Song of Solomon 2:11, 2 Timothy 4:21.",
+            "Plan: why God made winter, what grows in it, and how to walk through yours.",
+            "Persona: if you feel you've entered the winter of your life, this is hope for you."
+          ],
+          "acceptance_criteria_fr": [
+            "Les 4 passages cités avec leur contexte.",
+            "Une application concrète par passage.",
+            "Une histoire biblique de « fruit dans la vieillesse » (Psaume 92:14).",
+            "Une prière de fin."
+          ],
+          "thumbnail_fr": "Un arbre nu sous la neige avec un bourgeon vert, et Pastor Sam près d'une fenêtre d'hiver.",
+          "caution_fr": "Ne pas présenter de « prédictions » météo : le titre parle de la saison spirituelle."
+        },
+        {
+          "number": 110,
+          "title": "A Monday Morning Prayer for the Week Ahead | Good Morning, Jesus",
+          "priority": 10,
+          "winning_pattern_fr": "Les prières du lundi matin en série numérotée (1,0 M et 861 k)",
+          "topic_floor_ceiling_fr": "morning prayer psalm : plancher 131 k · plafond 1 M",
+          "demand_stack_fr": "Un rendez-vous fixe chaque lundi : ça crée l'habitude et les abonnés.",
+          "reference_videos": [
+            {
+              "title": "GOOD MORNING JESUS Vol. 1 | Monday Morning Prayer & Declaration For A New Week ",
+              "url": "https://www.youtube.com/watch?v=mkm8sYNkJf0",
+              "views": 1009339,
+              "channel": "Doxa House of Praise"
+            },
+            {
+              "title": "Powerful Morning Prayer to Start Your Day in God’s Presence | Gratitude, God’s Mercy & Blessings",
+              "url": "https://www.youtube.com/watch?v=6z4qttShLqU",
+              "views": 861261,
+              "channel": "PRAY NOW TV"
+            }
+          ],
+          "hook_4P": [
+            "Promise: start this week with God before anything else.",
+            "Proof: Psalm 5:3 — 'in the morning will I direct my prayer unto thee'.",
+            "Plan: thanksgiving, giving God the week, protection, and a blessing.",
+            "Persona: if Mondays feel heavy since you live alone, let's begin together."
+          ],
+          "acceptance_criteria_fr": [
+            "Le format court (15 à 20 min), à reproduire chaque lundi.",
+            "Une prière pour la santé, la famille, les décisions de la semaine.",
+            "Les versets KJV exacts.",
+            "Une bénédiction finale (Nombres 6:24-26)."
+          ],
+          "thumbnail_fr": "Une tasse de café et une Bible au lever du soleil, avec le texte « MONDAY ».",
+          "caution_fr": null
+        },
+        {
+          "number": 111,
+          "title": "Daniel's Visions and the End Times — Should Christians Be Afraid?",
+          "priority": 11,
+          "winning_pattern_fr": "Prophétie et Daniel (9,6 M pour le film, plancher de la prophétie à 197 k)",
+          "topic_floor_ceiling_fr": "bible prophecy end times : plancher 197 k · plafond 3,8 M",
+          "demand_stack_fr": "Une forte demande sur la prophétie, avec une réponse sans peur (notre angle).",
+          "reference_videos": [
+            {
+              "title": "Daniel – The Movie (2026) | The Prophet of Visions | Full Biblical Movie in 4K",
+              "url": "https://www.youtube.com/watch?v=2R1aaROltxE",
+              "views": 9577696,
+              "channel": "Unraveling the Scriptures"
+            },
+            {
+              "title": "How Much Time Does Trump Have Left? | Jonathan Cahn Prophetic",
+              "url": "https://www.youtube.com/watch?v=yDFr5IsQW-Y",
+              "views": 1066697,
+              "channel": "Jonathan Cahn Official"
+            }
+          ],
+          "hook_4P": [
+            "Promise: what Daniel saw, and why it should bring you peace, not panic.",
+            "Proof: Daniel 2 and 7, and Jesus' own words in Matthew 24.",
+            "Plan: the statue, the four beasts, the Son of Man, and what it means for you.",
+            "Persona: if the news scares you, let's look at who holds the future."
+          ],
+          "acceptance_criteria_fr": [
+            "Les visions résumées fidèlement.",
+            "Les grandes lectures présentées sans prendre parti agressivement.",
+            "Aucune date ni prédiction politique.",
+            "La conclusion : Daniel 7:13-14 et Jean 14:27."
+          ],
+          "thumbnail_fr": "Une statue d'or et de fer qui se fissure, et Pastor Sam calme.",
+          "caution_fr": "Aucune prédiction datée, aucun nom politique."
+        },
+        {
+          "number": 112,
+          "title": "How to Walk in the Spirit When Your Body Grows Weak (Galatians 5)",
+          "priority": 12,
+          "winning_pattern_fr": "Enseignement « How to Walk in the Spirit » (5,56 M et 843 k)",
+          "topic_floor_ceiling_fr": "pastor message : plancher 326 k · plafond 5,6 M",
+          "demand_stack_fr": "Un grand sujet du moment, accroché au vieillissement du corps.",
+          "reference_videos": [
+            {
+              "title": "How to Walk in the Spirit and Defeat the Flesh Daily | Dr. David Jeremiah",
+              "url": "https://www.youtube.com/watch?v=7h9vbGHZFGE",
+              "views": 5561592,
+              "channel": "David Jeremiah"
+            },
+            {
+              "title": "When the Holy Spirit Controls Your Life | Dr. David Jeremiah",
+              "url": "https://www.youtube.com/watch?v=oeEalByOuDY",
+              "views": 842885,
+              "channel": "David Jeremiah"
+            }
+          ],
+          "hook_4P": [
+            "Promise: how to live close to God even when your body slows down.",
+            "Proof: Galatians 5 and 2 Corinthians 4:16 — 'the inward man is renewed day by day'.",
+            "Plan: what walking in the Spirit means, the fruit, the daily habits, the hard days.",
+            "Persona: if you can't do what you used to, God isn't finished with you."
+          ],
+          "acceptance_criteria_fr": [
+            "Galates 5:16-25 expliqué simplement.",
+            "3 habitudes quotidiennes réalistes pour une personne âgée.",
+            "Un passage sur les jours de douleur.",
+            "Une prière de fin."
+          ],
+          "thumbnail_fr": "Des mains âgées sur une Bible, une lumière douce, le texte « DAY BY DAY ».",
+          "caution_fr": null
+        },
+        {
+          "number": 113,
+          "title": "Naomi Thought God Had Forgotten Her… The Story Every Widow Needs to Hear",
+          "priority": 13,
+          "winning_pattern_fr": "Récit « She Thought God Had Forgotten Her » (853 k) + notre persona veuve",
+          "topic_floor_ceiling_fr": "pastor message : plancher 326 k · plafond 5,6 M",
+          "demand_stack_fr": "Un personnage biblique précis, accroché à une situation (le veuvage).",
+          "reference_videos": [
+            {
+              "title": "She Thought God Had Forgotten Her… But He Was Working in Silence | Christian Movie",
+              "url": "https://www.youtube.com/watch?v=ukz1x60_tek",
+              "views": 853483,
+              "channel": "Story Time with Christelle"
+            }
+          ],
+          "hook_4P": [
+            "Promise: how God turned Naomi's bitterness into joy.",
+            "Proof: the whole book of Ruth, read as one story.",
+            "Plan: the loss, the return, Ruth's loyalty, and the grandson on her lap.",
+            "Persona: if you've lost your husband or wife, this story is for you tonight."
+          ],
+          "acceptance_criteria_fr": [
+            "Le récit de Ruth fidèle (chapitres 1 à 4).",
+            "Le lien avec la lignée de David et de Jésus (Ruth 4:17).",
+            "3 consolations concrètes pour les veufs et veuves.",
+            "Une prière de fin."
+          ],
+          "thumbnail_fr": "Une vieille femme de profil sur une route de Bethléem au coucher du soleil.",
+          "caution_fr": null
+        }
+      ],
+      "new_ideas_note": "Research of Oct 14, 2026: searches containing 'seniors' or 'old age' have a very low floor (median 352–602 views). Keep those words out of titles; speak to the 60+ viewer in the hook (persona). Produce new ideas by priority, alternating with the remaining original videos."
+    },
+    "mamaw_birdie": {
+      "channel": {
+        "name": "Mamaw Birdie's Mountain Ways",
+        "handle": "@MamawBirdie",
+        "banner_tagline": "Old mountain ways to spend less",
+        "upload_rhythm": "Tuesday, Thursday and Saturday.",
+        "about": "Welcome to Mamaw Birdie's Mountain Ways.\n\nUp in the Blue Ridge, folks never had much money — so they learned to make do. How to keep a house cool without air conditioning and warm without a big gas bill. How to clean without a cupboard full of store-bought bottles. How to keep a family fed through a long mountain winter. Those old ways saved families a lot of money, and most of them still work today.\nOn this channel, Mamaw Birdie and Papaw Virgil share those ways — the thrift, the know-how and the stories behind them — so you can spend a little less and live a little simpler.\nNew videos every Tuesday, Thursday and Saturday.\n📖 Mamaw Birdie’s Mountain Thrift Book: [your link]\nMamaw Birdie and Papaw Virgil are AI-presented storytellers. The ways shared here come from Appalachian tradition and are checked against reliable sources. Always use common sense, and follow the safety instructions on any product you use.",
+        "channel_keywords": "Mamaw Birdie, Appalachian, Appalachian old ways, Appalachian grandma, Appalachian mountains, old ways, mountain ways, old fashioned tips, frugal living, frugal tips, save money, Great Depression tips, grandma tips, homemaking, homestead tips, pantry staples, winter tips, keep warm without heat, cleaning with vinegar, baking soda uses, pest control natural, Blue Ridge, simple living, living on a budget",
+        "base_video_tags": "Mamaw Birdie, Appalachian old ways, Appalachian grandma, frugal living, old fashioned tips, save money, grandma tips, Great Depression tips, homemaking, simple living",
+        "description_template": "[1–2 line hook taken from the video]\n\nIn this video, Mamaw Birdie shares [topic] — the old mountain way, checked against today's safety advice.\n\n📖 Mamaw Birdie's Mountain Thrift Book: [link]\n\nChapters:\n0:00 [Hook]\n…\n\nSources: [CDC / USDA / NCHFP / ENERGY STAR …]\n\nMamaw Birdie and Papaw Virgil are AI-presented storytellers. The ways shared here come from Appalachian tradition and are checked against reliable sources. Always use common sense and follow the safety instructions on any product you use."
+      },
+      "positioning": "Mountain thrift that saves money (the Yoder channels' money topics: pests, heating and cooling, homemade products, pantry, tools), told with the voice and memories of an Appalachian grandmother; folklore in 10–20 % of the videos.",
+      "characters": {
+        "BIRDIE": {
+          "name": "Bernice 'Birdie' Hollins",
+          "age": 79,
+          "bio": "Youngest of seven children, grew up on a small farm in the Blue Ridge Mountains of southwest Virginia. Nicknamed 'Birdie' because she always sang while hanging laundry. Kept house all her life: Monday wash day, a pantry that lasts all winter, a budget where nothing is wasted. Married to Virgil for 58 years, three children, nine grandchildren.",
+          "topics": "Cooking and pantry, cleaning and homemade products, sewing and mending, folklore and memories.",
+          "line": "Waste not, want not, honey.",
+          "tone": "Warm, a little teasing; always tells a story before giving the tip.",
+          "voice": "Woman around 78, soft Appalachian accent, slow pace, warm."
+        },
+        "VIRGIL": {
+          "name": "Virgil Hollins",
+          "age": 81,
+          "bio": "Worked forty years at the county sawmill and always fixed everything himself. Never threw a tool away and knows the name of every tree on the hill. In his workshop, everything has its place and everything gets fixed.",
+          "topics": "Tools and maintenance, heating and wood, pests, garden, fences, making do.",
+          "line": "If it ain't broke, oil it.",
+          "tone": "Calm, few words, dry humor. Teases Birdie, who always has the last word.",
+          "voice": "Man around 80, deep and steady voice, a little dry humor.",
+          "use": "Optional second voice: tool/heating/pest topics and short exchanges with Birdie."
+        }
+      },
+      "opening_exchange": [
+        "BIRDIE: Well, hey there, honey. Come on up on the porch and sit a spell. I'm Mamaw Birdie…",
+        "VIRGIL: …and I'm the one who fixes whatever she breaks.",
+        "BIRDIE: Hush, Virgil. Today we're going to talk about [topic]. And I promise you, it'll save you some money."
+      ],
+      "character_rule": "They are fictional storytellers declared as AI characters. Their memories are stories that introduce real, checked know-how; they never claim to be real people or that their memories are real facts.",
+      "format": {
+        "length": "20–30 min",
+        "structure": "A numbered list (10–30 items) with family memories between items; avatar ≈ 20 % of the screen time (intro, transitions, ending), the rest period-style and how-to B-roll.",
+        "script_length": "≈ 3,600–3,800 words for 20 min, ≈ 4,800–4,950 words for 30 min (always under 5,000).",
+        "parts": [
+          [
+            "0:00–0:45",
+            "4P hook in Birdie's voice (promise, honest proof = her life story, plan, persona)."
+          ],
+          [
+            "0:45–1:30",
+            "Opening exchange on the porch."
+          ],
+          [
+            "1:30–end-2:00",
+            "The numbered items: memory → the old way → why it works → today's safe version and cost."
+          ],
+          [
+            "last 2 min",
+            "Safety reminder, the 'Mamaw's rule' summary, call to comment, the book if the link exists, warm goodbye."
+          ]
+        ]
+      },
+      "shot_library": {
+        "BIRDIE_PORCH": {
+          "use": "Main shot: hook, welcome, transitions, ending.",
+          "prompt": "A 78-year-old Appalachian grandmother sitting in a worn wooden rocking chair on the front porch of an old log cabin in the Blue Ridge Mountains, late afternoon. She has silver hair pinned up in a loose bun, kind deep-set eyes, a lined, weathered face with gentle smile lines. She wears a faded blue cotton print dress with a hand-knit cream cardigan and a simple apron. A wooden bowl of green beans rests on her lap. Behind her, slightly out of focus: rough-hewn log walls, a hanging oil lantern, a quilt draped over the railing, misty green mountain ridges. Soft natural golden-hour light. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles and age spots, documentary photography style, 16:9."
+        },
+        "BIRDIE_KITCHEN": {
+          "use": "Recipes, pantry and cleaning topics (optional variant).",
+          "prompt": "Same grandmother, same clothes and apron as the reference image, standing in a small old Appalachian farmhouse kitchen beside a black cast-iron wood cookstove, looking straight into the camera with a warm smile, mouth slightly open as if speaking, a cast-iron skillet on the stove, jars of home-canned beans on a wooden shelf behind her, soft window light. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture, documentary photography style, 16:9.",
+          "note": "New variant — generate from the porch image as reference."
+        },
+        "VIRGIL_WORKSHOP": {
+          "use": "Tools, heating, pests, fences.",
+          "prompt": "An 80-year-old Appalachian grandfather sitting on a wooden bench inside an old barn workshop in the Blue Ridge Mountains, morning light through the open barn door. He has short white hair, a trimmed white beard, deep-set kind eyes and a weathered, sun-lined face. He wears a faded denim work shirt with rolled sleeves under worn canvas overalls. He holds an old hand plane, and a wall of well-kept hand tools hangs behind him, slightly out of focus, with a small wood stove and a coil of rope. Warm natural light, dust in the air. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles, documentary photography style, 16:9."
+        },
+        "negative_prompt": "looking sideways, eyes off camera, face hidden, cartoon, plastic skin, oversaturated, Amish clothing, modern appliances in frame, readable brand logos, extra fingers, distorted hands, text",
+        "reference_order": "Generate BIRDIE_PORCH first, then every Birdie variant from it; VIRGIL_WORKSHOP is his own reference."
+      },
+      "broll": {
+        "stock_queries": [
+          "blue ridge mountains mist",
+          "log cabin porch",
+          "old farmhouse kitchen",
+          "cast iron skillet cooking",
+          "canning jars pantry",
+          "wood stove fire",
+          "vegetable garden rows",
+          "root cellar",
+          "hanging laundry clothesline",
+          "vinegar baking soda cleaning",
+          "snow cabin winter",
+          "rocking chair porch"
+        ],
+        "ai_broll": "AI images for 1940s–1960s mountain scenes (family at the wood stove, wash day, root cellar, snowed-in cabin) and for close-ups stock doesn't have; animate 3–6 s. Keep the same cabin, porch and kitchen as the avatar.",
+        "subscriber_form": {
+          "Place": "The Blue Ridge Mountains of Appalachia (southwest Virginia, western North Carolina, eastern Kentucky, West Virginia)",
+          "Era": "1940s–1960s for memories, present day for how-to demonstrations",
+          "Environment": "Log cabin and porch, old farmhouse kitchen with a wood cookstove and cast iron, root cellar and pantry shelves of canning jars, vegetable garden, barn workshop, misty mountain ridges, winter snow",
+          "Audience": "Americans aged 55 and over who want to save money and like old-fashioned know-how",
+          "Other details": "Warm natural light, realistic and humble rural life, no Amish clothing (Appalachian, not Amish), no modern brands or readable logos, no dangerous practices shown as normal"
+        }
+      },
+      "title_formulas": [
+        {
+          "yoder": "[Problem] The AMISH Way + small price",
+          "proof": "KILL EVERY Mosquito The AMISH Way (2.2 M)",
+          "ours": "The Old Mountain Way to [solve the problem]"
+        },
+        {
+          "yoder": "Stop Buying [product] — $X recipe that lasts a year",
+          "proof": "Stop Buying Laundry Detergent… (1.1 M)",
+          "ours": "Stop Buying [product] — Mamaw's Mountain Recipe"
+        },
+        {
+          "yoder": "Cool/heat for $X — no electricity",
+          "proof": "The $4 Amish Fix for a Deadly Hot House (1.9 M)",
+          "ours": "How Mountain Families [stayed cool / warm] Without [AC / gas]"
+        },
+        {
+          "yoder": "25 [product] Hacks from the 60s",
+          "proof": "25 BANNED Borax Hacks… (779 k)",
+          "ours": "25 Things Mountain Grandmothers Did With [vinegar, salt, baking soda]"
+        },
+        {
+          "yoder": "The Amish Have Never [paid/replaced] X",
+          "proof": "Never Replaced a Wood Fence in 200 Years (488 k)",
+          "ours": "Why Papaw Never Bought a New [tool, fence]"
+        },
+        {
+          "yoder": "N Items the Amish Buy in Bulk — Under $5",
+          "proof": "11 Survival Items… Walmart (462 k)",
+          "ours": "N Pantry Staples Every Appalachian Grandmother Bought in Bulk"
+        },
+        {
+          "yoder": "'The Industry Made It Illegal', 'Big Oil Paid to Bury This'",
+          "proof": "used by Eli Yoder Secrets",
+          "ours": "DO NOT USE — replace with a true curiosity: 'Most People Have Forgotten This', 'The Old Way Still Works'."
+        }
+      ],
+      "safety_facts": [
+        "Indoor heat: keep at least 68 °F (NIA, hypothermia risk for seniors).",
+        "Never use an oven, grill or generator indoors to heat (carbon monoxide); CO detector.",
+        "Space heater: 3 feet clearance, plugged straight into the wall.",
+        "Average heating saving with a programmable thermostat ≈ 15 % (ENERGY STAR) — never invent big savings.",
+        "Rodent cleanup: bleach 1:10, gloves, don't sweep droppings (CDC).",
+        "Never mix bleach with vinegar or ammonia.",
+        "Food storage and canning: USDA / NCHFP rules only."
+      ],
+      "products": [
+        {
+          "name": "Mamaw Birdie's Mountain Thrift Book — Old Appalachian Ways to Cut Your Household Bills",
+          "price": "27 $ book · 47 $ with printables (seasonal chores calendar, pantry list, weather signs) · later 17 $/year Mountain Almanac",
+          "promise": "'150 old mountain ways to spend less' — provable; never 'Save $6,000 a year'.",
+          "placement": "First line of each description and the channel Links tab."
+        }
+      ],
+      "guardrails": [
+        "No false promises or invented conspiracies ('The Amish Have Never Been to a Dentist', 'Industry buried this').",
+        "Safety first on cleaning products, food preservation, heating and pests — every tip true and safe.",
+        "Savings claims on the sales page must be provable (FTC).",
+        "AI characters declared.",
+        "Real, varied scripts — no repetitive mass-produced content (demonetization risk)."
+      ],
+      "done": [
+        1,
+        8,
+        4
+      ],
+      "publishing_order": [
+        1,
+        8,
+        4,
+        5,
+        13,
+        6,
+        7,
+        12,
+        9,
+        11,
+        3,
+        10
+      ],
+      "publishing_note": "Video #2 (mosquitoes) and spring garden topics go out in April–May.",
+      "videos": [
+        {
+          "number": 1,
+          "pillar": "Chaleur et fraîcheur",
+          "title": "The $4 Appalachian Fix for a Freezing Cold House (Save Money All Winter)",
+          "opening_and_angle_fr": "“Honey, if your house is already cold and it’s only October, sit with an old woman for a little while.” Version hiver : le boudin de porte à 4 $, chauffer la personne avant la maison, fenêtres, pièces chaudes, aides au chauffage (LIHEAP, 2-1-1).",
+          "inspiration": "The $4 Amish Fix for a Deadly Hot House (1,9 M), adapté à l’hiver puisqu’on publie en octobre · The Amish $50 System That Heats Any Home (810 k)",
+          "caution_fr": "Garder 68 °F minimum (NIA, risque d’hypothermie chez les seniors). Jamais de four, de grill ou de groupe électrogène pour chauffer (monoxyde de carbone). Radiateur d’appoint : 3 pieds de distance, branché au mur. Chiffre d’économie : 15 % en moyenne (ENERGY STAR), pas 3 000 $.",
+          "status": "script written"
+        },
+        {
+          "number": 2,
+          "pillar": "Nuisibles",
+          "title": "KILL EVERY Mosquito The APPALACHIAN Way. SAFE For Honey Bees & Pets!",
+          "opening_and_angle_fr": "“Every summer evening, the whole family sat on that porch — and nobody got eaten alive. Mamaw had a few tricks.”",
+          "inspiration": "KILL EVERY Mosquito The AMISH Way (2,2 M)",
+          "caution_fr": "À publier au printemps (avril-mai), pas en automne. Pas de promesse « tue tous les moustiques ». Supprimer l’eau stagnante, ventilateur, plantes : des méthodes qui ont des preuves.",
+          "status": "to do"
+        },
+        {
+          "number": 3,
+          "pillar": "Produits maison",
+          "title": "Stop Buying Laundry Detergent — This Cheap $6 Appalachian Recipe (Lasts a Year)",
+          "opening_and_angle_fr": "“Wash day was Monday, every Monday. And Mamaw never once bought a jug of detergent.”",
+          "inspiration": "Stop Buying Laundry Detergent… $6 Amish Recipe (1,1 M) · $0 Recipe (177 k)",
+          "caution_fr": "Cristaux de soude et savon : gants, garder hors de portée des enfants, ne jamais mélanger avec de l’eau de Javel.",
+          "status": "to do"
+        },
+        {
+          "number": 4,
+          "pillar": "Garde-manger",
+          "title": "11 Survival Items Appalachian Grandmothers Buy in Bulk — All Under $5 at Walmart",
+          "opening_and_angle_fr": "“If the snow shut the road for two weeks, Mamaw’s pantry didn’t even notice.”",
+          "inspiration": "11 Survival Items the Amish Buy in Bulk (462 k) · 9 Items… Walmart (217 k)",
+          "caution_fr": "Donner des prix réels et datés.",
+          "status": "script written"
+        },
+        {
+          "number": 5,
+          "pillar": "Chaleur et fraîcheur",
+          "title": "The Appalachian $50 System That Heats Any Home All Winter — Mountain Families Barely Paid a Heating Bill",
+          "opening_and_angle_fr": "“That cabin had no furnace, no thermostat — and I never once woke up cold.”",
+          "inspiration": "The Amish $50 System That Heats Any Home (810 k) · $300 Tunnel Heats Any Home (396 k)",
+          "caution_fr": "Sécurité du chauffage au bois : monoxyde de carbone, détecteur obligatoire, ramonage.",
+          "status": "to do"
+        },
+        {
+          "number": 6,
+          "pillar": "Maison et outils",
+          "title": "The $3 Appalachian Trick That Makes Any Metal Rust-Proof Forever... They Never Taught You This",
+          "opening_and_angle_fr": "“Papaw’s hand plane was older than me, and it still shines. Here’s what he did every single fall.”",
+          "inspiration": "The $3 Trick That Makes Any Metal Rust-Proof (740 k) · Never Replaced a Metal Tool (288 k)",
+          "caution_fr": "Huile de lin, cire, rangement au sec. Pas d’huile de vidange (toxique).",
+          "status": "to do"
+        },
+        {
+          "number": 7,
+          "pillar": "Produits maison",
+          "title": "Mamaw's 25 Forgotten Vinegar Hacks from the 60s That Old-Timers Say Were GENIUS",
+          "opening_and_angle_fr": "“Mamaw’s cleaning cupboard had three things in it. Three. And her house was the cleanest on the mountain.”",
+          "inspiration": "25 BANNED Borax Hacks (779 k) · 25 Hydrogen Peroxide Hacks (952 k)",
+          "caution_fr": "Liste des mélanges interdits : vinaigre + eau de Javel, eau oxygénée + vinaigre dans le même flacon.",
+          "status": "to do"
+        },
+        {
+          "number": 8,
+          "pillar": "Nuisibles",
+          "title": "MICE GONE FOR $2... The Secret APPALACHIAN WAY",
+          "opening_and_angle_fr": "“If you’ve heard a little scratching in the walls at night, sit down with me.” Le secret à 2 $ : paille de fer + mastic dans les trous, nourriture en bocaux, tapettes, et le nettoyage sans danger (javel 1:10, jamais balayer).",
+          "inspiration": "RATS GONE FOR $2 (431 k) · 20 Hydrogen Peroxide Hacks (1,2 M)",
+          "caution_fr": "Boucher les trous, pièges classiques, propreté. Pas de poison maison.",
+          "status": "script written"
+        },
+        {
+          "number": 9,
+          "pillar": "Folklore et mémoire",
+          "title": "30 Appalachian Signs Grandmothers Watched to Know Bad Weather Was Coming",
+          "opening_and_angle_fr": "“Papaw could tell you it’d rain by Thursday just by looking at the cows.”",
+          "inspiration": "25 Appalachian Signs Grandfathers Watched (287 k, chaîne de 4 150 abonnés)",
+          "caution_fr": "Présenter comme des croyances transmises, pas comme de la science.",
+          "status": "to do"
+        },
+        {
+          "number": 10,
+          "pillar": "Garde-manger",
+          "title": "25 LOST Appalachian Money-Saving Skills That Take a Lifetime to Learn",
+          "opening_and_angle_fr": "“Mamaw went to town twice a year. The rest, she made, grew, or traded for.”",
+          "inspiration": "25 “Illegal” Off-Grid Tricks Our Grandparents Used (691 k) · 25 LOST Mountain Skills (611 k)",
+          "caution_fr": "—",
+          "status": "to do"
+        },
+        {
+          "number": 11,
+          "pillar": "Cuisine d’autrefois",
+          "title": "25 Appalachian Kitchen Tricks Mamaw Never Wrote Down",
+          "opening_and_angle_fr": "“None of this was in a cookbook. It was in her hands.”",
+          "inspiration": "25 Appalachian Cooking Tricks Grandma Never Wrote Down (434 k) · Opal Rowe (422 k)",
+          "caution_fr": "Des astuces vraies, pas des « hacks » bizarres (la leçon d’Otis Boone).",
+          "status": "to do"
+        },
+        {
+          "number": 12,
+          "pillar": "Folklore et mémoire",
+          "title": "25 Cheap Winter Meals Appalachian Families Ate to Survive the Great Depression",
+          "opening_and_angle_fr": "“People ask how we got through the hard years. Truth is, the mountains had been teaching us for a hundred years.”",
+          "inspiration": "Cheap Meals Our Grandparents Ate To Survive (3,9 M)",
+          "caution_fr": "—",
+          "status": "to do"
+        },
+        {
+          "number": 13,
+          "pillar": "Garde-manger",
+          "title": "How Appalachian Families Preserved Food Without Refrigeration (No Electricity, No Fridge, No Waste)",
+          "opening_and_angle_fr": "“The springhouse, the root cellar, the smokehouse — that was our refrigerator.”",
+          "inspiration": "How The Amish Preserve Meat Without Refrigeration (244 k) · Hidden Dugouts (806 k)",
+          "caution_fr": "Raconter comme de l’histoire. Pour toute méthode à refaire : renvoyer vers les règles USDA et NCHFP (botulisme).",
+          "status": "to do"
+        },
+        {
+          "number": 14,
+          "pillar": "Nuisibles",
+          "title": "How to Keep VENOMOUS Snakes Out of Your Yard... 10 Old Appalachian Methods That ACTUALLY Work",
+          "opening_and_angle_fr": "“Copperheads were part of life up there. So were the habits that kept them away from the door.”",
+          "inspiration": "How to Keep VENOMOUS Snakes Out of Your Yard (195 k)",
+          "caution_fr": "Pas de boules de naphtaline (usage interdit). Dégager les tas de bois et les hautes herbes.",
+          "status": "to do"
+        },
+        {
+          "number": 15,
+          "pillar": "Maison et outils",
+          "title": "Appalachian Farmers Never Replaced a Wood Fence in 50 Years — The $2 Treatment Most People Forgot",
+          "opening_and_angle_fr": "“Papaw set those locust posts in 1952. They’re still standing.”",
+          "inspiration": "$20 Solution Protects Wood for 50 Years (525 k) · Never Replaced a Wood Fence (488 k)",
+          "caution_fr": "Pas de créosote ni d’huile de vidange. Bois naturellement résistant (robinier), drainage.",
+          "status": "to do"
+        },
+        {
+          "number": 16,
+          "pillar": "Jardin",
+          "title": "KILL Weeds FAST & Stop Them For Good! The Old Appalachian Way",
+          "opening_and_angle_fr": "“Mamaw never bought a bottle of weed killer in her life.”",
+          "inspiration": "KILL Weeds FAST (387 k) · The Weed Secret My Neighbor Taught Me (157 k)",
+          "caution_fr": "Paillage, binage, eau bouillante sur les allées : des méthodes connues.",
+          "status": "to do"
+        },
+        {
+          "number": 17,
+          "pillar": "Jardin",
+          "title": "Water Your Garden Automatically FOR FREE!!! The Appalachian $0 Method",
+          "opening_and_angle_fr": "“Every drop off that tin roof went somewhere useful.”",
+          "inspiration": "Water your yard Automatically FOR FREE (188 k) · Harvest Water From Air (218 k)",
+          "caution_fr": "Rappeler de vérifier les règles locales sur la récupération d’eau.",
+          "status": "to do"
+        },
+        {
+          "number": 18,
+          "pillar": "Cuisine d’autrefois",
+          "title": "The Real Appalachian Secret to Cast Iron That Never Sticks",
+          "opening_and_angle_fr": "“That skillet was her mother’s, and it’ll be my granddaughter’s.”",
+          "inspiration": "The Real Secret to Cast Iron That Never Sticks (216 k)",
+          "caution_fr": "—",
+          "status": "to do"
+        },
+        {
+          "number": 19,
+          "pillar": "Nuisibles",
+          "title": "Keep Every TICK Out of Your Yard The Appalachian Way... SAFE For Pets & Kids!",
+          "opening_and_angle_fr": "“We grew up in the woods, and Mamaw checked every one of us every single night.”",
+          "inspiration": "Kill Every TICK In Your Yard (288 k)",
+          "caution_fr": "Citer le CDC pour le retrait d’une tique. Pas de remède maison contre la maladie de Lyme.",
+          "status": "to do"
+        },
+        {
+          "number": 20,
+          "pillar": "Produits maison",
+          "title": "Black Mold... How Appalachian Families Killed Mold for a Few Dollars",
+          "opening_and_angle_fr": "“Monday was wash day, and it took the whole day. Let me tell you how it went.”",
+          "inspiration": "Mélange : récit d’autrefois + Stop Buying Laundry Detergent (1,1 M)",
+          "caution_fr": "—",
+          "status": "to do"
+        }
+      ],
+      "new_ideas_oct2026": [
+        {
+          "number": 101,
+          "title": "20 “Poor Man” Appalachian Winter Tricks That Make $500 Space Heaters Look Like a Scam",
+          "priority": 1,
+          "winning_pattern_fr": "« 20 Poor Man… Tricks That Make $X Gear Look Like a Scam » : gagne dans 3 chaînes différentes (panne de courant, camping, défense de la maison, garde-manger)",
+          "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+          "demand_stack_fr": "Saison (l'hiver arrive) + le prix d'un appareil connu (radiateur d'appoint).",
+          "reference_videos": [
+            {
+              "title": "20 “Poor Man” Blackout Tricks That Make High-Tech Prepper Gear Look Ridiculous",
+              "url": "https://www.youtube.com/watch?v=v4adiMg2wJQ",
+              "views": 1613217,
+              "channel": "Forgotten American Survival"
+            },
+            {
+              "title": "\"25 POOR MAN’S Camping Tricks That Make $1,000 Outdoor Gear Look Like a Scam\"",
+              "url": "https://www.youtube.com/watch?v=K2dsldzhJJU",
+              "views": 773793,
+              "channel": "Forgotten American Skills"
+            },
+            {
+              "title": "20 \"Poor Man's\" Pantry Tricks That Make $300 Grocery Bills Look Ridiculous",
+              "url": "https://www.youtube.com/watch?v=g_Z7RA9UeXU",
+              "views": 238062,
+              "channel": "Grandma's Lost Homefront"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 20 old mountain ways to stay warm this winter for almost nothing.",
+            "Proof: Mamaw lived 79 winters in the Blue Ridge, in a house with one wood stove.",
+            "Plan: first the house, then the bed, then your body — and the number one trick at the end.",
+            "Persona: if your heating bill scares you this year, this one's for you."
+          ],
+          "acceptance_criteria_fr": [
+            "20 astuces vraies et faisables, chacune avec son coût réel ou « gratuit ».",
+            "Pour chaque astuce : pourquoi ça marche (chaleur, courants d'air, isolation).",
+            "Une règle de sécurité claire : jamais de four ni de barbecue pour chauffer, et un détecteur de monoxyde de carbone (CO).",
+            "La comparaison honnête avec un radiateur à 500 $ : ce que l'astuce remplace, et ce qu'elle ne remplace pas."
+          ],
+          "thumbnail_fr": "Mamaw emmitouflée devant une fenêtre givrée, un radiateur neuf barré d'une croix rouge, et une bouteille d'eau chaude à côté.",
+          "caution_fr": "Ne rien conseiller qui crée un risque de feu ou de monoxyde de carbone (CO). « Scam » vise le prix de l'appareil, pas une marque précise."
+        },
+        {
+          "number": 102,
+          "title": "15 Foods Appalachian Grandmothers Stockpiled That Last for DECADES",
+          "priority": 2,
+          "winning_pattern_fr": "« X Foods To STOCKPILE That NEVER EXPIRE » : gagne dans 2 chaînes (4 M et 814 k)",
+          "topic_floor_ceiling_fr": "pantry stockpile : plancher 21 k · plafond 4 M",
+          "demand_stack_fr": "Peur de l'inflation et de l'hiver, et l'angle « grand-mère des Appalaches » que personne d'autre ne prend.",
+          "reference_videos": [
+            {
+              "title": "15 Foods To STOCKPILE That NEVER EXPIRE!",
+              "url": "https://www.youtube.com/watch?v=3bvE-ke3B2I",
+              "views": 4006966,
+              "channel": "Pantry Secrets"
+            },
+            {
+              "title": "31 Foods To STOCKPILE That NEVER EXPIRE!",
+              "url": "https://www.youtube.com/watch?v=hveG-kZxTgk",
+              "views": 813814,
+              "channel": "Esther Yoder"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 15 foods you can buy once and keep for years.",
+            "Proof: Mamaw's own cellar fed seven children through the 1958 snowstorm.",
+            "Plan: what to buy, how to store each one, and the one that surprised even me.",
+            "Persona: if you want a pantry that's ready for anything without wasting money, stay with me."
+          ],
+          "acceptance_criteria_fr": [
+            "15 aliments, chacun avec sa vraie durée de conservation et sa source (USDA, NCHFP).",
+            "Pour chacun : comment le stocker (bocal, sec, frais) et le signe qu'il est abîmé.",
+            "Uniquement des aliments qui durent vraiment des années : miel, sel, sucre, riz blanc, haricots secs, vinaigre, bicarbonate, etc.",
+            "Une règle d'or : stocker ce qu'on mange, et faire tourner le stock."
+          ],
+          "thumbnail_fr": "Une étagère de cave avec des bocaux, Mamaw qui montre un pot de miel, et le texte « 30+ YEARS ».",
+          "caution_fr": "Ne pas écrire « NEVER EXPIRE » : c'est faux pour la plupart des aliments. On dit « Last for DECADES » et on ne cite que des aliments où c'est vrai."
+        },
+        {
+          "number": 103,
+          "title": "STOP Frying Eggs the Modern Way! Try These 25 Appalachian Egg Tricks Mamaw Swore By",
+          "priority": 3,
+          "winning_pattern_fr": "« Stop X-ing the old way / NEVER X again — try this old farm trick » : 4 chaînes (6,3 M, 1,2 M, 441 k, 432 k)",
+          "topic_floor_ceiling_fr": "appalachian old ways : plancher 11 k · plafond 6,3 M",
+          "demand_stack_fr": "L'œuf est l'aliment le plus regardé du moment, et on y ajoute le savoir-faire des montagnes.",
+          "reference_videos": [
+            {
+              "title": "Stop frying eggs the old way! Here's a simple egg-frying trick that not everyone knows!",
+              "url": "https://www.youtube.com/watch?v=_0V7uOzTjbo",
+              "views": 6326634,
+              "channel": "Cooking Daily"
+            },
+            {
+              "title": "NEVER Fry Your Pork Chops Again — Try This Old FARM Trick",
+              "url": "https://www.youtube.com/watch?v=r5cw3juqudw",
+              "views": 1225487,
+              "channel": "Otis's Kitchen"
+            },
+            {
+              "title": "Grandma Taught Me This Egg Trick! Try These 45 Appalachian Cooking Secrets",
+              "url": "https://www.youtube.com/watch?v=Mi6UOyhQcIQ",
+              "views": 440693,
+              "channel": "Opal Rowe"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 25 ways to cook, keep and use eggs better than you were taught.",
+            "Proof: Mamaw kept 30 hens for 50 years — she's cracked more eggs than any chef.",
+            "Plan: frying, boiling, storing, then the old tricks nobody uses anymore.",
+            "Persona: if eggs cost you more than ever, let's waste none of them."
+          ],
+          "acceptance_criteria_fr": [
+            "25 astuces : cuisson, conservation, test de fraîcheur et réemploi des coquilles.",
+            "Chaque astuce montrée en B-roll et vérifiée : les règles de sécurité alimentaire de l'USDA s'appliquent.",
+            "Au moins 5 astuces vraiment surprenantes, gardées pour le milieu et la fin.",
+            "Bonus : une recette des montagnes avec ces œufs."
+          ],
+          "thumbnail_fr": "Mamaw au-dessus d'une poêle en fonte avec un œuf parfait, et une poêle antiadhésive barrée.",
+          "caution_fr": "Pas d'œufs crus non lavés laissés à température ambiante présentés comme sans risque aux États-Unis : rappeler la règle USDA (œufs réfrigérés)."
+        },
+        {
+          "number": 104,
+          "title": "12 Things Appalachian Households NEVER Waste Money On — That Most Americans Buy Every Month",
+          "priority": 4,
+          "winning_pattern_fr": "« X Things [culture] Households NEVER Waste Money On — That Americans Buy » : 3 chaînes (Mexique 283 k, Japon 926 k et 471 k)",
+          "topic_floor_ceiling_fr": "things old people did : plancher 11 k · plafond 1,8 M",
+          "demand_stack_fr": "La comparaison entre deux cultures, appliquée aux montagnes face à l'Amérique moderne.",
+          "reference_videos": [
+            {
+              "title": "12 Things Mexican Households NEVER Waste Money On — That Americans Buy Every Month",
+              "url": "https://www.youtube.com/watch?v=YE3Si60RALk",
+              "views": 283220,
+              "channel": "Bertha's Garden Hacks"
+            },
+            {
+              "title": "15 Things Japanese People Never Keep at Home — And You Should Remove Too",
+              "url": "https://www.youtube.com/watch?v=xKf_zekijv4",
+              "views": 925533,
+              "channel": "Inside Japan Living"
+            },
+            {
+              "title": "11 Japanese Rules Americans Break After 40 — That Cause \"Old Person Smell”",
+              "url": "https://www.youtube.com/watch?v=u3qGq7__-E8",
+              "views": 470951,
+              "channel": "The Japanese Method"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 12 monthly purchases you can stop today.",
+            "Proof: in Mamaw's holler, nobody bought these — and nobody missed them.",
+            "Plan: kitchen, cleaning, bathroom, then the most expensive one.",
+            "Persona: if your money runs out before the month does, this is for you."
+          ],
+          "acceptance_criteria_fr": [
+            "12 achats courants, chacun avec son prix mensuel moyen et son remplacement fait maison.",
+            "Le remplacement doit être sûr et vraiment moins cher (coût calculé).",
+            "Une anecdote de Mamaw pour 4 ou 5 d'entre eux.",
+            "Le total économisé par an, à la fin."
+          ],
+          "thumbnail_fr": "Un caddie plein avec 3 produits barrés, et Mamaw qui secoue la tête.",
+          "caution_fr": "Ne pas dénigrer de marque nommée ; parler de catégories de produits."
+        },
+        {
+          "number": 105,
+          "title": "What Appalachian Families Did When Snow Trapped Them Home for a Week — 20 Tricks That Still Work",
+          "priority": 5,
+          "winning_pattern_fr": "« 20 Forgotten Tricks Families Used When Snow Trapped Them » + « X Items You'll Wish You Bought BEFORE the Power Goes Out »",
+          "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+          "demand_stack_fr": "Saison (tempêtes d'hiver) et panne de courant.",
+          "reference_videos": [
+            {
+              "title": "20 Forgotten Appalachian Tricks Families Used When Snow Trapped Them at Home for a Week",
+              "url": "https://www.youtube.com/watch?v=jmiw_YrFQQs",
+              "views": 248626,
+              "channel": "Forgotten Appalachian Skills"
+            },
+            {
+              "title": "30 Costco Items Everyone Will Wish They Bought BEFORE the Power Goes Out",
+              "url": "https://www.youtube.com/watch?v=M_6bBUcB6Do",
+              "views": 318399,
+              "channel": "Forgotten American Survival"
+            }
+          ],
+          "hook_4P": [
+            "Promise: how to get through a week snowed in, without power, the mountain way.",
+            "Proof: Mamaw tells the 1958 storm — eight days, seven kids, no road.",
+            "Plan: water, heat, food, light, then keeping spirits up.",
+            "Persona: if a winter storm could cut your power this year, prepare now."
+          ],
+          "acceptance_criteria_fr": [
+            "20 astuces classées par besoin : eau, chaleur, nourriture, lumière, santé, moral.",
+            "Une liste de préparation à faire dès cette semaine.",
+            "Les règles de sécurité FEMA/CDC : monoxyde de carbone, groupe électrogène dehors, eau potable.",
+            "L'histoire de 1958 racontée en fil rouge."
+          ],
+          "thumbnail_fr": "Une cabane sous la neige la nuit avec une fenêtre éclairée à la lampe à pétrole, et Mamaw en médaillon.",
+          "caution_fr": "Une chaîne « Forgotten Appalachian » (août 2026) copie déjà ce créneau : il faut être plus utile et plus incarné qu'elle."
+        },
+        {
+          "number": 106,
+          "title": "11 Old Appalachian Habits That Keep a Home From Smelling Old (Mamaw Never Skipped #7)",
+          "priority": 6,
+          "winning_pattern_fr": "« Old Person Smell / Things That Make Your House Smell Old » : 3 chaînes (598 k, 471 k, 298 k)",
+          "topic_floor_ceiling_fr": "things old people did : plancher 11 k · plafond 1,8 M",
+          "demand_stack_fr": "Une peur très forte chez les plus de 60 ans, résolue avec le vinaigre et le bicarbonate de Mamaw.",
+          "reference_videos": [
+            {
+              "title": "11 Things That Make Your House Smell Old - That The Japanese Replaced",
+              "url": "https://www.youtube.com/watch?v=neh_XZxRd8w",
+              "views": 297878,
+              "channel": "The Japanese Method"
+            },
+            {
+              "title": "Old Person Smell? A Nurse Says Wash THIS Spot Daily",
+              "url": "https://www.youtube.com/watch?v=LQuWgDSxiIk",
+              "views": 597991,
+              "channel": "Nurse Jen | Healthcare Navigation"
+            },
+            {
+              "title": "11 Japanese Rules Americans Break After 40 — That Cause \"Old Person Smell”",
+              "url": "https://www.youtube.com/watch?v=u3qGq7__-E8",
+              "views": 470951,
+              "channel": "The Japanese Method"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 11 simple habits so your house always smells fresh and clean.",
+            "Proof: Mamaw kept a spotless farmhouse with vinegar, baking soda and sunshine.",
+            "Plan: air, fabrics, kitchen, bathroom — and #7, the one everyone forgets.",
+            "Persona: if you worry your home smells 'old', you're not alone and it's easy to fix."
+          ],
+          "acceptance_criteria_fr": [
+            "11 habitudes concrètes, avec la cause de chaque odeur expliquée simplement.",
+            "Uniquement des produits sûrs, sans mélange dangereux (javel avec vinaigre ou ammoniaque : jamais).",
+            "Le n°7 doit être une vraie révélation, gardée pour la fin du milieu.",
+            "Un ton bienveillant, jamais humiliant."
+          ],
+          "thumbnail_fr": "Mamaw qui ouvre grand une fenêtre, des rideaux au vent, un bocal de bicarbonate.",
+          "caution_fr": "Ne pas faire honte au public ; parler de la maison, pas des personnes."
+        },
+        {
+          "number": 107,
+          "title": "20 Hydrogen Peroxide Tricks Mountain Grandmothers Used Around the House — The $1 Bottle Old-Timers Swore By",
+          "priority": 7,
+          "winning_pattern_fr": "« N [produit à 1 $] Hacks… » : 2 chaînes Yoder (1,2 M et 785 k), complète nos astuces au vinaigre",
+          "topic_floor_ceiling_fr": "amish secret : plancher 12 k · plafond 4,4 M",
+          "demand_stack_fr": "Le prix (1 $) et le produit que tout le monde a déjà sous l'évier.",
+          "reference_videos": [
+            {
+              "title": "20 Hydrogen Peroxide Hacks That Kill Roaches, Ants & Mice — The $1 Bottle Exterminators Hide",
+              "url": "https://www.youtube.com/watch?v=DgfPMtLpJT8",
+              "views": 1228402,
+              "channel": "Eli Yoder Secrets"
+            },
+            {
+              "title": "Amish's 25 BANNED Borax Hacks from the 60s That Scientists Now Say Were GENIUS",
+              "url": "https://www.youtube.com/watch?v=PYEnWR0pWhA",
+              "views": 785043,
+              "channel": "Eli Yoder Secrets"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 20 uses for that brown bottle under your sink.",
+            "Proof: Mamaw's first-aid box and cleaning shelf, 60 years of it.",
+            "Plan: cleaning, laundry, garden, then the surprising ones.",
+            "Persona: if you like doing more with less, grab your bottle."
+          ],
+          "acceptance_criteria_fr": [
+            "20 usages vérifiés, chacun avec la concentration (3 %) et la manière de faire.",
+            "Les interdits : ne pas mélanger avec du vinaigre dans le même flacon, pas d'usage sur les plaies selon les conseils médicaux actuels.",
+            "Les usages au jardin et à la maison séparés des usages « santé » (aucune promesse médicale).",
+            "La conservation : flacon brun, à l'abri de la lumière."
+          ],
+          "thumbnail_fr": "Une bouteille brune de peroxyde en gros plan, Mamaw qui la tient, et le texte « $1 ».",
+          "caution_fr": "Pas de promesse médicale ; la Mayo Clinic déconseille aujourd'hui le peroxyde sur les plaies."
+        },
+        {
+          "number": 108,
+          "title": "25 Forgotten Skills Every Appalachian Child Learned Before Age 12",
+          "priority": 8,
+          "winning_pattern_fr": "« X Forgotten Skills Every [groupe] Mastered Before 12 » : 3 chaînes (446 k, 300 k, 254 k)",
+          "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+          "demand_stack_fr": "La nostalgie et la transmission aux petits-enfants.",
+          "reference_videos": [
+            {
+              "title": "15 forgotten skills every 1950s boy mastered before 12",
+              "url": "https://www.youtube.com/watch?v=u1b14oXP_tw",
+              "views": 445589,
+              "channel": "America's Forgotten Fathers"
+            },
+            {
+              "title": "25 Forgotten Camping Skills Every American Grandfather Knew by Heart",
+              "url": "https://www.youtube.com/watch?v=mdfnUxfRG10",
+              "views": 300394,
+              "channel": "Forgotten American Skills"
+            },
+            {
+              "title": "25 Forgotten Survival Skills Every American Parent Should Teach Their Kids | Vanished Icon",
+              "url": "https://www.youtube.com/watch?v=MmJDmHht57k",
+              "views": 254295,
+              "channel": "Vanished Icon"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 25 skills mountain kids had by 12 — and you can still teach them.",
+            "Proof: Mamaw learned every one of them before her twelfth birthday.",
+            "Plan: house, kitchen, garden, woods — and the one I'd teach first.",
+            "Persona: if you want your grandkids to know how to take care of themselves, start here."
+          ],
+          "acceptance_criteria_fr": [
+            "25 compétences concrètes, chacune avec l'âge et la manière de l'apprendre.",
+            "Un souvenir court de Mamaw pour au moins 8 d'entre elles.",
+            "Uniquement des activités sûres pour des enfants, avec la règle de sécurité quand il le faut.",
+            "La fin : comment transmettre ces compétences ce week-end."
+          ],
+          "thumbnail_fr": "Une petite fille qui coupe du bois d'allumage avec Mamaw derrière elle, dans une photo à l'ancienne colorisée.",
+          "caution_fr": "Rien de dangereux pour les enfants (armes, couteau sans surveillance)."
+        },
+        {
+          "number": 109,
+          "title": "12 Groceries Appalachian Grandmothers Stock Up On Before November Ends",
+          "priority": 9,
+          "winning_pattern_fr": "« These 12 Groceries You SHOULD Stock Up On Before [mois] Ends » : 1 chaîne, 2 succès (390 k et 348 k), et « Always Keep These 15 Canned Foods » (484 k)",
+          "topic_floor_ceiling_fr": "pantry stockpile : plancher 21 k · plafond 4 M",
+          "demand_stack_fr": "La date (fin novembre, avant les fêtes et l'hiver).",
+          "reference_videos": [
+            {
+              "title": "These 12 Groceries You SHOULD Stock Up On Before 15th October Ends",
+              "url": "https://www.youtube.com/watch?v=W5N-tOUAva0",
+              "views": 347623,
+              "channel": "Budget Pantry Hub"
+            },
+            {
+              "title": "Always Keep These 15 Canned Foods in Your Pantry (Save Hundreds Every Year)",
+              "url": "https://www.youtube.com/watch?v=fzaqLWUL8W8",
+              "views": 483622,
+              "channel": "Tried & True"
+            }
+          ],
+          "hook_4P": [
+            "Promise: the 12 groceries worth buying now, before prices and weather turn.",
+            "Proof: Mamaw did her 'fall stock-up' every November for 60 years.",
+            "Plan: the list, why each one now, and how much to buy.",
+            "Persona: if you shop on a fixed income, this list will stretch it."
+          ],
+          "acceptance_criteria_fr": [
+            "12 produits, chacun avec la raison de l'acheter maintenant (saison, soldes, durée de conservation).",
+            "Aucun prix inventé : des fourchettes « environ » ou un renvoi aux prospectus de la semaine.",
+            "La quantité conseillée pour une ou deux personnes.",
+            "Bonus : 3 repas des montagnes avec ces produits."
+          ],
+          "thumbnail_fr": "Mamaw avec un panier en osier plein, un calendrier « NOV » entouré en rouge.",
+          "caution_fr": "Ne jamais annoncer une pénurie ou une hausse de prix sans source."
+        },
+        {
+          "number": 110,
+          "title": "How to Store Apples & Potatoes All Winter Without a Fridge — The Old Appalachian Way",
+          "priority": 10,
+          "winning_pattern_fr": "« How to … The Old AMISH Way » (4,4 M) appliqué aux montagnes, avec la saison",
+          "topic_floor_ceiling_fr": "amish secret : plancher 12 k · plafond 4,4 M",
+          "demand_stack_fr": "La saison (récolte d'automne) et la peur du gaspillage.",
+          "reference_videos": [
+            {
+              "title": "How to Pick a Sweet Watermelon... The Old AMISH Way",
+              "url": "https://www.youtube.com/watch?v=6jZ7ib2Edes",
+              "views": 4371491,
+              "channel": "Amish Gardening"
+            }
+          ],
+          "hook_4P": [
+            "Promise: keep apples and potatoes fresh until spring, no fridge needed.",
+            "Proof: Mamaw's root cellar fed the family every winter.",
+            "Plan: picking, curing, storing, checking — the mistakes that rot a whole crate.",
+            "Persona: if you buy in bulk or grow your own, don't lose a single one."
+          ],
+          "acceptance_criteria_fr": [
+            "Les bonnes conditions pour chacun : température, humidité, obscurité.",
+            "Pourquoi ne jamais stocker pommes et pommes de terre ensemble (éthylène).",
+            "Comment faire sans cave : garage, sous-sol, caisse isolée.",
+            "Le contrôle chaque semaine et quoi faire des fruits abîmés."
+          ],
+          "thumbnail_fr": "Une caisse en bois de pommes rouges dans une cave, Mamaw qui en tient une, avec le texte « UNTIL SPRING ».",
+          "caution_fr": null
+        },
+        {
+          "number": 111,
+          "title": "25 “Poor Man” Garden Tricks That Make Expensive Gadgets Look Useless — The Appalachian Way",
+          "priority": 11,
+          "winning_pattern_fr": "« Poor Man » + « Old-Fashioned Gardening Tricks That Make Modern Gadgets Look Useless » (278 k)",
+          "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+          "demand_stack_fr": "À publier en février-mars, pour la saison des semis.",
+          "reference_videos": [
+            {
+              "title": "25 Old-Fashioned Gardening Tricks That Make Modern Gadgets Look Useless",
+              "url": "https://www.youtube.com/watch?v=ShqcjBkSRfY",
+              "views": 278258,
+              "channel": "No Longer Here"
+            },
+            {
+              "title": "\"25 POOR MAN’S Camping Tricks That Make $1,000 Outdoor Gear Look Like a Scam\"",
+              "url": "https://www.youtube.com/watch?v=K2dsldzhJJU",
+              "views": 773793,
+              "channel": "Forgotten American Skills"
+            }
+          ],
+          "hook_4P": [
+            "Promise: 25 garden tricks that cost nothing and beat the gadgets.",
+            "Proof: Mamaw's garden fed nine people without a single store-bought tool.",
+            "Plan: soil, seeds, water, pests, harvest.",
+            "Persona: if you garden on a budget, this will save you a season of mistakes."
+          ],
+          "acceptance_criteria_fr": [
+            "25 astuces de jardin vérifiables (sources : services de vulgarisation agricole des universités).",
+            "Chaque astuce avec l'objet cher qu'elle remplace.",
+            "Les erreurs de saison à éviter.",
+            "Le rappel de nos vidéos déjà prévues (désherbage, arrosage gratuit)."
+          ],
+          "thumbnail_fr": "Mamaw à genoux dans un potager luxuriant, un gadget cher barré.",
+          "caution_fr": "Vidéo de réserve : à sortir au printemps."
+        }
+      ],
+      "new_ideas_note": "Research of Oct 14, 2026: best floors are 'forgotten skills' (median 40 k), 'pantry stockpile' (21 k), 'amish secret' (12 k), 'appalachian old ways' (11 k); 'depression era tips' and 'save money old ways' have very low floors — keep those words out of titles. A copycat channel ('Forgotten Appalachian', Aug 2026) already exists: be more useful and more personal."
+    }
+  }
+}
