@@ -1,0 +1,972 @@
+{
+  "project": "Personal video tool for the English AI-avatar YouTube channel 'Mamaw Birdie's Mountain Ways'",
+  "language_of_videos": "English (en-US). Everything the viewer sees or hears is in English.",
+  "language_of_user": "French. Talk to the user in French.",
+  "goal": "A personal tool that turns one video idea from the lists below into a finished long-form YouTube video for this AI-avatar channel: the script, the voice, lip-synced avatar clips, B-roll (AI-generated and free stock), verse/text cards, subtitles, the final edit and the publishing pack.",
+  "video_method": {
+    "source": "Jake Trinder, 'How to Become Disgustingly Good at YouTube' (youtu.be/Dx-c19qXdxM), Oct 14 2026",
+    "principle": "A video is a series system: topic, packaging (title + thumbnail), hook, body and edit must all be right; one wrong decision can sink the video.",
+    "topic": [
+      "Pick topics from what the audience already chooses to watch (revealed preference), not from what we think they need.",
+      "For each topic note the floor (median views of a decent video) and the ceiling (best videos) over the last 3–6 months, 8+ min videos.",
+      "Check views look real (≈1–5 % likes per view, on-topic comments) and that demand is still active (recent videos still getting views).",
+      "Raise the ceiling by attaching the topic to a bigger demand: season, event, culture (Amish, Japanese), well-known store (Walmart, Costco, Aldi)."
+    ],
+    "title": [
+      "Use a title framing that wins in at least 2–3 different channels or niches, not a single outlier.",
+      "Understand why the framing works and only reuse it if that reason is true for our audience (avoid overfitting).",
+      "The title must make a promise the video fully delivers; never use false words."
+    ],
+    "thumbnail": [
+      "Job 1: stand out in the feed. Job 2: be understood at a glance.",
+      "Avatar face + one object/icon that targets the audience + a tension that opens a question; the title closes only part of it."
+    ],
+    "edit": "The edit matches the promise: calm and warm for our characters, useful B-roll, on-screen text for numbers, no gratuitous effects.",
+    "hook_4P": {
+      "promise": "Confirm in one sentence that this is what they clicked for.",
+      "proof": "Why listen: honest proof only (sources, the character's story told as a story, a shown result). Never fake credentials or numbers.",
+      "plan": "Announce the steps / number of items and what comes at the end.",
+      "persona": "Name the viewer: 'if you're over 60', 'if you lost your spouse', 'wenn du einen Diesel fährst'.",
+      "timing": "All 4 P inside the first 30–45 seconds."
+    },
+    "body_acceptance_criteria": [
+      "Decompose the title's promise: what must be true at the end for the title to be true? Break each answer down again.",
+      "That list is the outline; the script is finished only when every condition is met.",
+      "Deliver real value fast, then exceed the expectation (one bonus item, a safety tip, a worked example).",
+      "Goal is viewer satisfaction, not retention tricks."
+    ],
+    "after_publish": [
+      "Early signals: positive comments per view (and what they say), likes per view, subs per view, view curve vs channel average.",
+      "A metric tells where to look, not what to change (low CTR → look at the thumbnail and ask why).",
+      "Sharp retention drop → inspect that moment (early CTA, a slow part) and cut it.",
+      "Write down one lesson per video for the next one."
+    ],
+    "pre_production_checklist": [
+      "Topic has a good floor (median) and a high ceiling on videos from the last 3–6 months.",
+      "Reference views look real and demand is still active.",
+      "Topic is attached to a bigger demand when possible (season, store, culture, event).",
+      "Title framing wins in at least 2 different channels and we know why it works for our audience.",
+      "Title promise is deliverable and true, no false words.",
+      "Thumbnail: avatar face, one audience-targeting object, an open question; understood in 1 second.",
+      "Hook has the 4 P (promise, honest proof, plan, persona) in the first 45 seconds.",
+      "Script outline = the list of conditions that make the title true; every one is met.",
+      "Over-deliver: a bonus, a safety tip, a worked example.",
+      "Edit matches the promise: calm, warm, no gratuitous effects.",
+      "After 48 h and 7 days: read comments, likes/view, subs/view, retention curve; note one lesson."
+    ]
+  },
+  "title_rule": "Clone, word for word, the title of a video that got many views and change only the niche words. If a word would be false for our video ('BANNED', '100% Effective', 'NEVER EXPIRE', an inflated number, 'Industry Buried'), replace only that word. The new ideas below already follow this rule and the video_method.",
+  "avatar_rules": [
+    "Each lip-synced avatar clip is at most 15 seconds; longer passages are split and alternated with B-roll.",
+    "Every avatar image comes from the same reference image (same face, clothes, set) — generate the reference first, then use it for every variant.",
+    "Faces must stay clearly visible (three-quarter angle at most) or lip-sync fails.",
+    "Cover any glitchy lip-sync moment with B-roll while the voice continues.",
+    "The avatar is on screen about 20 % of the time (intro, transitions, ending); the rest is B-roll."
+  ],
+  "free_stock_sources": [
+    {
+      "name": "Pixabay",
+      "url": "https://pixabay.com/videos/",
+      "license": "Pixabay Content License: free for commercial use, no attribution required; do not resell unchanged clips."
+    },
+    {
+      "name": "Pexels",
+      "url": "https://www.pexels.com/videos/",
+      "license": "Pexels License: free for commercial use, no attribution required; do not imply endorsement."
+    },
+    {
+      "name": "Mixkit",
+      "url": "https://mixkit.co/free-stock-video/",
+      "license": "Mixkit Stock Video Free License."
+    },
+    {
+      "name": "YouTube Audio Library / Pixabay Music",
+      "url": "https://studio.youtube.com",
+      "license": "Royalty-free music for the background."
+    }
+  ],
+  "stock_rules": [
+    "Search in English, landscape 1080p or 4K, 25/30 fps.",
+    "Log every clip in credits.csv (file, source, URL, license, date).",
+    "Re-check each license page before first use."
+  ],
+  "editing": {
+    "format": "16:9, 1920×1080, 30 fps, H.264, audio about −14 LUFS",
+    "subtitles": "Upload an English SRT made from the script.",
+    "music": "Soft, royalty-free, −25 to −30 dB under the voice; no copyrighted hymns or songs recorded by others.",
+    "transitions": "Slow cross-fades, gentle zooms, no flashy effects (the promise is calm and warm)."
+  },
+  "script_output_schema": {
+    "video_number": "int",
+    "title": "string",
+    "format": "see channel formats",
+    "reference_videos": [
+      {
+        "title": "string",
+        "url": "string",
+        "views": "int"
+      }
+    ],
+    "word_count": "int",
+    "estimated_minutes": "number (≈130 spoken words per minute for these slow voices)",
+    "acceptance_criteria": [
+      "the conditions that make the title true (from video_method) — each must be met"
+    ],
+    "chapters": [
+      {
+        "time": "mm:ss",
+        "title": "string"
+      }
+    ],
+    "segments": [
+      {
+        "id": "S001",
+        "part": "Hook | Welcome | Item 1 … | Prayer | Blessing | Ending",
+        "speaker": "BIRDIE | VIRGIL",
+        "shot": "one of the channel shot_library keys, or BROLL_STOCK / BROLL_AI / TEXT_CARD / VERSE_CARD",
+        "voice_text": "English text spoken during this segment (the voice continues under B-roll)",
+        "est_seconds": "number — max 15 for any lip-synced avatar shot",
+        "on_screen_text": "short overlay, verse reference, number, or empty",
+        "broll": {
+          "source": "stock | ai | none",
+          "stock_queries": [
+            "2–3 English search terms"
+          ],
+          "ai_image_prompt": "English prompt",
+          "ai_motion_prompt": "short motion instruction",
+          "fallback": "string"
+        },
+        "fact_check": [
+          {
+            "claim": "string",
+            "source": "name + URL",
+            "status": "ok | to_verify | removed"
+          }
+        ]
+      }
+    ],
+    "description": "from the channel description template",
+    "tags": "base tags + 5–10 topic tags",
+    "pinned_comment": "string",
+    "thumbnail": {
+      "text": "2–4 words",
+      "image_prompt": "English prompt"
+    }
+  },
+  "production_pipeline": [
+    "1. Pick the next video (publishing_order, then new_ideas_oct2026 by priority) or the one the user names.",
+    "2. Research: open the reference video(s), read the transcript, note structure and promise; check floor/ceiling and that demand is still active (video_method.topic).",
+    "3. Write acceptance criteria from the title (video_method.body_acceptance_criteria), then the script with the 4P hook in the first 45 s.",
+    "4. Fact-check every claim: CDC, USDA, NCHFP, NIA, ENERGY STAR, FEMA for every safety, food or money claim. Remove anything unsourced.",
+    "5. Check the word count against the channel target.",
+    "6. Voice: generate audio per segment with the fixed voice of the speaker.",
+    "7. Avatar clips: lip-sync each avatar segment on the right reference image (≤15 s).",
+    "8. B-roll: stock first for generic real scenes, AI for specific scenes and for anything showing our characters' places.",
+    "9. Edit: voice track, avatar clips, B-roll, text/verse cards, music, subtitles, AI label in the first seconds.",
+    "10. QA with video_method.pre_production_checklist and the channel guardrails, export.",
+    "11. Publishing pack: title, description (template), chapters, tags, pinned comment, thumbnail; tick 'Altered or synthetic content' in YouTube Studio.",
+    "12. After 48 h and 7 days: read the signals listed in video_method.after_publish and write one lesson for the next video."
+  ],
+  "compliance": [
+    "AI characters are declared in the channel description and with YouTube's 'altered or synthetic content' setting on every upload.",
+    "The characters' memories are presented as stories; they never claim to be real people or give fake credentials.",
+    "Affiliate links and the channels' own products are clearly labelled (FTC).",
+    "No medical, legal or financial promises."
+  ],
+  "existing_scripts": {
+    "note": "Finished scripts in the repo — use them as style examples (plain text, pasted into the Subscriber app).",
+    "files": [
+      "scripts/mamaw-birdie-01-script-seul.txt",
+      "scripts/mamaw-birdie-02-script-seul.txt",
+      "scripts/mamaw-birdie-03-script-seul.txt"
+    ]
+  },
+  "channel": {
+    "name": "Mamaw Birdie's Mountain Ways",
+    "handle": "@MamawBirdie",
+    "banner_tagline": "Old mountain ways to spend less",
+    "upload_rhythm": "Tuesday, Thursday and Saturday.",
+    "about": "Welcome to Mamaw Birdie's Mountain Ways.\n\nUp in the Blue Ridge, folks never had much money — so they learned to make do. How to keep a house cool without air conditioning and warm without a big gas bill. How to clean without a cupboard full of store-bought bottles. How to keep a family fed through a long mountain winter. Those old ways saved families a lot of money, and most of them still work today.\nOn this channel, Mamaw Birdie and Papaw Virgil share those ways — the thrift, the know-how and the stories behind them — so you can spend a little less and live a little simpler.\nNew videos every Tuesday, Thursday and Saturday.\n📖 Mamaw Birdie’s Mountain Thrift Book: [your link]\nMamaw Birdie and Papaw Virgil are AI-presented storytellers. The ways shared here come from Appalachian tradition and are checked against reliable sources. Always use common sense, and follow the safety instructions on any product you use.",
+    "channel_keywords": "Mamaw Birdie, Appalachian, Appalachian old ways, Appalachian grandma, Appalachian mountains, old ways, mountain ways, old fashioned tips, frugal living, frugal tips, save money, Great Depression tips, grandma tips, homemaking, homestead tips, pantry staples, winter tips, keep warm without heat, cleaning with vinegar, baking soda uses, pest control natural, Blue Ridge, simple living, living on a budget",
+    "base_video_tags": "Mamaw Birdie, Appalachian old ways, Appalachian grandma, frugal living, old fashioned tips, save money, grandma tips, Great Depression tips, homemaking, simple living",
+    "description_template": "[1–2 line hook taken from the video]\n\nIn this video, Mamaw Birdie shares [topic] — the old mountain way, checked against today's safety advice.\n\n📖 Mamaw Birdie's Mountain Thrift Book: [link]\n\nChapters:\n0:00 [Hook]\n…\n\nSources: [CDC / USDA / NCHFP / ENERGY STAR …]\n\nMamaw Birdie and Papaw Virgil are AI-presented storytellers. The ways shared here come from Appalachian tradition and are checked against reliable sources. Always use common sense and follow the safety instructions on any product you use."
+  },
+  "positioning": "Mountain thrift that saves money (the Yoder channels' money topics: pests, heating and cooling, homemade products, pantry, tools), told with the voice and memories of an Appalachian grandmother; folklore in 10–20 % of the videos.",
+  "characters": {
+    "BIRDIE": {
+      "name": "Bernice 'Birdie' Hollins",
+      "age": 79,
+      "bio": "Youngest of seven children, grew up on a small farm in the Blue Ridge Mountains of southwest Virginia. Nicknamed 'Birdie' because she always sang while hanging laundry. Kept house all her life: Monday wash day, a pantry that lasts all winter, a budget where nothing is wasted. Married to Virgil for 58 years, three children, nine grandchildren.",
+      "topics": "Cooking and pantry, cleaning and homemade products, sewing and mending, folklore and memories.",
+      "line": "Waste not, want not, honey.",
+      "tone": "Warm, a little teasing; always tells a story before giving the tip.",
+      "voice": "Woman around 78, soft Appalachian accent, slow pace, warm."
+    },
+    "VIRGIL": {
+      "name": "Virgil Hollins",
+      "age": 81,
+      "bio": "Worked forty years at the county sawmill and always fixed everything himself. Never threw a tool away and knows the name of every tree on the hill. In his workshop, everything has its place and everything gets fixed.",
+      "topics": "Tools and maintenance, heating and wood, pests, garden, fences, making do.",
+      "line": "If it ain't broke, oil it.",
+      "tone": "Calm, few words, dry humor. Teases Birdie, who always has the last word.",
+      "voice": "Man around 80, deep and steady voice, a little dry humor.",
+      "use": "Optional second voice: tool/heating/pest topics and short exchanges with Birdie."
+    }
+  },
+  "opening_exchange": [
+    "BIRDIE: Well, hey there, honey. Come on up on the porch and sit a spell. I'm Mamaw Birdie…",
+    "VIRGIL: …and I'm the one who fixes whatever she breaks.",
+    "BIRDIE: Hush, Virgil. Today we're going to talk about [topic]. And I promise you, it'll save you some money."
+  ],
+  "character_rule": "They are fictional storytellers declared as AI characters. Their memories are stories that introduce real, checked know-how; they never claim to be real people or that their memories are real facts.",
+  "format": {
+    "length": "20–30 min",
+    "structure": "A numbered list (10–30 items) with family memories between items; avatar ≈ 20 % of the screen time (intro, transitions, ending), the rest period-style and how-to B-roll.",
+    "script_length": "≈ 3,600–3,800 words for 20 min, ≈ 4,800–4,950 words for 30 min (always under 5,000).",
+    "parts": [
+      [
+        "0:00–0:45",
+        "4P hook in Birdie's voice (promise, honest proof = her life story, plan, persona)."
+      ],
+      [
+        "0:45–1:30",
+        "Opening exchange on the porch."
+      ],
+      [
+        "1:30–end-2:00",
+        "The numbered items: memory → the old way → why it works → today's safe version and cost."
+      ],
+      [
+        "last 2 min",
+        "Safety reminder, the 'Mamaw's rule' summary, call to comment, the book if the link exists, warm goodbye."
+      ]
+    ]
+  },
+  "shot_library": {
+    "BIRDIE_PORCH": {
+      "use": "Main shot: hook, welcome, transitions, ending.",
+      "prompt": "A 78-year-old Appalachian grandmother sitting in a worn wooden rocking chair on the front porch of an old log cabin in the Blue Ridge Mountains, late afternoon. She has silver hair pinned up in a loose bun, kind deep-set eyes, a lined, weathered face with gentle smile lines. She wears a faded blue cotton print dress with a hand-knit cream cardigan and a simple apron. A wooden bowl of green beans rests on her lap. Behind her, slightly out of focus: rough-hewn log walls, a hanging oil lantern, a quilt draped over the railing, misty green mountain ridges. Soft natural golden-hour light. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles and age spots, documentary photography style, 16:9."
+    },
+    "BIRDIE_KITCHEN": {
+      "use": "Recipes, pantry and cleaning topics (optional variant).",
+      "prompt": "Same grandmother, same clothes and apron as the reference image, standing in a small old Appalachian farmhouse kitchen beside a black cast-iron wood cookstove, looking straight into the camera with a warm smile, mouth slightly open as if speaking, a cast-iron skillet on the stove, jars of home-canned beans on a wooden shelf behind her, soft window light. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture, documentary photography style, 16:9.",
+      "note": "New variant — generate from the porch image as reference."
+    },
+    "VIRGIL_WORKSHOP": {
+      "use": "Tools, heating, pests, fences.",
+      "prompt": "An 80-year-old Appalachian grandfather sitting on a wooden bench inside an old barn workshop in the Blue Ridge Mountains, morning light through the open barn door. He has short white hair, a trimmed white beard, deep-set kind eyes and a weathered, sun-lined face. He wears a faded denim work shirt with rolled sleeves under worn canvas overalls. He holds an old hand plane, and a wall of well-kept hand tools hangs behind him, slightly out of focus, with a small wood stove and a coil of rope. Warm natural light, dust in the air. Eye level, medium shot, 50mm lens, f/2.8, shallow depth of field, realistic skin texture with natural wrinkles, documentary photography style, 16:9."
+    },
+    "negative_prompt": "looking sideways, eyes off camera, face hidden, cartoon, plastic skin, oversaturated, Amish clothing, modern appliances in frame, readable brand logos, extra fingers, distorted hands, text",
+    "reference_order": "Generate BIRDIE_PORCH first, then every Birdie variant from it; VIRGIL_WORKSHOP is his own reference."
+  },
+  "broll": {
+    "stock_queries": [
+      "blue ridge mountains mist",
+      "log cabin porch",
+      "old farmhouse kitchen",
+      "cast iron skillet cooking",
+      "canning jars pantry",
+      "wood stove fire",
+      "vegetable garden rows",
+      "root cellar",
+      "hanging laundry clothesline",
+      "vinegar baking soda cleaning",
+      "snow cabin winter",
+      "rocking chair porch"
+    ],
+    "ai_broll": "AI images for 1940s–1960s mountain scenes (family at the wood stove, wash day, root cellar, snowed-in cabin) and for close-ups stock doesn't have; animate 3–6 s. Keep the same cabin, porch and kitchen as the avatar.",
+    "subscriber_form": {
+      "Place": "The Blue Ridge Mountains of Appalachia (southwest Virginia, western North Carolina, eastern Kentucky, West Virginia)",
+      "Era": "1940s–1960s for memories, present day for how-to demonstrations",
+      "Environment": "Log cabin and porch, old farmhouse kitchen with a wood cookstove and cast iron, root cellar and pantry shelves of canning jars, vegetable garden, barn workshop, misty mountain ridges, winter snow",
+      "Audience": "Americans aged 55 and over who want to save money and like old-fashioned know-how",
+      "Other details": "Warm natural light, realistic and humble rural life, no Amish clothing (Appalachian, not Amish), no modern brands or readable logos, no dangerous practices shown as normal"
+    }
+  },
+  "title_formulas": [
+    {
+      "yoder": "[Problem] The AMISH Way + small price",
+      "proof": "KILL EVERY Mosquito The AMISH Way (2.2 M)",
+      "ours": "The Old Mountain Way to [solve the problem]"
+    },
+    {
+      "yoder": "Stop Buying [product] — $X recipe that lasts a year",
+      "proof": "Stop Buying Laundry Detergent… (1.1 M)",
+      "ours": "Stop Buying [product] — Mamaw's Mountain Recipe"
+    },
+    {
+      "yoder": "Cool/heat for $X — no electricity",
+      "proof": "The $4 Amish Fix for a Deadly Hot House (1.9 M)",
+      "ours": "How Mountain Families [stayed cool / warm] Without [AC / gas]"
+    },
+    {
+      "yoder": "25 [product] Hacks from the 60s",
+      "proof": "25 BANNED Borax Hacks… (779 k)",
+      "ours": "25 Things Mountain Grandmothers Did With [vinegar, salt, baking soda]"
+    },
+    {
+      "yoder": "The Amish Have Never [paid/replaced] X",
+      "proof": "Never Replaced a Wood Fence in 200 Years (488 k)",
+      "ours": "Why Papaw Never Bought a New [tool, fence]"
+    },
+    {
+      "yoder": "N Items the Amish Buy in Bulk — Under $5",
+      "proof": "11 Survival Items… Walmart (462 k)",
+      "ours": "N Pantry Staples Every Appalachian Grandmother Bought in Bulk"
+    },
+    {
+      "yoder": "'The Industry Made It Illegal', 'Big Oil Paid to Bury This'",
+      "proof": "used by Eli Yoder Secrets",
+      "ours": "DO NOT USE — replace with a true curiosity: 'Most People Have Forgotten This', 'The Old Way Still Works'."
+    }
+  ],
+  "safety_facts": [
+    "Indoor heat: keep at least 68 °F (NIA, hypothermia risk for seniors).",
+    "Never use an oven, grill or generator indoors to heat (carbon monoxide); CO detector.",
+    "Space heater: 3 feet clearance, plugged straight into the wall.",
+    "Average heating saving with a programmable thermostat ≈ 15 % (ENERGY STAR) — never invent big savings.",
+    "Rodent cleanup: bleach 1:10, gloves, don't sweep droppings (CDC).",
+    "Never mix bleach with vinegar or ammonia.",
+    "Food storage and canning: USDA / NCHFP rules only."
+  ],
+  "products": [
+    {
+      "name": "Mamaw Birdie's Mountain Thrift Book — Old Appalachian Ways to Cut Your Household Bills",
+      "price": "27 $ book · 47 $ with printables (seasonal chores calendar, pantry list, weather signs) · later 17 $/year Mountain Almanac",
+      "promise": "'150 old mountain ways to spend less' — provable; never 'Save $6,000 a year'.",
+      "placement": "First line of each description and the channel Links tab."
+    }
+  ],
+  "guardrails": [
+    "No false promises or invented conspiracies ('The Amish Have Never Been to a Dentist', 'Industry buried this').",
+    "Safety first on cleaning products, food preservation, heating and pests — every tip true and safe.",
+    "Savings claims on the sales page must be provable (FTC).",
+    "AI characters declared.",
+    "Real, varied scripts — no repetitive mass-produced content (demonetization risk)."
+  ],
+  "done": [
+    1,
+    8,
+    4
+  ],
+  "publishing_order": [
+    1,
+    8,
+    4,
+    5,
+    13,
+    6,
+    7,
+    12,
+    9,
+    11,
+    3,
+    10
+  ],
+  "publishing_note": "Video #2 (mosquitoes) and spring garden topics go out in April–May.",
+  "videos": [
+    {
+      "number": 1,
+      "pillar": "Chaleur et fraîcheur",
+      "title": "The $4 Appalachian Fix for a Freezing Cold House (Save Money All Winter)",
+      "opening_and_angle_fr": "“Honey, if your house is already cold and it’s only October, sit with an old woman for a little while.” Version hiver : le boudin de porte à 4 $, chauffer la personne avant la maison, fenêtres, pièces chaudes, aides au chauffage (LIHEAP, 2-1-1).",
+      "inspiration": "The $4 Amish Fix for a Deadly Hot House (1,9 M), adapté à l’hiver puisqu’on publie en octobre · The Amish $50 System That Heats Any Home (810 k)",
+      "caution_fr": "Garder 68 °F minimum (NIA, risque d’hypothermie chez les seniors). Jamais de four, de grill ou de groupe électrogène pour chauffer (monoxyde de carbone). Radiateur d’appoint : 3 pieds de distance, branché au mur. Chiffre d’économie : 15 % en moyenne (ENERGY STAR), pas 3 000 $.",
+      "status": "script written"
+    },
+    {
+      "number": 2,
+      "pillar": "Nuisibles",
+      "title": "KILL EVERY Mosquito The APPALACHIAN Way. SAFE For Honey Bees & Pets!",
+      "opening_and_angle_fr": "“Every summer evening, the whole family sat on that porch — and nobody got eaten alive. Mamaw had a few tricks.”",
+      "inspiration": "KILL EVERY Mosquito The AMISH Way (2,2 M)",
+      "caution_fr": "À publier au printemps (avril-mai), pas en automne. Pas de promesse « tue tous les moustiques ». Supprimer l’eau stagnante, ventilateur, plantes : des méthodes qui ont des preuves.",
+      "status": "to do"
+    },
+    {
+      "number": 3,
+      "pillar": "Produits maison",
+      "title": "Stop Buying Laundry Detergent — This Cheap $6 Appalachian Recipe (Lasts a Year)",
+      "opening_and_angle_fr": "“Wash day was Monday, every Monday. And Mamaw never once bought a jug of detergent.”",
+      "inspiration": "Stop Buying Laundry Detergent… $6 Amish Recipe (1,1 M) · $0 Recipe (177 k)",
+      "caution_fr": "Cristaux de soude et savon : gants, garder hors de portée des enfants, ne jamais mélanger avec de l’eau de Javel.",
+      "status": "to do"
+    },
+    {
+      "number": 4,
+      "pillar": "Garde-manger",
+      "title": "11 Survival Items Appalachian Grandmothers Buy in Bulk — All Under $5 at Walmart",
+      "opening_and_angle_fr": "“If the snow shut the road for two weeks, Mamaw’s pantry didn’t even notice.”",
+      "inspiration": "11 Survival Items the Amish Buy in Bulk (462 k) · 9 Items… Walmart (217 k)",
+      "caution_fr": "Donner des prix réels et datés.",
+      "status": "script written"
+    },
+    {
+      "number": 5,
+      "pillar": "Chaleur et fraîcheur",
+      "title": "The Appalachian $50 System That Heats Any Home All Winter — Mountain Families Barely Paid a Heating Bill",
+      "opening_and_angle_fr": "“That cabin had no furnace, no thermostat — and I never once woke up cold.”",
+      "inspiration": "The Amish $50 System That Heats Any Home (810 k) · $300 Tunnel Heats Any Home (396 k)",
+      "caution_fr": "Sécurité du chauffage au bois : monoxyde de carbone, détecteur obligatoire, ramonage.",
+      "status": "to do"
+    },
+    {
+      "number": 6,
+      "pillar": "Maison et outils",
+      "title": "The $3 Appalachian Trick That Makes Any Metal Rust-Proof Forever... They Never Taught You This",
+      "opening_and_angle_fr": "“Papaw’s hand plane was older than me, and it still shines. Here’s what he did every single fall.”",
+      "inspiration": "The $3 Trick That Makes Any Metal Rust-Proof (740 k) · Never Replaced a Metal Tool (288 k)",
+      "caution_fr": "Huile de lin, cire, rangement au sec. Pas d’huile de vidange (toxique).",
+      "status": "to do"
+    },
+    {
+      "number": 7,
+      "pillar": "Produits maison",
+      "title": "Mamaw's 25 Forgotten Vinegar Hacks from the 60s That Old-Timers Say Were GENIUS",
+      "opening_and_angle_fr": "“Mamaw’s cleaning cupboard had three things in it. Three. And her house was the cleanest on the mountain.”",
+      "inspiration": "25 BANNED Borax Hacks (779 k) · 25 Hydrogen Peroxide Hacks (952 k)",
+      "caution_fr": "Liste des mélanges interdits : vinaigre + eau de Javel, eau oxygénée + vinaigre dans le même flacon.",
+      "status": "to do"
+    },
+    {
+      "number": 8,
+      "pillar": "Nuisibles",
+      "title": "MICE GONE FOR $2... The Secret APPALACHIAN WAY",
+      "opening_and_angle_fr": "“If you’ve heard a little scratching in the walls at night, sit down with me.” Le secret à 2 $ : paille de fer + mastic dans les trous, nourriture en bocaux, tapettes, et le nettoyage sans danger (javel 1:10, jamais balayer).",
+      "inspiration": "RATS GONE FOR $2 (431 k) · 20 Hydrogen Peroxide Hacks (1,2 M)",
+      "caution_fr": "Boucher les trous, pièges classiques, propreté. Pas de poison maison.",
+      "status": "script written"
+    },
+    {
+      "number": 9,
+      "pillar": "Folklore et mémoire",
+      "title": "30 Appalachian Signs Grandmothers Watched to Know Bad Weather Was Coming",
+      "opening_and_angle_fr": "“Papaw could tell you it’d rain by Thursday just by looking at the cows.”",
+      "inspiration": "25 Appalachian Signs Grandfathers Watched (287 k, chaîne de 4 150 abonnés)",
+      "caution_fr": "Présenter comme des croyances transmises, pas comme de la science.",
+      "status": "to do"
+    },
+    {
+      "number": 10,
+      "pillar": "Garde-manger",
+      "title": "25 LOST Appalachian Money-Saving Skills That Take a Lifetime to Learn",
+      "opening_and_angle_fr": "“Mamaw went to town twice a year. The rest, she made, grew, or traded for.”",
+      "inspiration": "25 “Illegal” Off-Grid Tricks Our Grandparents Used (691 k) · 25 LOST Mountain Skills (611 k)",
+      "caution_fr": "—",
+      "status": "to do"
+    },
+    {
+      "number": 11,
+      "pillar": "Cuisine d’autrefois",
+      "title": "25 Appalachian Kitchen Tricks Mamaw Never Wrote Down",
+      "opening_and_angle_fr": "“None of this was in a cookbook. It was in her hands.”",
+      "inspiration": "25 Appalachian Cooking Tricks Grandma Never Wrote Down (434 k) · Opal Rowe (422 k)",
+      "caution_fr": "Des astuces vraies, pas des « hacks » bizarres (la leçon d’Otis Boone).",
+      "status": "to do"
+    },
+    {
+      "number": 12,
+      "pillar": "Folklore et mémoire",
+      "title": "25 Cheap Winter Meals Appalachian Families Ate to Survive the Great Depression",
+      "opening_and_angle_fr": "“People ask how we got through the hard years. Truth is, the mountains had been teaching us for a hundred years.”",
+      "inspiration": "Cheap Meals Our Grandparents Ate To Survive (3,9 M)",
+      "caution_fr": "—",
+      "status": "to do"
+    },
+    {
+      "number": 13,
+      "pillar": "Garde-manger",
+      "title": "How Appalachian Families Preserved Food Without Refrigeration (No Electricity, No Fridge, No Waste)",
+      "opening_and_angle_fr": "“The springhouse, the root cellar, the smokehouse — that was our refrigerator.”",
+      "inspiration": "How The Amish Preserve Meat Without Refrigeration (244 k) · Hidden Dugouts (806 k)",
+      "caution_fr": "Raconter comme de l’histoire. Pour toute méthode à refaire : renvoyer vers les règles USDA et NCHFP (botulisme).",
+      "status": "to do"
+    },
+    {
+      "number": 14,
+      "pillar": "Nuisibles",
+      "title": "How to Keep VENOMOUS Snakes Out of Your Yard... 10 Old Appalachian Methods That ACTUALLY Work",
+      "opening_and_angle_fr": "“Copperheads were part of life up there. So were the habits that kept them away from the door.”",
+      "inspiration": "How to Keep VENOMOUS Snakes Out of Your Yard (195 k)",
+      "caution_fr": "Pas de boules de naphtaline (usage interdit). Dégager les tas de bois et les hautes herbes.",
+      "status": "to do"
+    },
+    {
+      "number": 15,
+      "pillar": "Maison et outils",
+      "title": "Appalachian Farmers Never Replaced a Wood Fence in 50 Years — The $2 Treatment Most People Forgot",
+      "opening_and_angle_fr": "“Papaw set those locust posts in 1952. They’re still standing.”",
+      "inspiration": "$20 Solution Protects Wood for 50 Years (525 k) · Never Replaced a Wood Fence (488 k)",
+      "caution_fr": "Pas de créosote ni d’huile de vidange. Bois naturellement résistant (robinier), drainage.",
+      "status": "to do"
+    },
+    {
+      "number": 16,
+      "pillar": "Jardin",
+      "title": "KILL Weeds FAST & Stop Them For Good! The Old Appalachian Way",
+      "opening_and_angle_fr": "“Mamaw never bought a bottle of weed killer in her life.”",
+      "inspiration": "KILL Weeds FAST (387 k) · The Weed Secret My Neighbor Taught Me (157 k)",
+      "caution_fr": "Paillage, binage, eau bouillante sur les allées : des méthodes connues.",
+      "status": "to do"
+    },
+    {
+      "number": 17,
+      "pillar": "Jardin",
+      "title": "Water Your Garden Automatically FOR FREE!!! The Appalachian $0 Method",
+      "opening_and_angle_fr": "“Every drop off that tin roof went somewhere useful.”",
+      "inspiration": "Water your yard Automatically FOR FREE (188 k) · Harvest Water From Air (218 k)",
+      "caution_fr": "Rappeler de vérifier les règles locales sur la récupération d’eau.",
+      "status": "to do"
+    },
+    {
+      "number": 18,
+      "pillar": "Cuisine d’autrefois",
+      "title": "The Real Appalachian Secret to Cast Iron That Never Sticks",
+      "opening_and_angle_fr": "“That skillet was her mother’s, and it’ll be my granddaughter’s.”",
+      "inspiration": "The Real Secret to Cast Iron That Never Sticks (216 k)",
+      "caution_fr": "—",
+      "status": "to do"
+    },
+    {
+      "number": 19,
+      "pillar": "Nuisibles",
+      "title": "Keep Every TICK Out of Your Yard The Appalachian Way... SAFE For Pets & Kids!",
+      "opening_and_angle_fr": "“We grew up in the woods, and Mamaw checked every one of us every single night.”",
+      "inspiration": "Kill Every TICK In Your Yard (288 k)",
+      "caution_fr": "Citer le CDC pour le retrait d’une tique. Pas de remède maison contre la maladie de Lyme.",
+      "status": "to do"
+    },
+    {
+      "number": 20,
+      "pillar": "Produits maison",
+      "title": "Black Mold... How Appalachian Families Killed Mold for a Few Dollars",
+      "opening_and_angle_fr": "“Monday was wash day, and it took the whole day. Let me tell you how it went.”",
+      "inspiration": "Mélange : récit d’autrefois + Stop Buying Laundry Detergent (1,1 M)",
+      "caution_fr": "—",
+      "status": "to do"
+    }
+  ],
+  "new_ideas_oct2026": [
+    {
+      "number": 101,
+      "title": "20 “Poor Man” Appalachian Winter Tricks That Make $500 Space Heaters Look Like a Scam",
+      "priority": 1,
+      "winning_pattern_fr": "« 20 Poor Man… Tricks That Make $X Gear Look Like a Scam » : gagne dans 3 chaînes différentes (panne de courant, camping, défense de la maison, garde-manger)",
+      "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+      "demand_stack_fr": "Saison (l'hiver arrive) + le prix d'un appareil connu (radiateur d'appoint).",
+      "reference_videos": [
+        {
+          "title": "20 “Poor Man” Blackout Tricks That Make High-Tech Prepper Gear Look Ridiculous",
+          "url": "https://www.youtube.com/watch?v=v4adiMg2wJQ",
+          "views": 1613217,
+          "channel": "Forgotten American Survival"
+        },
+        {
+          "title": "\"25 POOR MAN’S Camping Tricks That Make $1,000 Outdoor Gear Look Like a Scam\"",
+          "url": "https://www.youtube.com/watch?v=K2dsldzhJJU",
+          "views": 773793,
+          "channel": "Forgotten American Skills"
+        },
+        {
+          "title": "20 \"Poor Man's\" Pantry Tricks That Make $300 Grocery Bills Look Ridiculous",
+          "url": "https://www.youtube.com/watch?v=g_Z7RA9UeXU",
+          "views": 238062,
+          "channel": "Grandma's Lost Homefront"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 20 old mountain ways to stay warm this winter for almost nothing.",
+        "Proof: Mamaw lived 79 winters in the Blue Ridge, in a house with one wood stove.",
+        "Plan: first the house, then the bed, then your body — and the number one trick at the end.",
+        "Persona: if your heating bill scares you this year, this one's for you."
+      ],
+      "acceptance_criteria_fr": [
+        "20 astuces vraies et faisables, chacune avec son coût réel ou « gratuit ».",
+        "Pour chaque astuce : pourquoi ça marche (chaleur, courants d'air, isolation).",
+        "Une règle de sécurité claire : jamais de four ni de barbecue pour chauffer, et un détecteur de monoxyde de carbone (CO).",
+        "La comparaison honnête avec un radiateur à 500 $ : ce que l'astuce remplace, et ce qu'elle ne remplace pas."
+      ],
+      "thumbnail_fr": "Mamaw emmitouflée devant une fenêtre givrée, un radiateur neuf barré d'une croix rouge, et une bouteille d'eau chaude à côté.",
+      "caution_fr": "Ne rien conseiller qui crée un risque de feu ou de monoxyde de carbone (CO). « Scam » vise le prix de l'appareil, pas une marque précise."
+    },
+    {
+      "number": 102,
+      "title": "15 Foods Appalachian Grandmothers Stockpiled That Last for DECADES",
+      "priority": 2,
+      "winning_pattern_fr": "« X Foods To STOCKPILE That NEVER EXPIRE » : gagne dans 2 chaînes (4 M et 814 k)",
+      "topic_floor_ceiling_fr": "pantry stockpile : plancher 21 k · plafond 4 M",
+      "demand_stack_fr": "Peur de l'inflation et de l'hiver, et l'angle « grand-mère des Appalaches » que personne d'autre ne prend.",
+      "reference_videos": [
+        {
+          "title": "15 Foods To STOCKPILE That NEVER EXPIRE!",
+          "url": "https://www.youtube.com/watch?v=3bvE-ke3B2I",
+          "views": 4006966,
+          "channel": "Pantry Secrets"
+        },
+        {
+          "title": "31 Foods To STOCKPILE That NEVER EXPIRE!",
+          "url": "https://www.youtube.com/watch?v=hveG-kZxTgk",
+          "views": 813814,
+          "channel": "Esther Yoder"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 15 foods you can buy once and keep for years.",
+        "Proof: Mamaw's own cellar fed seven children through the 1958 snowstorm.",
+        "Plan: what to buy, how to store each one, and the one that surprised even me.",
+        "Persona: if you want a pantry that's ready for anything without wasting money, stay with me."
+      ],
+      "acceptance_criteria_fr": [
+        "15 aliments, chacun avec sa vraie durée de conservation et sa source (USDA, NCHFP).",
+        "Pour chacun : comment le stocker (bocal, sec, frais) et le signe qu'il est abîmé.",
+        "Uniquement des aliments qui durent vraiment des années : miel, sel, sucre, riz blanc, haricots secs, vinaigre, bicarbonate, etc.",
+        "Une règle d'or : stocker ce qu'on mange, et faire tourner le stock."
+      ],
+      "thumbnail_fr": "Une étagère de cave avec des bocaux, Mamaw qui montre un pot de miel, et le texte « 30+ YEARS ».",
+      "caution_fr": "Ne pas écrire « NEVER EXPIRE » : c'est faux pour la plupart des aliments. On dit « Last for DECADES » et on ne cite que des aliments où c'est vrai."
+    },
+    {
+      "number": 103,
+      "title": "STOP Frying Eggs the Modern Way! Try These 25 Appalachian Egg Tricks Mamaw Swore By",
+      "priority": 3,
+      "winning_pattern_fr": "« Stop X-ing the old way / NEVER X again — try this old farm trick » : 4 chaînes (6,3 M, 1,2 M, 441 k, 432 k)",
+      "topic_floor_ceiling_fr": "appalachian old ways : plancher 11 k · plafond 6,3 M",
+      "demand_stack_fr": "L'œuf est l'aliment le plus regardé du moment, et on y ajoute le savoir-faire des montagnes.",
+      "reference_videos": [
+        {
+          "title": "Stop frying eggs the old way! Here's a simple egg-frying trick that not everyone knows!",
+          "url": "https://www.youtube.com/watch?v=_0V7uOzTjbo",
+          "views": 6326634,
+          "channel": "Cooking Daily"
+        },
+        {
+          "title": "NEVER Fry Your Pork Chops Again — Try This Old FARM Trick",
+          "url": "https://www.youtube.com/watch?v=r5cw3juqudw",
+          "views": 1225487,
+          "channel": "Otis's Kitchen"
+        },
+        {
+          "title": "Grandma Taught Me This Egg Trick! Try These 45 Appalachian Cooking Secrets",
+          "url": "https://www.youtube.com/watch?v=Mi6UOyhQcIQ",
+          "views": 440693,
+          "channel": "Opal Rowe"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 25 ways to cook, keep and use eggs better than you were taught.",
+        "Proof: Mamaw kept 30 hens for 50 years — she's cracked more eggs than any chef.",
+        "Plan: frying, boiling, storing, then the old tricks nobody uses anymore.",
+        "Persona: if eggs cost you more than ever, let's waste none of them."
+      ],
+      "acceptance_criteria_fr": [
+        "25 astuces : cuisson, conservation, test de fraîcheur et réemploi des coquilles.",
+        "Chaque astuce montrée en B-roll et vérifiée : les règles de sécurité alimentaire de l'USDA s'appliquent.",
+        "Au moins 5 astuces vraiment surprenantes, gardées pour le milieu et la fin.",
+        "Bonus : une recette des montagnes avec ces œufs."
+      ],
+      "thumbnail_fr": "Mamaw au-dessus d'une poêle en fonte avec un œuf parfait, et une poêle antiadhésive barrée.",
+      "caution_fr": "Pas d'œufs crus non lavés laissés à température ambiante présentés comme sans risque aux États-Unis : rappeler la règle USDA (œufs réfrigérés)."
+    },
+    {
+      "number": 104,
+      "title": "12 Things Appalachian Households NEVER Waste Money On — That Most Americans Buy Every Month",
+      "priority": 4,
+      "winning_pattern_fr": "« X Things [culture] Households NEVER Waste Money On — That Americans Buy » : 3 chaînes (Mexique 283 k, Japon 926 k et 471 k)",
+      "topic_floor_ceiling_fr": "things old people did : plancher 11 k · plafond 1,8 M",
+      "demand_stack_fr": "La comparaison entre deux cultures, appliquée aux montagnes face à l'Amérique moderne.",
+      "reference_videos": [
+        {
+          "title": "12 Things Mexican Households NEVER Waste Money On — That Americans Buy Every Month",
+          "url": "https://www.youtube.com/watch?v=YE3Si60RALk",
+          "views": 283220,
+          "channel": "Bertha's Garden Hacks"
+        },
+        {
+          "title": "15 Things Japanese People Never Keep at Home — And You Should Remove Too",
+          "url": "https://www.youtube.com/watch?v=xKf_zekijv4",
+          "views": 925533,
+          "channel": "Inside Japan Living"
+        },
+        {
+          "title": "11 Japanese Rules Americans Break After 40 — That Cause \"Old Person Smell”",
+          "url": "https://www.youtube.com/watch?v=u3qGq7__-E8",
+          "views": 470951,
+          "channel": "The Japanese Method"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 12 monthly purchases you can stop today.",
+        "Proof: in Mamaw's holler, nobody bought these — and nobody missed them.",
+        "Plan: kitchen, cleaning, bathroom, then the most expensive one.",
+        "Persona: if your money runs out before the month does, this is for you."
+      ],
+      "acceptance_criteria_fr": [
+        "12 achats courants, chacun avec son prix mensuel moyen et son remplacement fait maison.",
+        "Le remplacement doit être sûr et vraiment moins cher (coût calculé).",
+        "Une anecdote de Mamaw pour 4 ou 5 d'entre eux.",
+        "Le total économisé par an, à la fin."
+      ],
+      "thumbnail_fr": "Un caddie plein avec 3 produits barrés, et Mamaw qui secoue la tête.",
+      "caution_fr": "Ne pas dénigrer de marque nommée ; parler de catégories de produits."
+    },
+    {
+      "number": 105,
+      "title": "What Appalachian Families Did When Snow Trapped Them Home for a Week — 20 Tricks That Still Work",
+      "priority": 5,
+      "winning_pattern_fr": "« 20 Forgotten Tricks Families Used When Snow Trapped Them » + « X Items You'll Wish You Bought BEFORE the Power Goes Out »",
+      "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+      "demand_stack_fr": "Saison (tempêtes d'hiver) et panne de courant.",
+      "reference_videos": [
+        {
+          "title": "20 Forgotten Appalachian Tricks Families Used When Snow Trapped Them at Home for a Week",
+          "url": "https://www.youtube.com/watch?v=jmiw_YrFQQs",
+          "views": 248626,
+          "channel": "Forgotten Appalachian Skills"
+        },
+        {
+          "title": "30 Costco Items Everyone Will Wish They Bought BEFORE the Power Goes Out",
+          "url": "https://www.youtube.com/watch?v=M_6bBUcB6Do",
+          "views": 318399,
+          "channel": "Forgotten American Survival"
+        }
+      ],
+      "hook_4P": [
+        "Promise: how to get through a week snowed in, without power, the mountain way.",
+        "Proof: Mamaw tells the 1958 storm — eight days, seven kids, no road.",
+        "Plan: water, heat, food, light, then keeping spirits up.",
+        "Persona: if a winter storm could cut your power this year, prepare now."
+      ],
+      "acceptance_criteria_fr": [
+        "20 astuces classées par besoin : eau, chaleur, nourriture, lumière, santé, moral.",
+        "Une liste de préparation à faire dès cette semaine.",
+        "Les règles de sécurité FEMA/CDC : monoxyde de carbone, groupe électrogène dehors, eau potable.",
+        "L'histoire de 1958 racontée en fil rouge."
+      ],
+      "thumbnail_fr": "Une cabane sous la neige la nuit avec une fenêtre éclairée à la lampe à pétrole, et Mamaw en médaillon.",
+      "caution_fr": "Une chaîne « Forgotten Appalachian » (août 2026) copie déjà ce créneau : il faut être plus utile et plus incarné qu'elle."
+    },
+    {
+      "number": 106,
+      "title": "11 Old Appalachian Habits That Keep a Home From Smelling Old (Mamaw Never Skipped #7)",
+      "priority": 6,
+      "winning_pattern_fr": "« Old Person Smell / Things That Make Your House Smell Old » : 3 chaînes (598 k, 471 k, 298 k)",
+      "topic_floor_ceiling_fr": "things old people did : plancher 11 k · plafond 1,8 M",
+      "demand_stack_fr": "Une peur très forte chez les plus de 60 ans, résolue avec le vinaigre et le bicarbonate de Mamaw.",
+      "reference_videos": [
+        {
+          "title": "11 Things That Make Your House Smell Old - That The Japanese Replaced",
+          "url": "https://www.youtube.com/watch?v=neh_XZxRd8w",
+          "views": 297878,
+          "channel": "The Japanese Method"
+        },
+        {
+          "title": "Old Person Smell? A Nurse Says Wash THIS Spot Daily",
+          "url": "https://www.youtube.com/watch?v=LQuWgDSxiIk",
+          "views": 597991,
+          "channel": "Nurse Jen | Healthcare Navigation"
+        },
+        {
+          "title": "11 Japanese Rules Americans Break After 40 — That Cause \"Old Person Smell”",
+          "url": "https://www.youtube.com/watch?v=u3qGq7__-E8",
+          "views": 470951,
+          "channel": "The Japanese Method"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 11 simple habits so your house always smells fresh and clean.",
+        "Proof: Mamaw kept a spotless farmhouse with vinegar, baking soda and sunshine.",
+        "Plan: air, fabrics, kitchen, bathroom — and #7, the one everyone forgets.",
+        "Persona: if you worry your home smells 'old', you're not alone and it's easy to fix."
+      ],
+      "acceptance_criteria_fr": [
+        "11 habitudes concrètes, avec la cause de chaque odeur expliquée simplement.",
+        "Uniquement des produits sûrs, sans mélange dangereux (javel avec vinaigre ou ammoniaque : jamais).",
+        "Le n°7 doit être une vraie révélation, gardée pour la fin du milieu.",
+        "Un ton bienveillant, jamais humiliant."
+      ],
+      "thumbnail_fr": "Mamaw qui ouvre grand une fenêtre, des rideaux au vent, un bocal de bicarbonate.",
+      "caution_fr": "Ne pas faire honte au public ; parler de la maison, pas des personnes."
+    },
+    {
+      "number": 107,
+      "title": "20 Hydrogen Peroxide Tricks Mountain Grandmothers Used Around the House — The $1 Bottle Old-Timers Swore By",
+      "priority": 7,
+      "winning_pattern_fr": "« N [produit à 1 $] Hacks… » : 2 chaînes Yoder (1,2 M et 785 k), complète nos astuces au vinaigre",
+      "topic_floor_ceiling_fr": "amish secret : plancher 12 k · plafond 4,4 M",
+      "demand_stack_fr": "Le prix (1 $) et le produit que tout le monde a déjà sous l'évier.",
+      "reference_videos": [
+        {
+          "title": "20 Hydrogen Peroxide Hacks That Kill Roaches, Ants & Mice — The $1 Bottle Exterminators Hide",
+          "url": "https://www.youtube.com/watch?v=DgfPMtLpJT8",
+          "views": 1228402,
+          "channel": "Eli Yoder Secrets"
+        },
+        {
+          "title": "Amish's 25 BANNED Borax Hacks from the 60s That Scientists Now Say Were GENIUS",
+          "url": "https://www.youtube.com/watch?v=PYEnWR0pWhA",
+          "views": 785043,
+          "channel": "Eli Yoder Secrets"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 20 uses for that brown bottle under your sink.",
+        "Proof: Mamaw's first-aid box and cleaning shelf, 60 years of it.",
+        "Plan: cleaning, laundry, garden, then the surprising ones.",
+        "Persona: if you like doing more with less, grab your bottle."
+      ],
+      "acceptance_criteria_fr": [
+        "20 usages vérifiés, chacun avec la concentration (3 %) et la manière de faire.",
+        "Les interdits : ne pas mélanger avec du vinaigre dans le même flacon, pas d'usage sur les plaies selon les conseils médicaux actuels.",
+        "Les usages au jardin et à la maison séparés des usages « santé » (aucune promesse médicale).",
+        "La conservation : flacon brun, à l'abri de la lumière."
+      ],
+      "thumbnail_fr": "Une bouteille brune de peroxyde en gros plan, Mamaw qui la tient, et le texte « $1 ».",
+      "caution_fr": "Pas de promesse médicale ; la Mayo Clinic déconseille aujourd'hui le peroxyde sur les plaies."
+    },
+    {
+      "number": 108,
+      "title": "25 Forgotten Skills Every Appalachian Child Learned Before Age 12",
+      "priority": 8,
+      "winning_pattern_fr": "« X Forgotten Skills Every [groupe] Mastered Before 12 » : 3 chaînes (446 k, 300 k, 254 k)",
+      "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+      "demand_stack_fr": "La nostalgie et la transmission aux petits-enfants.",
+      "reference_videos": [
+        {
+          "title": "15 forgotten skills every 1950s boy mastered before 12",
+          "url": "https://www.youtube.com/watch?v=u1b14oXP_tw",
+          "views": 445589,
+          "channel": "America's Forgotten Fathers"
+        },
+        {
+          "title": "25 Forgotten Camping Skills Every American Grandfather Knew by Heart",
+          "url": "https://www.youtube.com/watch?v=mdfnUxfRG10",
+          "views": 300394,
+          "channel": "Forgotten American Skills"
+        },
+        {
+          "title": "25 Forgotten Survival Skills Every American Parent Should Teach Their Kids | Vanished Icon",
+          "url": "https://www.youtube.com/watch?v=MmJDmHht57k",
+          "views": 254295,
+          "channel": "Vanished Icon"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 25 skills mountain kids had by 12 — and you can still teach them.",
+        "Proof: Mamaw learned every one of them before her twelfth birthday.",
+        "Plan: house, kitchen, garden, woods — and the one I'd teach first.",
+        "Persona: if you want your grandkids to know how to take care of themselves, start here."
+      ],
+      "acceptance_criteria_fr": [
+        "25 compétences concrètes, chacune avec l'âge et la manière de l'apprendre.",
+        "Un souvenir court de Mamaw pour au moins 8 d'entre elles.",
+        "Uniquement des activités sûres pour des enfants, avec la règle de sécurité quand il le faut.",
+        "La fin : comment transmettre ces compétences ce week-end."
+      ],
+      "thumbnail_fr": "Une petite fille qui coupe du bois d'allumage avec Mamaw derrière elle, dans une photo à l'ancienne colorisée.",
+      "caution_fr": "Rien de dangereux pour les enfants (armes, couteau sans surveillance)."
+    },
+    {
+      "number": 109,
+      "title": "12 Groceries Appalachian Grandmothers Stock Up On Before November Ends",
+      "priority": 9,
+      "winning_pattern_fr": "« These 12 Groceries You SHOULD Stock Up On Before [mois] Ends » : 1 chaîne, 2 succès (390 k et 348 k), et « Always Keep These 15 Canned Foods » (484 k)",
+      "topic_floor_ceiling_fr": "pantry stockpile : plancher 21 k · plafond 4 M",
+      "demand_stack_fr": "La date (fin novembre, avant les fêtes et l'hiver).",
+      "reference_videos": [
+        {
+          "title": "These 12 Groceries You SHOULD Stock Up On Before 15th October Ends",
+          "url": "https://www.youtube.com/watch?v=W5N-tOUAva0",
+          "views": 347623,
+          "channel": "Budget Pantry Hub"
+        },
+        {
+          "title": "Always Keep These 15 Canned Foods in Your Pantry (Save Hundreds Every Year)",
+          "url": "https://www.youtube.com/watch?v=fzaqLWUL8W8",
+          "views": 483622,
+          "channel": "Tried & True"
+        }
+      ],
+      "hook_4P": [
+        "Promise: the 12 groceries worth buying now, before prices and weather turn.",
+        "Proof: Mamaw did her 'fall stock-up' every November for 60 years.",
+        "Plan: the list, why each one now, and how much to buy.",
+        "Persona: if you shop on a fixed income, this list will stretch it."
+      ],
+      "acceptance_criteria_fr": [
+        "12 produits, chacun avec la raison de l'acheter maintenant (saison, soldes, durée de conservation).",
+        "Aucun prix inventé : des fourchettes « environ » ou un renvoi aux prospectus de la semaine.",
+        "La quantité conseillée pour une ou deux personnes.",
+        "Bonus : 3 repas des montagnes avec ces produits."
+      ],
+      "thumbnail_fr": "Mamaw avec un panier en osier plein, un calendrier « NOV » entouré en rouge.",
+      "caution_fr": "Ne jamais annoncer une pénurie ou une hausse de prix sans source."
+    },
+    {
+      "number": 110,
+      "title": "How to Store Apples & Potatoes All Winter Without a Fridge — The Old Appalachian Way",
+      "priority": 10,
+      "winning_pattern_fr": "« How to … The Old AMISH Way » (4,4 M) appliqué aux montagnes, avec la saison",
+      "topic_floor_ceiling_fr": "amish secret : plancher 12 k · plafond 4,4 M",
+      "demand_stack_fr": "La saison (récolte d'automne) et la peur du gaspillage.",
+      "reference_videos": [
+        {
+          "title": "How to Pick a Sweet Watermelon... The Old AMISH Way",
+          "url": "https://www.youtube.com/watch?v=6jZ7ib2Edes",
+          "views": 4371491,
+          "channel": "Amish Gardening"
+        }
+      ],
+      "hook_4P": [
+        "Promise: keep apples and potatoes fresh until spring, no fridge needed.",
+        "Proof: Mamaw's root cellar fed the family every winter.",
+        "Plan: picking, curing, storing, checking — the mistakes that rot a whole crate.",
+        "Persona: if you buy in bulk or grow your own, don't lose a single one."
+      ],
+      "acceptance_criteria_fr": [
+        "Les bonnes conditions pour chacun : température, humidité, obscurité.",
+        "Pourquoi ne jamais stocker pommes et pommes de terre ensemble (éthylène).",
+        "Comment faire sans cave : garage, sous-sol, caisse isolée.",
+        "Le contrôle chaque semaine et quoi faire des fruits abîmés."
+      ],
+      "thumbnail_fr": "Une caisse en bois de pommes rouges dans une cave, Mamaw qui en tient une, avec le texte « UNTIL SPRING ».",
+      "caution_fr": null
+    },
+    {
+      "number": 111,
+      "title": "25 “Poor Man” Garden Tricks That Make Expensive Gadgets Look Useless — The Appalachian Way",
+      "priority": 11,
+      "winning_pattern_fr": "« Poor Man » + « Old-Fashioned Gardening Tricks That Make Modern Gadgets Look Useless » (278 k)",
+      "topic_floor_ceiling_fr": "forgotten skills : plancher 40 k · plafond 1,6 M",
+      "demand_stack_fr": "À publier en février-mars, pour la saison des semis.",
+      "reference_videos": [
+        {
+          "title": "25 Old-Fashioned Gardening Tricks That Make Modern Gadgets Look Useless",
+          "url": "https://www.youtube.com/watch?v=ShqcjBkSRfY",
+          "views": 278258,
+          "channel": "No Longer Here"
+        },
+        {
+          "title": "\"25 POOR MAN’S Camping Tricks That Make $1,000 Outdoor Gear Look Like a Scam\"",
+          "url": "https://www.youtube.com/watch?v=K2dsldzhJJU",
+          "views": 773793,
+          "channel": "Forgotten American Skills"
+        }
+      ],
+      "hook_4P": [
+        "Promise: 25 garden tricks that cost nothing and beat the gadgets.",
+        "Proof: Mamaw's garden fed nine people without a single store-bought tool.",
+        "Plan: soil, seeds, water, pests, harvest.",
+        "Persona: if you garden on a budget, this will save you a season of mistakes."
+      ],
+      "acceptance_criteria_fr": [
+        "25 astuces de jardin vérifiables (sources : services de vulgarisation agricole des universités).",
+        "Chaque astuce avec l'objet cher qu'elle remplace.",
+        "Les erreurs de saison à éviter.",
+        "Le rappel de nos vidéos déjà prévues (désherbage, arrosage gratuit)."
+      ],
+      "thumbnail_fr": "Mamaw à genoux dans un potager luxuriant, un gadget cher barré.",
+      "caution_fr": "Vidéo de réserve : à sortir au printemps."
+    }
+  ],
+  "new_ideas_note": "Research of Oct 14, 2026: best floors are 'forgotten skills' (median 40 k), 'pantry stockpile' (21 k), 'amish secret' (12 k), 'appalachian old ways' (11 k); 'depression era tips' and 'save money old ways' have very low floors — keep those words out of titles. A copycat channel ('Forgotten Appalachian', Aug 2026) already exists: be more useful and more personal."
+}
